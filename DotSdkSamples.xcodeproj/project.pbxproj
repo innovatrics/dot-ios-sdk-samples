@@ -1,0 +1,611 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3BC2FF5D28CF462000B144CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF5C28CF462000B144CD /* AppDelegate.swift */; };
+		3BC2FF5F28CF462000B144CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF5E28CF462000B144CD /* SceneDelegate.swift */; };
+		3BC2FF6128CF462000B144CD /* SamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF6028CF462000B144CD /* SamplesViewController.swift */; };
+		3BC2FF6428CF462000B144CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC2FF6228CF462000B144CD /* Main.storyboard */; };
+		3BC2FF6628CF462200B144CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BC2FF6528CF462200B144CD /* Assets.xcassets */; };
+		3BC2FF6928CF462200B144CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC2FF6728CF462200B144CD /* LaunchScreen.storyboard */; };
+		3BC2FF7128CF4D4900B144CD /* dot_face_license.lic in Resources */ = {isa = PBXBuildFile; fileRef = 3BC2FF7028CF4D4900B144CD /* dot_face_license.lic */; };
+		3BC2FF7328CF6D0F00B144CD /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF7228CF6D0F00B144CD /* ContainerViewController.swift */; };
+		3BC2FF7528CF6DEF00B144CD /* DocumentAutoCaptureContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF7428CF6DEF00B144CD /* DocumentAutoCaptureContainerViewController.swift */; };
+		3BC2FF7828CF714F00B144CD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3BC2FF7A28CF714F00B144CD /* Localizable.strings */; };
+		3BC2FF7C28CF733C00B144CD /* ButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF7B28CF733C00B144CD /* ButtonFactory.swift */; };
+		3BC2FF7F28D0BE4F00B144CD /* SampleResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF7E28D0BE4F00B144CD /* SampleResultViewController.swift */; };
+		3BC2FF8428D1E91F00B144CD /* DocumentAutoCapture+Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF8328D1E91F00B144CD /* DocumentAutoCapture+Encodable.swift */; };
+		3BC2FF8B28D2138500B144CD /* FaceAutoCaptureContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF8A28D2138400B144CD /* FaceAutoCaptureContainerViewController.swift */; };
+		3BC2FF8F28D4841C00B144CD /* FaceAutoCapture+Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF8E28D4841C00B144CD /* FaceAutoCapture+Encodable.swift */; };
+		3BC2FF9228D4A65300B144CD /* SmileLivenessContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF9128D4A65300B144CD /* SmileLivenessContainerViewController.swift */; };
+		3BC2FF9728D85EDA00B144CD /* FaceMatchingExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF9628D85EDA00B144CD /* FaceMatchingExecutor.swift */; };
+		3BC2FF9928D8761E00B144CD /* FaceMatchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF9828D8761E00B144CD /* FaceMatchingViewController.swift */; };
+		3BC2FF9B28D8838100B144CD /* ActivityIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF9A28D8838100B144CD /* ActivityIndicatorViewController.swift */; };
+		3BC2FF9D28D8A8C800B144CD /* FaceMatcher+Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF9C28D8A8C800B144CD /* FaceMatcher+Encodable.swift */; };
+		3BC2FFA028D8B6F500B144CD /* NfcReadingDocumentAutoCaptureContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF9F28D8B6F500B144CD /* NfcReadingDocumentAutoCaptureContainerViewController.swift */; };
+		3BC2FFA228D8B8AB00B144CD /* NfcReadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FFA128D8B8AB00B144CD /* NfcReadingViewController.swift */; };
+		3BC2FFA428D8BAC300B144CD /* NfcReadingExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FFA328D8BAC300B144CD /* NfcReadingExecutor.swift */; };
+		3BC2FFA628D8BDCE00B144CD /* NfcKeyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FFA528D8BDCE00B144CD /* NfcKeyFactory.swift */; };
+		3BC2FFA928D9BDF400B144CD /* NfcReading+Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FFA828D9BDF400B144CD /* NfcReading+Encodable.swift */; };
+		3BC2FFAD28D9E68400B144CD /* DocumentAutoCaptureSampleResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FFAC28D9E68400B144CD /* DocumentAutoCaptureSampleResult.swift */; };
+		3BC2FFAF28D9E9F700B144CD /* FaceAutoCaptureSampleResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FFAE28D9E9F700B144CD /* FaceAutoCaptureSampleResult.swift */; };
+		3BC2FFB128D9EC5800B144CD /* NfcReadingSampleResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FFB028D9EC5800B144CD /* NfcReadingSampleResult.swift */; };
+		3BC2FFB328D9EE4500B144CD /* SmileLivenessSampleResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FFB228D9EE4500B144CD /* SmileLivenessSampleResultViewController.swift */; };
+		3BC2FFB528D9FB3100B144CD /* DetectedFaceEvaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FFB428D9FB3100B144CD /* DetectedFaceEvaluator.swift */; };
+		3BC2FFB728DA046800B144CD /* master_list.pem in Resources */ = {isa = PBXBuildFile; fileRef = 3BC2FFB628DA046800B144CD /* master_list.pem */; };
+		3BC2FFB928DB099200B144CD /* UIAlertController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FFB828DB099200B144CD /* UIAlertController+Ext.swift */; };
+		5BC669F9F216894A735B2FE3 /* Pods_DotSdkSamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B61D9645A79F1043FC8A812 /* Pods_DotSdkSamples.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3BC2FF5928CF462000B144CD /* DotSdkSamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DotSdkSamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BC2FF5C28CF462000B144CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3BC2FF5E28CF462000B144CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3BC2FF6028CF462000B144CD /* SamplesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplesViewController.swift; sourceTree = "<group>"; };
+		3BC2FF6328CF462000B144CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3BC2FF6528CF462200B144CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3BC2FF6828CF462200B144CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3BC2FF6A28CF462200B144CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BC2FF7028CF4D4900B144CD /* dot_face_license.lic */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dot_face_license.lic; sourceTree = "<group>"; };
+		3BC2FF7228CF6D0F00B144CD /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		3BC2FF7428CF6DEF00B144CD /* DocumentAutoCaptureContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentAutoCaptureContainerViewController.swift; sourceTree = "<group>"; };
+		3BC2FF7928CF714F00B144CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3BC2FF7B28CF733C00B144CD /* ButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFactory.swift; sourceTree = "<group>"; };
+		3BC2FF7E28D0BE4F00B144CD /* SampleResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleResultViewController.swift; sourceTree = "<group>"; };
+		3BC2FF8328D1E91F00B144CD /* DocumentAutoCapture+Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DocumentAutoCapture+Encodable.swift"; sourceTree = "<group>"; };
+		3BC2FF8A28D2138400B144CD /* FaceAutoCaptureContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceAutoCaptureContainerViewController.swift; sourceTree = "<group>"; };
+		3BC2FF8E28D4841C00B144CD /* FaceAutoCapture+Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FaceAutoCapture+Encodable.swift"; sourceTree = "<group>"; };
+		3BC2FF9128D4A65300B144CD /* SmileLivenessContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmileLivenessContainerViewController.swift; sourceTree = "<group>"; };
+		3BC2FF9628D85EDA00B144CD /* FaceMatchingExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceMatchingExecutor.swift; sourceTree = "<group>"; };
+		3BC2FF9828D8761E00B144CD /* FaceMatchingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceMatchingViewController.swift; sourceTree = "<group>"; };
+		3BC2FF9A28D8838100B144CD /* ActivityIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorViewController.swift; sourceTree = "<group>"; };
+		3BC2FF9C28D8A8C800B144CD /* FaceMatcher+Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FaceMatcher+Encodable.swift"; sourceTree = "<group>"; };
+		3BC2FF9F28D8B6F500B144CD /* NfcReadingDocumentAutoCaptureContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NfcReadingDocumentAutoCaptureContainerViewController.swift; sourceTree = "<group>"; };
+		3BC2FFA128D8B8AB00B144CD /* NfcReadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NfcReadingViewController.swift; sourceTree = "<group>"; };
+		3BC2FFA328D8BAC300B144CD /* NfcReadingExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NfcReadingExecutor.swift; sourceTree = "<group>"; };
+		3BC2FFA528D8BDCE00B144CD /* NfcKeyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NfcKeyFactory.swift; sourceTree = "<group>"; };
+		3BC2FFA728D9A43500B144CD /* DotSdkSamples.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DotSdkSamples.entitlements; sourceTree = "<group>"; };
+		3BC2FFA828D9BDF400B144CD /* NfcReading+Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NfcReading+Encodable.swift"; sourceTree = "<group>"; };
+		3BC2FFAC28D9E68400B144CD /* DocumentAutoCaptureSampleResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentAutoCaptureSampleResult.swift; sourceTree = "<group>"; };
+		3BC2FFAE28D9E9F700B144CD /* FaceAutoCaptureSampleResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceAutoCaptureSampleResult.swift; sourceTree = "<group>"; };
+		3BC2FFB028D9EC5800B144CD /* NfcReadingSampleResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NfcReadingSampleResult.swift; sourceTree = "<group>"; };
+		3BC2FFB228D9EE4500B144CD /* SmileLivenessSampleResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmileLivenessSampleResultViewController.swift; sourceTree = "<group>"; };
+		3BC2FFB428D9FB3100B144CD /* DetectedFaceEvaluator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectedFaceEvaluator.swift; sourceTree = "<group>"; };
+		3BC2FFB628DA046800B144CD /* master_list.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = master_list.pem; sourceTree = "<group>"; };
+		3BC2FFB828DB099200B144CD /* UIAlertController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Ext.swift"; sourceTree = "<group>"; };
+		5810CE6CC32F27A5C1A315AA /* Pods-DotSdkSamples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotSdkSamples.release.xcconfig"; path = "Target Support Files/Pods-DotSdkSamples/Pods-DotSdkSamples.release.xcconfig"; sourceTree = "<group>"; };
+		5B61D9645A79F1043FC8A812 /* Pods_DotSdkSamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DotSdkSamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83795D1C83D69C0A9D3372AA /* Pods-DotSdkSamples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotSdkSamples.debug.xcconfig"; path = "Target Support Files/Pods-DotSdkSamples/Pods-DotSdkSamples.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3BC2FF5628CF462000B144CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BC669F9F216894A735B2FE3 /* Pods_DotSdkSamples.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3BC2FF5028CF462000B144CD = {
+			isa = PBXGroup;
+			children = (
+				3BC2FF5B28CF462000B144CD /* DotSdkSamples */,
+				3BC2FF5A28CF462000B144CD /* Products */,
+				D882853C4CCB3F9299AC765E /* Pods */,
+				E801544B8D724CDFE5D73259 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3BC2FF5A28CF462000B144CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3BC2FF5928CF462000B144CD /* DotSdkSamples.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3BC2FF5B28CF462000B144CD /* DotSdkSamples */ = {
+			isa = PBXGroup;
+			children = (
+				3BC2FF5C28CF462000B144CD /* AppDelegate.swift */,
+				3BC2FF5E28CF462000B144CD /* SceneDelegate.swift */,
+				3BC2FF6028CF462000B144CD /* SamplesViewController.swift */,
+				3BC2FF7B28CF733C00B144CD /* ButtonFactory.swift */,
+				3BC2FFB828DB099200B144CD /* UIAlertController+Ext.swift */,
+				3BC2FF7D28D0BD6300B144CD /* Samples */,
+				3BC2FF6228CF462000B144CD /* Main.storyboard */,
+				3BC2FF6528CF462200B144CD /* Assets.xcassets */,
+				3BC2FF6728CF462200B144CD /* LaunchScreen.storyboard */,
+				3BC2FF6A28CF462200B144CD /* Info.plist */,
+				3BC2FF7028CF4D4900B144CD /* dot_face_license.lic */,
+				3BC2FF7A28CF714F00B144CD /* Localizable.strings */,
+				3BC2FFA728D9A43500B144CD /* DotSdkSamples.entitlements */,
+				3BC2FFB628DA046800B144CD /* master_list.pem */,
+			);
+			path = DotSdkSamples;
+			sourceTree = "<group>";
+		};
+		3BC2FF7D28D0BD6300B144CD /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				3BC2FF7E28D0BE4F00B144CD /* SampleResultViewController.swift */,
+				3BC2FF7228CF6D0F00B144CD /* ContainerViewController.swift */,
+				3BC2FF8228D1E8ED00B144CD /* DocumentAutoCapture */,
+				3BC2FF9E28D8B66800B144CD /* NfcReading */,
+				3BC2FF8528D1F85A00B144CD /* FaceAutoCapture */,
+				3BC2FF9028D4A5F800B144CD /* SmileLiveness */,
+				3BC2FF9328D85D9A00B144CD /* FaceMatcher */,
+			);
+			path = Samples;
+			sourceTree = "<group>";
+		};
+		3BC2FF8228D1E8ED00B144CD /* DocumentAutoCapture */ = {
+			isa = PBXGroup;
+			children = (
+				3BC2FF7428CF6DEF00B144CD /* DocumentAutoCaptureContainerViewController.swift */,
+				3BC2FF8328D1E91F00B144CD /* DocumentAutoCapture+Encodable.swift */,
+				3BC2FFAC28D9E68400B144CD /* DocumentAutoCaptureSampleResult.swift */,
+			);
+			path = DocumentAutoCapture;
+			sourceTree = "<group>";
+		};
+		3BC2FF8528D1F85A00B144CD /* FaceAutoCapture */ = {
+			isa = PBXGroup;
+			children = (
+				3BC2FF8A28D2138400B144CD /* FaceAutoCaptureContainerViewController.swift */,
+				3BC2FF8E28D4841C00B144CD /* FaceAutoCapture+Encodable.swift */,
+				3BC2FFAE28D9E9F700B144CD /* FaceAutoCaptureSampleResult.swift */,
+				3BC2FFB428D9FB3100B144CD /* DetectedFaceEvaluator.swift */,
+			);
+			path = FaceAutoCapture;
+			sourceTree = "<group>";
+		};
+		3BC2FF9028D4A5F800B144CD /* SmileLiveness */ = {
+			isa = PBXGroup;
+			children = (
+				3BC2FF9128D4A65300B144CD /* SmileLivenessContainerViewController.swift */,
+				3BC2FFB228D9EE4500B144CD /* SmileLivenessSampleResultViewController.swift */,
+			);
+			path = SmileLiveness;
+			sourceTree = "<group>";
+		};
+		3BC2FF9328D85D9A00B144CD /* FaceMatcher */ = {
+			isa = PBXGroup;
+			children = (
+				3BC2FF9628D85EDA00B144CD /* FaceMatchingExecutor.swift */,
+				3BC2FF9828D8761E00B144CD /* FaceMatchingViewController.swift */,
+				3BC2FF9A28D8838100B144CD /* ActivityIndicatorViewController.swift */,
+				3BC2FF9C28D8A8C800B144CD /* FaceMatcher+Encodable.swift */,
+			);
+			path = FaceMatcher;
+			sourceTree = "<group>";
+		};
+		3BC2FF9E28D8B66800B144CD /* NfcReading */ = {
+			isa = PBXGroup;
+			children = (
+				3BC2FF9F28D8B6F500B144CD /* NfcReadingDocumentAutoCaptureContainerViewController.swift */,
+				3BC2FFA128D8B8AB00B144CD /* NfcReadingViewController.swift */,
+				3BC2FFA328D8BAC300B144CD /* NfcReadingExecutor.swift */,
+				3BC2FFA528D8BDCE00B144CD /* NfcKeyFactory.swift */,
+				3BC2FFA828D9BDF400B144CD /* NfcReading+Encodable.swift */,
+				3BC2FFB028D9EC5800B144CD /* NfcReadingSampleResult.swift */,
+			);
+			path = NfcReading;
+			sourceTree = "<group>";
+		};
+		D882853C4CCB3F9299AC765E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				83795D1C83D69C0A9D3372AA /* Pods-DotSdkSamples.debug.xcconfig */,
+				5810CE6CC32F27A5C1A315AA /* Pods-DotSdkSamples.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E801544B8D724CDFE5D73259 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B61D9645A79F1043FC8A812 /* Pods_DotSdkSamples.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3BC2FF5828CF462000B144CD /* DotSdkSamples */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BC2FF6D28CF462200B144CD /* Build configuration list for PBXNativeTarget "DotSdkSamples" */;
+			buildPhases = (
+				DC674B0D442F4607072B7A87 /* [CP] Check Pods Manifest.lock */,
+				3BC2FF5528CF462000B144CD /* Sources */,
+				3BC2FF5628CF462000B144CD /* Frameworks */,
+				3BC2FF5728CF462000B144CD /* Resources */,
+				2549F9C631BAE5A6B02FD075 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DotSdkSamples;
+			productName = DotSdkSamples;
+			productReference = 3BC2FF5928CF462000B144CD /* DotSdkSamples.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3BC2FF5128CF462000B144CD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					3BC2FF5828CF462000B144CD = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 3BC2FF5428CF462000B144CD /* Build configuration list for PBXProject "DotSdkSamples" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3BC2FF5028CF462000B144CD;
+			productRefGroup = 3BC2FF5A28CF462000B144CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3BC2FF5828CF462000B144CD /* DotSdkSamples */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3BC2FF5728CF462000B144CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BC2FF7828CF714F00B144CD /* Localizable.strings in Resources */,
+				3BC2FF6928CF462200B144CD /* LaunchScreen.storyboard in Resources */,
+				3BC2FF7128CF4D4900B144CD /* dot_face_license.lic in Resources */,
+				3BC2FF6628CF462200B144CD /* Assets.xcassets in Resources */,
+				3BC2FFB728DA046800B144CD /* master_list.pem in Resources */,
+				3BC2FF6428CF462000B144CD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2549F9C631BAE5A6B02FD075 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DotSdkSamples/Pods-DotSdkSamples-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DotSdkSamples/Pods-DotSdkSamples-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DotSdkSamples/Pods-DotSdkSamples-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC674B0D442F4607072B7A87 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DotSdkSamples-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3BC2FF5528CF462000B144CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BC2FFB928DB099200B144CD /* UIAlertController+Ext.swift in Sources */,
+				3BC2FF7C28CF733C00B144CD /* ButtonFactory.swift in Sources */,
+				3BC2FF9228D4A65300B144CD /* SmileLivenessContainerViewController.swift in Sources */,
+				3BC2FF6128CF462000B144CD /* SamplesViewController.swift in Sources */,
+				3BC2FF9928D8761E00B144CD /* FaceMatchingViewController.swift in Sources */,
+				3BC2FFAD28D9E68400B144CD /* DocumentAutoCaptureSampleResult.swift in Sources */,
+				3BC2FFB328D9EE4500B144CD /* SmileLivenessSampleResultViewController.swift in Sources */,
+				3BC2FF7F28D0BE4F00B144CD /* SampleResultViewController.swift in Sources */,
+				3BC2FFAF28D9E9F700B144CD /* FaceAutoCaptureSampleResult.swift in Sources */,
+				3BC2FF5D28CF462000B144CD /* AppDelegate.swift in Sources */,
+				3BC2FFB528D9FB3100B144CD /* DetectedFaceEvaluator.swift in Sources */,
+				3BC2FF8428D1E91F00B144CD /* DocumentAutoCapture+Encodable.swift in Sources */,
+				3BC2FF7328CF6D0F00B144CD /* ContainerViewController.swift in Sources */,
+				3BC2FFA928D9BDF400B144CD /* NfcReading+Encodable.swift in Sources */,
+				3BC2FFA028D8B6F500B144CD /* NfcReadingDocumentAutoCaptureContainerViewController.swift in Sources */,
+				3BC2FF7528CF6DEF00B144CD /* DocumentAutoCaptureContainerViewController.swift in Sources */,
+				3BC2FF9B28D8838100B144CD /* ActivityIndicatorViewController.swift in Sources */,
+				3BC2FFA228D8B8AB00B144CD /* NfcReadingViewController.swift in Sources */,
+				3BC2FF5F28CF462000B144CD /* SceneDelegate.swift in Sources */,
+				3BC2FFB128D9EC5800B144CD /* NfcReadingSampleResult.swift in Sources */,
+				3BC2FF8F28D4841C00B144CD /* FaceAutoCapture+Encodable.swift in Sources */,
+				3BC2FF9D28D8A8C800B144CD /* FaceMatcher+Encodable.swift in Sources */,
+				3BC2FFA628D8BDCE00B144CD /* NfcKeyFactory.swift in Sources */,
+				3BC2FF9728D85EDA00B144CD /* FaceMatchingExecutor.swift in Sources */,
+				3BC2FF8B28D2138500B144CD /* FaceAutoCaptureContainerViewController.swift in Sources */,
+				3BC2FFA428D8BAC300B144CD /* NfcReadingExecutor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3BC2FF6228CF462000B144CD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BC2FF6328CF462000B144CD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3BC2FF6728CF462200B144CD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BC2FF6828CF462200B144CD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3BC2FF7A28CF714F00B144CD /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BC2FF7928CF714F00B144CD /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3BC2FF6B28CF462200B144CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3BC2FF6C28CF462200B144CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3BC2FF6E28CF462200B144CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83795D1C83D69C0A9D3372AA /* Pods-DotSdkSamples.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DotSdkSamples/DotSdkSamples.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2FC5979W67;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DotSdkSamples/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "DOT SDK Samples";
+				INFOPLIST_KEY_NFCReaderUsageDescription = "Please allow access to the NFC hardware to enable reading of travel documents.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow access to the camera.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 4.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.innovatrics.dot.samples;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "DotSamples Development Profile";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3BC2FF6F28CF462200B144CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5810CE6CC32F27A5C1A315AA /* Pods-DotSdkSamples.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DotSdkSamples/DotSdkSamples.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2FC5979W67;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DotSdkSamples/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "DOT SDK Samples";
+				INFOPLIST_KEY_NFCReaderUsageDescription = "Please allow access to the NFC hardware to enable reading of travel documents.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow access to the camera.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 4.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.innovatrics.dot.samples;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "DotSamples Development Profile";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3BC2FF5428CF462000B144CD /* Build configuration list for PBXProject "DotSdkSamples" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BC2FF6B28CF462200B144CD /* Debug */,
+				3BC2FF6C28CF462200B144CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BC2FF6D28CF462200B144CD /* Build configuration list for PBXNativeTarget "DotSdkSamples" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BC2FF6E28CF462200B144CD /* Debug */,
+				3BC2FF6F28CF462200B144CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3BC2FF5128CF462000B144CD /* Project object */;
+}
