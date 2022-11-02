@@ -12,8 +12,8 @@ target 'DotSdkSamples' do
   pod 'dot-face-background-uniformity', '4.10.1'
   pod 'dot-face-expression-neutral', '4.10.1'
 
-  pod 'dot-document', '3.6.0'
+  pod 'dot-document', '3.7.0'
 
-  pod 'dot-nfc', '2.3.1'
+  pod 'dot-nfc', '2.3.2'
 
 end
