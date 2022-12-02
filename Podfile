@@ -14,6 +14,6 @@ target 'DotSdkSamples' do
 
   pod 'dot-document', '3.7.0'
 
-  pod 'dot-nfc', '2.3.2'
+  pod 'dot-nfc', '2.3.3'
 
 end
