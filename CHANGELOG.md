@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.2.0 - 2022-12-15
+### Changed
+- updated DOT Face to 4.11.0
+
 ## 4.1.1 - 2022-12-02
 ### Changed
 - updated DOT NFC to 2.3.3
