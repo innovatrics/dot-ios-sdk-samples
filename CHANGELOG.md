@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.2.1 - 2023-01-19
+### Changed
+- updated DOT Face to 4.11.1
+- updated DOT Document to 3.7.1
+
 ## 4.2.0 - 2022-12-15
 ### Changed
 - updated DOT Face to 4.11.0

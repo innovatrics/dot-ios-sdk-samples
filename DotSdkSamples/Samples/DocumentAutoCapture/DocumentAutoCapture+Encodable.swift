@@ -54,8 +54,8 @@ extension DocumentDetector.Result: Encodable {
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: Keys.self)
         try container.encode(confidence, forKey: .confidence)
-        try container.encodeIfPresent(widthToHeightRatio?.value, forKey: .widthToHeightRatio)
-        try container.encodeIfPresent(corners, forKey: .corners)
+        try container.encode(widthToHeightRatio.value, forKey: .widthToHeightRatio)
+        try container.encode(corners, forKey: .corners)
     }
 }
 
