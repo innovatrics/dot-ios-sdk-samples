@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.3.0 - 2023-01-27
+### Changed
+- updated DOT SDK to 5.0.0
+
 ## 4.2.1 - 2023-01-19
 ### Changed
 - updated DOT Face to 4.11.1

@@ -7,7 +7,7 @@ class NfcReadingDocumentAutoCaptureContainerViewController: ContainerViewControl
     private let nfcKeyFactory = NfcKeyFactory()
     
     init() {
-        let configuration = try! DocumentAutoCaptureConfiguration(isMrzReadingEnabled: true)
+        let configuration = DocumentAutoCaptureConfiguration(isMrzReadingEnabled: true)
         let viewController = DocumentAutoCaptureViewController.create(configuration: configuration)
         super.init(viewController: viewController)
         viewController.delegate = self
