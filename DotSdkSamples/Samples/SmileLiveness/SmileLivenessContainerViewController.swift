@@ -1,5 +1,6 @@
 import UIKit
 import DotFaceCore
+import DotCore
 
 class SmileLivenessContainerViewController: ContainerViewController {
     

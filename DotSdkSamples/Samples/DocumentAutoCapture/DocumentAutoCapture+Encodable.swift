@@ -1,5 +1,6 @@
 import Foundation
 import DotDocument
+import DotCore
 
 extension DocumentAutoCaptureResult: Encodable {
     

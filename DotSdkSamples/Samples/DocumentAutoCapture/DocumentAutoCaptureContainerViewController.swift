@@ -1,5 +1,6 @@
 import UIKit
 import DotDocument
+import DotCore
 
 class DocumentAutoCaptureContainerViewController: ContainerViewController {
     
