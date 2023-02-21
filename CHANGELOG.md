@@ -1,5 +1,12 @@
 # Changelog
 
+## 4.4.1 - 2023-02-21
+### Added
+- updated project to use Swift Package Manager
+
+### Changed
+- updated DOT SDK to 5.1.1
+
 ## 4.4.0 - 2023-02-08
 ### Changed
 - updated DOT SDK to 5.1.0

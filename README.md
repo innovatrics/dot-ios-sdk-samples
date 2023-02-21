@@ -2,11 +2,22 @@
 
 A collection of quickstart samples demonstrating the DOT iOS SDK. [Read more about DOT iOS SDK](https://developers.innovatrics.com/digital-onboarding/technical/ios-development/).
 
-## Setup
+## Dependencies
 
+### Swift Package Manager
+1. The project is configured to use Swift Package Manager by default. [Location of DOT iOS SDK Swift packages](https://github.com/innovatrics/dot-ios-sdk-spm.git).
+1. After you open DotSdkSamples.xcodeproj, Xcode will automatically download required packages.
+1. If you encounter an error while downloading packages, try one of the following: Xcode->File->Packages->Reset Package Caches/Update to Latest Package Versions 
+1. Swift package dependencies can be added or removed in Xcode in the **Package Dependencies** tab of DotSdkSamples project.
+
+### CocoaPods
+1. Remove Swift package dependencies as it is described in the **Swift Package Manager** section above.
 1. Check if your CocoaPods is up to date with the command `pod --version`. If not, use the command `[sudo] gem install cocoapods`.
 1. Run `pod install --repo-update` command in the project directory.
 1. After the pod installation is finished, open DotSdkSamples.xcworkspace in Xcode.
+
+## Setup
+
 1. In the **General** tab of DotSdkSamples target, choose your unique **Bundle Identifier**. This identifier is used for the generation of the license.
 1. Complete app signing configuration using your certificates and profiles.
 1. Run the sample and your **LicenseId** will be printed in the terminal.

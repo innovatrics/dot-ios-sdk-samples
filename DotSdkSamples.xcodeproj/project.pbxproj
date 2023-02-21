@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B053F60299FBC0D00F74426 /* DotDocument in Frameworks */ = {isa = PBXBuildFile; productRef = 3B053F5F299FBC0D00F74426 /* DotDocument */; };
+		3B053F62299FBC0D00F74426 /* DotFaceBackgroundUniformity in Frameworks */ = {isa = PBXBuildFile; productRef = 3B053F61299FBC0D00F74426 /* DotFaceBackgroundUniformity */; };
+		3B053F64299FBC0D00F74426 /* DotFaceDetectionFast in Frameworks */ = {isa = PBXBuildFile; productRef = 3B053F63299FBC0D00F74426 /* DotFaceDetectionFast */; };
+		3B053F66299FBC0D00F74426 /* DotFaceExpressionNeutral in Frameworks */ = {isa = PBXBuildFile; productRef = 3B053F65299FBC0D00F74426 /* DotFaceExpressionNeutral */; };
+		3B053F68299FBC0D00F74426 /* DotFacePassiveLiveness in Frameworks */ = {isa = PBXBuildFile; productRef = 3B053F67299FBC0D00F74426 /* DotFacePassiveLiveness */; };
+		3B053F6A299FBC0D00F74426 /* DotFaceVerification in Frameworks */ = {isa = PBXBuildFile; productRef = 3B053F69299FBC0D00F74426 /* DotFaceVerification */; };
+		3B053F6C299FBC0D00F74426 /* DotNfc in Frameworks */ = {isa = PBXBuildFile; productRef = 3B053F6B299FBC0D00F74426 /* DotNfc */; };
 		3BC2FF5D28CF462000B144CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF5C28CF462000B144CD /* AppDelegate.swift */; };
 		3BC2FF5F28CF462000B144CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF5E28CF462000B144CD /* SceneDelegate.swift */; };
 		3BC2FF6128CF462000B144CD /* SamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF6028CF462000B144CD /* SamplesViewController.swift */; };
@@ -39,7 +46,6 @@
 		3BC2FFB528D9FB3100B144CD /* DetectedFaceEvaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FFB428D9FB3100B144CD /* DetectedFaceEvaluator.swift */; };
 		3BC2FFB728DA046800B144CD /* master_list.pem in Resources */ = {isa = PBXBuildFile; fileRef = 3BC2FFB628DA046800B144CD /* master_list.pem */; };
 		3BC2FFB928DB099200B144CD /* UIAlertController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FFB828DB099200B144CD /* UIAlertController+Ext.swift */; };
-		5BC669F9F216894A735B2FE3 /* Pods_DotSdkSamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B61D9645A79F1043FC8A812 /* Pods_DotSdkSamples.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,9 +84,6 @@
 		3BC2FFB428D9FB3100B144CD /* DetectedFaceEvaluator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectedFaceEvaluator.swift; sourceTree = "<group>"; };
 		3BC2FFB628DA046800B144CD /* master_list.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = master_list.pem; sourceTree = "<group>"; };
 		3BC2FFB828DB099200B144CD /* UIAlertController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Ext.swift"; sourceTree = "<group>"; };
-		5810CE6CC32F27A5C1A315AA /* Pods-DotSdkSamples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotSdkSamples.release.xcconfig"; path = "Target Support Files/Pods-DotSdkSamples/Pods-DotSdkSamples.release.xcconfig"; sourceTree = "<group>"; };
-		5B61D9645A79F1043FC8A812 /* Pods_DotSdkSamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DotSdkSamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		83795D1C83D69C0A9D3372AA /* Pods-DotSdkSamples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotSdkSamples.debug.xcconfig"; path = "Target Support Files/Pods-DotSdkSamples/Pods-DotSdkSamples.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +91,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BC669F9F216894A735B2FE3 /* Pods_DotSdkSamples.framework in Frameworks */,
+				3B053F6C299FBC0D00F74426 /* DotNfc in Frameworks */,
+				3B053F68299FBC0D00F74426 /* DotFacePassiveLiveness in Frameworks */,
+				3B053F60299FBC0D00F74426 /* DotDocument in Frameworks */,
+				3B053F6A299FBC0D00F74426 /* DotFaceVerification in Frameworks */,
+				3B053F66299FBC0D00F74426 /* DotFaceExpressionNeutral in Frameworks */,
+				3B053F64299FBC0D00F74426 /* DotFaceDetectionFast in Frameworks */,
+				3B053F62299FBC0D00F74426 /* DotFaceBackgroundUniformity in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +109,6 @@
 			children = (
 				3BC2FF5B28CF462000B144CD /* DotSdkSamples */,
 				3BC2FF5A28CF462000B144CD /* Products */,
-				D882853C4CCB3F9299AC765E /* Pods */,
 				E801544B8D724CDFE5D73259 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -202,19 +210,9 @@
 			path = NfcReading;
 			sourceTree = "<group>";
 		};
-		D882853C4CCB3F9299AC765E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				83795D1C83D69C0A9D3372AA /* Pods-DotSdkSamples.debug.xcconfig */,
-				5810CE6CC32F27A5C1A315AA /* Pods-DotSdkSamples.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		E801544B8D724CDFE5D73259 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5B61D9645A79F1043FC8A812 /* Pods_DotSdkSamples.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -226,17 +224,24 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BC2FF6D28CF462200B144CD /* Build configuration list for PBXNativeTarget "DotSdkSamples" */;
 			buildPhases = (
-				DC674B0D442F4607072B7A87 /* [CP] Check Pods Manifest.lock */,
 				3BC2FF5528CF462000B144CD /* Sources */,
 				3BC2FF5628CF462000B144CD /* Frameworks */,
 				3BC2FF5728CF462000B144CD /* Resources */,
-				2549F9C631BAE5A6B02FD075 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = DotSdkSamples;
+			packageProductDependencies = (
+				3B053F5F299FBC0D00F74426 /* DotDocument */,
+				3B053F61299FBC0D00F74426 /* DotFaceBackgroundUniformity */,
+				3B053F63299FBC0D00F74426 /* DotFaceDetectionFast */,
+				3B053F65299FBC0D00F74426 /* DotFaceExpressionNeutral */,
+				3B053F67299FBC0D00F74426 /* DotFacePassiveLiveness */,
+				3B053F69299FBC0D00F74426 /* DotFaceVerification */,
+				3B053F6B299FBC0D00F74426 /* DotNfc */,
+			);
 			productName = DotSdkSamples;
 			productReference = 3BC2FF5928CF462000B144CD /* DotSdkSamples.app */;
 			productType = "com.apple.product-type.application";
@@ -265,6 +270,9 @@
 				Base,
 			);
 			mainGroup = 3BC2FF5028CF462000B144CD;
+			packageReferences = (
+				3B053F5E299FBC0D00F74426 /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */,
+			);
 			productRefGroup = 3BC2FF5A28CF462000B144CD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -289,48 +297,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		2549F9C631BAE5A6B02FD075 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DotSdkSamples/Pods-DotSdkSamples-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DotSdkSamples/Pods-DotSdkSamples-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DotSdkSamples/Pods-DotSdkSamples-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DC674B0D442F4607072B7A87 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DotSdkSamples-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3BC2FF5528CF462000B144CD /* Sources */ = {
@@ -512,7 +478,6 @@
 		};
 		3BC2FF6E28CF462200B144CD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 83795D1C83D69C0A9D3372AA /* Pods-DotSdkSamples.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -537,7 +502,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.4.0;
+				MARKETING_VERSION = 4.4.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.innovatrics.dot.samples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "DotSamples Development Profile";
@@ -549,7 +514,6 @@
 		};
 		3BC2FF6F28CF462200B144CD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5810CE6CC32F27A5C1A315AA /* Pods-DotSdkSamples.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -574,7 +538,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.4.0;
+				MARKETING_VERSION = 4.4.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.innovatrics.dot.samples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "DotSamples Development Profile";
@@ -606,6 +570,55 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3B053F5E299FBC0D00F74426 /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/innovatrics/dot-ios-sdk-spm.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3B053F5F299FBC0D00F74426 /* DotDocument */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B053F5E299FBC0D00F74426 /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */;
+			productName = DotDocument;
+		};
+		3B053F61299FBC0D00F74426 /* DotFaceBackgroundUniformity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B053F5E299FBC0D00F74426 /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */;
+			productName = DotFaceBackgroundUniformity;
+		};
+		3B053F63299FBC0D00F74426 /* DotFaceDetectionFast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B053F5E299FBC0D00F74426 /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */;
+			productName = DotFaceDetectionFast;
+		};
+		3B053F65299FBC0D00F74426 /* DotFaceExpressionNeutral */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B053F5E299FBC0D00F74426 /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */;
+			productName = DotFaceExpressionNeutral;
+		};
+		3B053F67299FBC0D00F74426 /* DotFacePassiveLiveness */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B053F5E299FBC0D00F74426 /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */;
+			productName = DotFacePassiveLiveness;
+		};
+		3B053F69299FBC0D00F74426 /* DotFaceVerification */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B053F5E299FBC0D00F74426 /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */;
+			productName = DotFaceVerification;
+		};
+		3B053F6B299FBC0D00F74426 /* DotNfc */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B053F5E299FBC0D00F74426 /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */;
+			productName = DotNfc;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3BC2FF5128CF462000B144CD /* Project object */;
 }
