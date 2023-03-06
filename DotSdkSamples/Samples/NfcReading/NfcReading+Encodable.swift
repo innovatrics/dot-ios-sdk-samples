@@ -6,8 +6,7 @@ extension TravelDocument: Encodable {
     enum Keys: String, CodingKey {
         case ldsVersion
         case accessControlProtocolUsed
-        case passiveAuthenticationStatus
-        case activeAuthenticationStatus
+        case authenticationStatus
         case ldsMasterFile
         case machineReadableZoneInformation
         case encodedIdentificationFeaturesFace
@@ -21,8 +20,7 @@ extension TravelDocument: Encodable {
         var container = encoder.container(keyedBy: Keys.self)
         try container.encode(ldsVersion, forKey: .ldsVersion)
         try container.encode(accessControlProtocolUsed, forKey: .accessControlProtocolUsed)
-        try container.encode(passiveAuthenticationStatus, forKey: .passiveAuthenticationStatus)
-        try container.encode(activeAuthenticationStatus, forKey: .activeAuthenticationStatus)
+        try container.encode(authenticationStatus, forKey: .authenticationStatus)
         try container.encode(ldsMasterFile, forKey: .ldsMasterFile)
         try container.encode(machineReadableZoneInformation, forKey: .machineReadableZoneInformation)
         try container.encode(encodedIdentificationFeaturesFace, forKey: .encodedIdentificationFeaturesFace)
@@ -290,31 +288,44 @@ extension AccessControlProtocol: Encodable {
     }
 }
 
-extension PassiveAuthenticationStatus: Encodable {
-    
+extension AuthenticationStatus: Encodable {
+   
     enum Keys: String, CodingKey {
-        case success
-        case failed
-        case notSupported
-        case authorityCertificatesNotProvided
+        case data
+        case chip
     }
     
     public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encode(self.description)
+        var container = encoder.container(keyedBy: Keys.self)
+        try container.encode(data, forKey: .data)
+        try container.encode(chip, forKey: .chip)
     }
 }
 
-extension ActiveAuthenticationStatus: Encodable {
-    
+extension DataAuthenticationStatus: Encodable {
+   
     enum Keys: String, CodingKey {
-        case success
-        case failed
-        case notSupported
+        case status
+        case authenticationProtocol
     }
     
     public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encode(self.description)
+        var container = encoder.container(keyedBy: Keys.self)
+        try container.encode(status.description, forKey: .status)
+        try container.encode(authenticationProtocol.description, forKey: .authenticationProtocol)
+    }
+}
+
+extension ChipAuthenticationStatus: Encodable {
+   
+    enum Keys: String, CodingKey {
+        case status
+        case authenticationProtocol
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: Keys.self)
+        try container.encode(status.description, forKey: .status)
+        try container.encodeIfPresent(authenticationProtocol?.authenticationProtocol.description, forKey: .authenticationProtocol)
     }
 }

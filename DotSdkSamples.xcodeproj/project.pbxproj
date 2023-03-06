@@ -502,7 +502,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.4.1;
+				MARKETING_VERSION = 4.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.innovatrics.dot.samples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "DotSamples Development Profile";
@@ -538,7 +538,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.4.1;
+				MARKETING_VERSION = 4.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.innovatrics.dot.samples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "DotSamples Development Profile";
@@ -577,7 +577,7 @@
 			repositoryURL = "https://github.com/innovatrics/dot-ios-sdk-spm.git";
 			requirement = {
 				kind = exactVersion;
-				version = 5.1.1;
+				version = 5.2.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
