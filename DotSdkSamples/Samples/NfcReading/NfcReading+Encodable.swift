@@ -138,20 +138,6 @@ extension Image: Encodable {
     }
 }
 
-extension ImageSize: Encodable {
-    
-    enum Keys: String, CodingKey {
-        case width
-        case height
-    }
-    
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: Keys.self)
-        try container.encode(width, forKey: .width)
-        try container.encode(height, forKey: .height)
-    }
-}
-
 extension ImageFormat: Encodable {
     
     enum Keys: String, CodingKey {

@@ -4,6 +4,7 @@ import DotNfc
 class NfcReadingSampleResult: SampleResult {
     
     let image: UIImage
+    let resultDescription: String? = nil
     let travelDocument: TravelDocument
     
     init(image: UIImage, travelDocument: TravelDocument) {

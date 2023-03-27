@@ -4,6 +4,7 @@ import UIKit
 class DocumentAutoCaptureSampleResult: SampleResult {
     
     let image: UIImage
+    let resultDescription: String? = nil
     let documentAutoCaptureResult: DocumentAutoCaptureResult
     
     init(image: UIImage, documentAutoCaptureResult: DocumentAutoCaptureResult) {

@@ -32,6 +32,7 @@ A collection of quickstart samples demonstrating the DOT iOS SDK. [Read more abo
 | **Document Auto Capture** | Basic component sample.                                                                                               |
 | **NFC Reading**           | Combination of Document Auto Capture component with enabled MRZ recognition and NFC Travel Document Reader component. |
 | **Face Auto Capture**     | Component with Passive Liveness evaluation.                                                                           |
+| **MagnifEye Liveness**    | Basic component sample.                                                                                               |
 | **Smile Liveness**        | Basic component sample.                                                                                               |
 | **Face Matcher**          | Perform face matching using image resources.                                                                          |
 

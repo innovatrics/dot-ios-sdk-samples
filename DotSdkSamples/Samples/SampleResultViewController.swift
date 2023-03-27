@@ -2,6 +2,7 @@ import UIKit
 
 protocol SampleResult: Encodable {
     var image: UIImage { get }
+    var resultDescription: String? { get }
 }
 
 class SampleResultViewController<T: SampleResult>: UIViewController {
@@ -56,7 +57,7 @@ extension SampleResultViewController {
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.isEditable = false
         textView.isScrollEnabled = false
-        textView.text = String(data: try! encoder.encode(sampleResult), encoding: .utf8)
+        textView.text = sampleResult.resultDescription ?? String(data: try! encoder.encode(sampleResult), encoding: .utf8)
         textView.font = .systemFont(ofSize: 14)
     }
     

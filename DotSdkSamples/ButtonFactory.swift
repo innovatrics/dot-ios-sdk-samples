@@ -3,13 +3,14 @@ import UIKit
 struct ButtonFactory {
     
     enum ButtonType {
-        case documentAutoCapture, nfcReading, faceAutoCapture, smileLiveness, faceMatcher
+        case documentAutoCapture, nfcReading, faceAutoCapture, magnifEyeLiveness, smileLiveness, faceMatcher
         
         var title: String {
             switch self {
             case .documentAutoCapture: return NSLocalizedString("samples.document_auto_capture.title", comment: "")
             case .nfcReading: return NSLocalizedString("samples.nfc_reading.title", comment: "")
             case .faceAutoCapture: return NSLocalizedString("samples.face_auto_capture.title", comment: "")
+            case .magnifEyeLiveness: return NSLocalizedString("samples.magnifeye_liveness.title", comment: "")
             case .smileLiveness: return NSLocalizedString("samples.smile_liveness.title", comment: "")
             case .faceMatcher: return NSLocalizedString("samples.face_matcher.title", comment: "")
             }
@@ -20,6 +21,7 @@ struct ButtonFactory {
             case .documentAutoCapture: return NSLocalizedString("samples.document_auto_capture.subtitle", comment: "")
             case .nfcReading: return NSLocalizedString("samples.nfc_reading.subtitle", comment: "")
             case .faceAutoCapture: return NSLocalizedString("samples.face_auto_capture.subtitle", comment: "")
+            case .magnifEyeLiveness: return NSLocalizedString("samples.magnifeye_liveness.subtitle", comment: "")
             case .smileLiveness: return NSLocalizedString("samples.smile_liveness.subtitle", comment: "")
             case .faceMatcher: return NSLocalizedString("samples.face_matcher.subtitle", comment: "")
             }
@@ -30,6 +32,7 @@ struct ButtonFactory {
             case .documentAutoCapture: return 55
             case .nfcReading: return 85
             case .faceAutoCapture: return 55
+            case .magnifEyeLiveness: return 55
             case .smileLiveness: return 55
             case .faceMatcher: return 55
             }

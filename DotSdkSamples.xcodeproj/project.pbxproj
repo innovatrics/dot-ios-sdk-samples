@@ -14,6 +14,7 @@
 		3B053F68299FBC0D00F74426 /* DotFacePassiveLiveness in Frameworks */ = {isa = PBXBuildFile; productRef = 3B053F67299FBC0D00F74426 /* DotFacePassiveLiveness */; };
 		3B053F6A299FBC0D00F74426 /* DotFaceVerification in Frameworks */ = {isa = PBXBuildFile; productRef = 3B053F69299FBC0D00F74426 /* DotFaceVerification */; };
 		3B053F6C299FBC0D00F74426 /* DotNfc in Frameworks */ = {isa = PBXBuildFile; productRef = 3B053F6B299FBC0D00F74426 /* DotNfc */; };
+		3B569AEA29CC44E3007A34EE /* MagnifEyeLivenessContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B569AE829CC44E3007A34EE /* MagnifEyeLivenessContainerViewController.swift */; };
 		3BC2FF5D28CF462000B144CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF5C28CF462000B144CD /* AppDelegate.swift */; };
 		3BC2FF5F28CF462000B144CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF5E28CF462000B144CD /* SceneDelegate.swift */; };
 		3BC2FF6128CF462000B144CD /* SamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF6028CF462000B144CD /* SamplesViewController.swift */; };
@@ -46,9 +47,11 @@
 		3BC2FFB528D9FB3100B144CD /* DetectedFaceEvaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FFB428D9FB3100B144CD /* DetectedFaceEvaluator.swift */; };
 		3BC2FFB728DA046800B144CD /* master_list.pem in Resources */ = {isa = PBXBuildFile; fileRef = 3BC2FFB628DA046800B144CD /* master_list.pem */; };
 		3BC2FFB928DB099200B144CD /* UIAlertController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FFB828DB099200B144CD /* UIAlertController+Ext.swift */; };
+		3BD0E8A829CC6B760027E4FF /* MagnifEyeLivenessResult+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD0E8A729CC6B760027E4FF /* MagnifEyeLivenessResult+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B569AE829CC44E3007A34EE /* MagnifEyeLivenessContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagnifEyeLivenessContainerViewController.swift; sourceTree = "<group>"; };
 		3BC2FF5928CF462000B144CD /* DotSdkSamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DotSdkSamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BC2FF5C28CF462000B144CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BC2FF5E28CF462000B144CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +87,7 @@
 		3BC2FFB428D9FB3100B144CD /* DetectedFaceEvaluator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectedFaceEvaluator.swift; sourceTree = "<group>"; };
 		3BC2FFB628DA046800B144CD /* master_list.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = master_list.pem; sourceTree = "<group>"; };
 		3BC2FFB828DB099200B144CD /* UIAlertController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Ext.swift"; sourceTree = "<group>"; };
+		3BD0E8A729CC6B760027E4FF /* MagnifEyeLivenessResult+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MagnifEyeLivenessResult+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B569AE729CC44E3007A34EE /* MagnifEyeLiveness */ = {
+			isa = PBXGroup;
+			children = (
+				3B569AE829CC44E3007A34EE /* MagnifEyeLivenessContainerViewController.swift */,
+				3BD0E8A729CC6B760027E4FF /* MagnifEyeLivenessResult+Extension.swift */,
+			);
+			path = MagnifEyeLiveness;
+			sourceTree = "<group>";
+		};
 		3BC2FF5028CF462000B144CD = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +163,7 @@
 				3BC2FF8228D1E8ED00B144CD /* DocumentAutoCapture */,
 				3BC2FF9E28D8B66800B144CD /* NfcReading */,
 				3BC2FF8528D1F85A00B144CD /* FaceAutoCapture */,
+				3B569AE729CC44E3007A34EE /* MagnifEyeLiveness */,
 				3BC2FF9028D4A5F800B144CD /* SmileLiveness */,
 				3BC2FF9328D85D9A00B144CD /* FaceMatcher */,
 			);
@@ -317,10 +331,12 @@
 				3BC2FF8428D1E91F00B144CD /* DocumentAutoCapture+Encodable.swift in Sources */,
 				3BC2FF7328CF6D0F00B144CD /* ContainerViewController.swift in Sources */,
 				3BC2FFA928D9BDF400B144CD /* NfcReading+Encodable.swift in Sources */,
+				3B569AEA29CC44E3007A34EE /* MagnifEyeLivenessContainerViewController.swift in Sources */,
 				3BC2FFA028D8B6F500B144CD /* NfcReadingDocumentAutoCaptureContainerViewController.swift in Sources */,
 				3BC2FF7528CF6DEF00B144CD /* DocumentAutoCaptureContainerViewController.swift in Sources */,
 				3BC2FF9B28D8838100B144CD /* ActivityIndicatorViewController.swift in Sources */,
 				3BC2FFA228D8B8AB00B144CD /* NfcReadingViewController.swift in Sources */,
+				3BD0E8A829CC6B760027E4FF /* MagnifEyeLivenessResult+Extension.swift in Sources */,
 				3BC2FF5F28CF462000B144CD /* SceneDelegate.swift in Sources */,
 				3BC2FFB128D9EC5800B144CD /* NfcReadingSampleResult.swift in Sources */,
 				3BC2FF8F28D4841C00B144CD /* FaceAutoCapture+Encodable.swift in Sources */,
@@ -502,7 +518,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.5.0;
+				MARKETING_VERSION = 4.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.innovatrics.dot.samples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "DotSamples Development Profile";
@@ -538,7 +554,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.5.0;
+				MARKETING_VERSION = 4.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.innovatrics.dot.samples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "DotSamples Development Profile";
@@ -577,7 +593,7 @@
 			repositoryURL = "https://github.com/innovatrics/dot-ios-sdk-spm.git";
 			requirement = {
 				kind = exactVersion;
-				version = 5.2.0;
+				version = 5.4.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

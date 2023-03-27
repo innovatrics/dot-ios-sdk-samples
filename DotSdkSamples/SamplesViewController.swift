@@ -14,12 +14,14 @@ class SamplesViewController: UIViewController {
     private lazy var nfcReadingButton = buttonFactory.create(.nfcReading)
     private lazy var faceAutoCaptureButton = buttonFactory.create(.faceAutoCapture)
     private lazy var smileLivenessButton = buttonFactory.create(.smileLiveness)
+    private lazy var magnifEyeLivenessButton = buttonFactory.create(.magnifEyeLiveness)
     private lazy var faceMatcherButton = buttonFactory.create(.faceMatcher)
     
     private lazy var buttons: [UIButton] = [documentAutoCaptureButton,
                                             nfcReadingButton,
                                             faceAutoCaptureButton,
                                             smileLivenessButton,
+                                            magnifEyeLivenessButton,
                                             faceMatcherButton]
     
     override func viewDidLoad() {
@@ -53,6 +55,11 @@ extension SamplesViewController {
         guard checkDotFaceIsInitialized() else { return }
         
         let viewController = FaceAutoCaptureContainerViewController()
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    @objc private func showMagnifEyeLiveness() {
+        let viewController = MagnifEyeLivenessContainerViewController()
         navigationController?.pushViewController(viewController, animated: true)
     }
     
@@ -109,6 +116,7 @@ extension SamplesViewController {
         nfcReadingButton.addTarget(self, action: #selector(showNfcReading), for: .touchUpInside)
         faceAutoCaptureButton.addTarget(self, action: #selector(showFaceAutoCapture), for: .touchUpInside)
         smileLivenessButton.addTarget(self, action: #selector(showSmileLiveness), for: .touchUpInside)
+        magnifEyeLivenessButton.addTarget(self, action: #selector(showMagnifEyeLiveness), for: .touchUpInside)
         faceMatcherButton.addTarget(self, action: #selector(showFaceMatcher), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
@@ -132,6 +140,7 @@ extension SamplesViewController {
             nfcReadingButton.heightAnchor.constraint(equalToConstant: buttonFactory.getHeight(.nfcReading)),
             faceAutoCaptureButton.heightAnchor.constraint(equalToConstant: buttonFactory.getHeight(.faceAutoCapture)),
             smileLivenessButton.heightAnchor.constraint(equalToConstant: buttonFactory.getHeight(.smileLiveness)),
+            magnifEyeLivenessButton.heightAnchor.constraint(equalToConstant: buttonFactory.getHeight(.magnifEyeLiveness)),
             faceMatcherButton.heightAnchor.constraint(equalToConstant: buttonFactory.getHeight(.faceMatcher)),
         ])
     }

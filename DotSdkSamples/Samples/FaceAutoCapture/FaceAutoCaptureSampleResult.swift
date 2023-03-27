@@ -4,11 +4,12 @@ import DotFaceCore
 class FaceAutoCaptureSampleResult: SampleResult {
     
     let image: UIImage
+    let resultDescription: String? = nil
     let confidence: Double
     let passiveLivenessFaceAttribute: FaceAttribute
     let faceAspects: FaceAspects
     let faceQuality: FaceQuality
-    
+
     init(image: UIImage, confidence: Double, passiveLivenessFaceAttribute: FaceAttribute, faceAspects: FaceAspects, faceQuality: FaceQuality) {
         self.image = image
         self.confidence = confidence
