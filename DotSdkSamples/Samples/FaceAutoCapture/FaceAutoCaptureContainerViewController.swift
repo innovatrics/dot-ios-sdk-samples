@@ -3,9 +3,12 @@ import DotFaceCore
 
 class FaceAutoCaptureContainerViewController: ContainerViewController {
     
+    struct NoFaceDetectedError: LocalizedError {
+        var errorDescription: String? { return "No face detected." }
+    }
+    
     init() {
-        let provider = PassiveLivenessQualityProvider()
-        let configuration = FaceAutoCaptureConfiguration(qualityAttributes: provider.getQualityAttributes())
+        let configuration = FaceAutoCaptureConfiguration(qualityAttributeThresholds: FaceAutoCaptureConfiguration.QualityAttributeThresholdPresets.passiveLiveness.build())
         let viewController = FaceAutoCaptureViewController.create(configuration: configuration)
         super.init(viewController: viewController)
         viewController.delegate = self
@@ -38,10 +41,12 @@ class FaceAutoCaptureContainerViewController: ContainerViewController {
 
 extension FaceAutoCaptureContainerViewController: FaceAutoCaptureViewControllerDelegate {
     
-    func faceAutoCaptureViewController(_ viewController: FaceAutoCaptureViewController, stepChanged captureStepId: CaptureStepId, with detectedFace: DetectedFace?) {}
-    
-    func faceAutoCaptureViewController(_ viewController: FaceAutoCaptureViewController, captured detectedFace: DetectedFace) {
+    func faceAutoCaptureViewController(_ viewController: FaceAutoCaptureViewController, captured result: FaceAutoCaptureResult) {
         Task {
+            guard let detectedFace = result.detectedFace else {
+                presentErrorAlert(NoFaceDetectedError())
+                return
+            }
             do {
                 let faceAutoCaptureSampleResult = try await DetectedFaceEvaluator().evaluate(detectedFace)
                 navigateToResultViewController(faceAutoCaptureSampleResult)
@@ -50,7 +55,7 @@ extension FaceAutoCaptureContainerViewController: FaceAutoCaptureViewControllerD
             }
         }
     }
-    
+        
     func faceAutoCaptureViewControllerViewWillAppear(_ viewController: FaceAutoCaptureViewController) {
         viewController.start()
     }

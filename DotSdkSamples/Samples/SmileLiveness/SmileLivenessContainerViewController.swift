@@ -23,10 +23,8 @@ class SmileLivenessContainerViewController: ContainerViewController {
     private func navigateToResultViewController(_ smileLivenessResult: SmileLivenessResult) {
         guard let samplesViewController = navigationController?.viewControllers.first else { return }
         
-        let images = [smileLivenessResult.neutralExpressionFace.image, smileLivenessResult.smileExpressionFace.image].map { bgrRawImage in
-            return UIImage(cgImage: CGImageFactory.create(bgrRawImage: bgrRawImage))
-        }
-        let resultViewController = SmileLivenessSampleResultViewController(images: images)
+        let image = UIImage(cgImage: CGImageFactory.create(bgrRawImage: smileLivenessResult.bgrRawImage))
+        let resultViewController = SmileLivenessSampleResultViewController(images: [image])
         navigationController?.setViewControllers([samplesViewController, resultViewController], animated: true)
     }
 }

@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.7.0 - 2023-06-14
+### Changed
+- updated `master_list.pem`
+- updated DOT SDK to 6.0.0
+
 ## 4.6.0 - 2023-03-27
 ### Added
 - new sample: MagnifEye Liveness

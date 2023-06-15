@@ -32,13 +32,14 @@ extension SmileLivenessSampleResultViewController {
     
     private func setupImages() {
         
+        let imageCount = CGFloat(images.count)
         images.forEach { image in
             let imageView = UIImageView(image: image)
             imageView.contentMode = .scaleAspectFit
             imageView.setContentHuggingPriority(.required, for: .vertical)
             stackView.addArrangedSubview(imageView)
             imageView.translatesAutoresizingMaskIntoConstraints = false
-            imageView.widthAnchor.constraint(equalTo: stackView.widthAnchor, multiplier: 0.5).isActive = true
+            imageView.widthAnchor.constraint(equalTo: stackView.widthAnchor, multiplier: 1/imageCount).isActive = true
             imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor, multiplier: image.size.width/image.size.height).isActive = true
         }
     }
