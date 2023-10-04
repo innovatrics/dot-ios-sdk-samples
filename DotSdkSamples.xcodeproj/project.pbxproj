@@ -51,6 +51,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B4D53C52ACDA4BC009613BE /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		3B569AE829CC44E3007A34EE /* MagnifEyeLivenessContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagnifEyeLivenessContainerViewController.swift; sourceTree = "<group>"; };
 		3BC2FF5928CF462000B144CD /* DotSdkSamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DotSdkSamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BC2FF5C28CF462000B144CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +121,7 @@
 		3BC2FF5028CF462000B144CD = {
 			isa = PBXGroup;
 			children = (
+				3B4D53C52ACDA4BC009613BE /* CHANGELOG.md */,
 				3BC2FF5B28CF462000B144CD /* DotSdkSamples */,
 				3BC2FF5A28CF462000B144CD /* Products */,
 				E801544B8D724CDFE5D73259 /* Frameworks */,
@@ -518,7 +520,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.10.0;
+				MARKETING_VERSION = 4.11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.innovatrics.dot.samples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "DotSamples Development Profile";
@@ -554,7 +556,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.10.0;
+				MARKETING_VERSION = 4.11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.innovatrics.dot.samples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "DotSamples Development Profile";
@@ -593,7 +595,7 @@
 			repositoryURL = "https://github.com/innovatrics/dot-ios-sdk-spm.git";
 			requirement = {
 				kind = exactVersion;
-				version = 6.3.0;
+				version = 6.5.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
