@@ -15,13 +15,13 @@
 		3B053F6A299FBC0D00F74426 /* DotFaceVerification in Frameworks */ = {isa = PBXBuildFile; productRef = 3B053F69299FBC0D00F74426 /* DotFaceVerification */; };
 		3B053F6C299FBC0D00F74426 /* DotNfc in Frameworks */ = {isa = PBXBuildFile; productRef = 3B053F6B299FBC0D00F74426 /* DotNfc */; };
 		3B569AEA29CC44E3007A34EE /* MagnifEyeLivenessContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B569AE829CC44E3007A34EE /* MagnifEyeLivenessContainerViewController.swift */; };
+		3BB0F9342AF3F3B1004D9FD2 /* dot_license.lic in Resources */ = {isa = PBXBuildFile; fileRef = 3BB0F9332AF3F3B1004D9FD2 /* dot_license.lic */; };
 		3BC2FF5D28CF462000B144CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF5C28CF462000B144CD /* AppDelegate.swift */; };
 		3BC2FF5F28CF462000B144CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF5E28CF462000B144CD /* SceneDelegate.swift */; };
 		3BC2FF6128CF462000B144CD /* SamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF6028CF462000B144CD /* SamplesViewController.swift */; };
 		3BC2FF6428CF462000B144CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC2FF6228CF462000B144CD /* Main.storyboard */; };
 		3BC2FF6628CF462200B144CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BC2FF6528CF462200B144CD /* Assets.xcassets */; };
 		3BC2FF6928CF462200B144CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC2FF6728CF462200B144CD /* LaunchScreen.storyboard */; };
-		3BC2FF7128CF4D4900B144CD /* dot_face_license.lic in Resources */ = {isa = PBXBuildFile; fileRef = 3BC2FF7028CF4D4900B144CD /* dot_face_license.lic */; };
 		3BC2FF7328CF6D0F00B144CD /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF7228CF6D0F00B144CD /* ContainerViewController.swift */; };
 		3BC2FF7528CF6DEF00B144CD /* DocumentAutoCaptureContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF7428CF6DEF00B144CD /* DocumentAutoCaptureContainerViewController.swift */; };
 		3BC2FF7828CF714F00B144CD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3BC2FF7A28CF714F00B144CD /* Localizable.strings */; };
@@ -53,6 +53,7 @@
 /* Begin PBXFileReference section */
 		3B4D53C52ACDA4BC009613BE /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		3B569AE829CC44E3007A34EE /* MagnifEyeLivenessContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagnifEyeLivenessContainerViewController.swift; sourceTree = "<group>"; };
+		3BB0F9332AF3F3B1004D9FD2 /* dot_license.lic */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dot_license.lic; sourceTree = "<group>"; };
 		3BC2FF5928CF462000B144CD /* DotSdkSamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DotSdkSamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BC2FF5C28CF462000B144CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BC2FF5E28CF462000B144CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,7 +62,6 @@
 		3BC2FF6528CF462200B144CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BC2FF6828CF462200B144CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3BC2FF6A28CF462200B144CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3BC2FF7028CF4D4900B144CD /* dot_face_license.lic */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dot_face_license.lic; sourceTree = "<group>"; };
 		3BC2FF7228CF6D0F00B144CD /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		3BC2FF7428CF6DEF00B144CD /* DocumentAutoCaptureContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentAutoCaptureContainerViewController.swift; sourceTree = "<group>"; };
 		3BC2FF7928CF714F00B144CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -149,10 +149,10 @@
 				3BC2FF6528CF462200B144CD /* Assets.xcassets */,
 				3BC2FF6728CF462200B144CD /* LaunchScreen.storyboard */,
 				3BC2FF6A28CF462200B144CD /* Info.plist */,
-				3BC2FF7028CF4D4900B144CD /* dot_face_license.lic */,
 				3BC2FF7A28CF714F00B144CD /* Localizable.strings */,
 				3BC2FFA728D9A43500B144CD /* DotSdkSamples.entitlements */,
 				3BC2FFB628DA046800B144CD /* master_list.pem */,
+				3BB0F9332AF3F3B1004D9FD2 /* dot_license.lic */,
 			);
 			path = DotSdkSamples;
 			sourceTree = "<group>";
@@ -305,9 +305,9 @@
 			files = (
 				3BC2FF7828CF714F00B144CD /* Localizable.strings in Resources */,
 				3BC2FF6928CF462200B144CD /* LaunchScreen.storyboard in Resources */,
-				3BC2FF7128CF4D4900B144CD /* dot_face_license.lic in Resources */,
 				3BC2FF6628CF462200B144CD /* Assets.xcassets in Resources */,
 				3BC2FFB728DA046800B144CD /* master_list.pem in Resources */,
+				3BB0F9342AF3F3B1004D9FD2 /* dot_license.lic in Resources */,
 				3BC2FF6428CF462000B144CD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,7 +520,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.11.0;
+				MARKETING_VERSION = 4.12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.innovatrics.dot.samples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "DotSamples Development Profile";
@@ -556,7 +556,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.11.0;
+				MARKETING_VERSION = 4.12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.innovatrics.dot.samples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "DotSamples Development Profile";
@@ -595,7 +595,7 @@
 			repositoryURL = "https://github.com/innovatrics/dot-ios-sdk-spm.git";
 			requirement = {
 				kind = exactVersion;
-				version = 6.5.0;
+				version = 7.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

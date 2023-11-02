@@ -1,5 +1,6 @@
 import UIKit
 
+import DotCore
 import DotFaceCore
 import DotDocument
 import DotNfc
@@ -9,9 +10,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        print("DotFace version: \(DotFaceLibrary.versionName)")
-        print("DotDocument version: \(DotDocumentLibrary.versionName)")
-        print("DotNfc version: \(DotNfcLibrary.versionName)")
+        print("DotSdk version: \(DotSdk.shared.versionName)")
         
         DotFaceCore.Logger.logLevel = .debug
         DotDocument.Logger.logLevel = .debug

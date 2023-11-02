@@ -1,4 +1,5 @@
 import UIKit
+import DotCore
 import DotDocument
 import DotFaceCore
 
@@ -42,36 +43,42 @@ class SamplesViewController: UIViewController {
 extension SamplesViewController {
     
     @objc private func showDocumentAutoCapture() {
+        guard checkDotSdkIsInitialized() else { return }
+        
         let viewController = DocumentAutoCaptureContainerViewController()
         navigationController?.pushViewController(viewController, animated: true)
     }
     
     @objc private func showNfcReading() {
+        guard checkDotSdkIsInitialized() else { return }
+        
         let viewController = NfcReadingDocumentAutoCaptureContainerViewController()
         navigationController?.pushViewController(viewController, animated: true)
     }
     
     @objc private func showFaceAutoCapture() {
-        guard checkDotFaceIsInitialized() else { return }
+        guard checkDotSdkIsInitialized() else { return }
         
         let viewController = FaceAutoCaptureContainerViewController()
         navigationController?.pushViewController(viewController, animated: true)
     }
     
     @objc private func showMagnifEyeLiveness() {
+        guard checkDotSdkIsInitialized() else { return }
+        
         let viewController = MagnifEyeLivenessContainerViewController()
         navigationController?.pushViewController(viewController, animated: true)
     }
     
     @objc private func showSmileLiveness() {
-        guard checkDotFaceIsInitialized() else { return }
+        guard checkDotSdkIsInitialized() else { return }
         
         let viewController = SmileLivenessContainerViewController()
         navigationController?.pushViewController(viewController, animated: true)
     }
     
     @objc private func showFaceMatcher() {
-        guard checkDotFaceIsInitialized() else { return }
+        guard checkDotSdkIsInitialized() else { return }
         
         let viewController = FaceMatchingViewController()
         navigationController?.pushViewController(viewController, animated: true)
@@ -80,11 +87,11 @@ extension SamplesViewController {
 
 extension SamplesViewController {
     
-    private func checkDotFaceIsInitialized() -> Bool {
-        if DotFaceLibrary.shared.isInitialized {
+    private func checkDotSdkIsInitialized() -> Bool {
+        if DotSdk.shared.isInitialized {
             return true
         } else {
-            let alertController = UIAlertController.createErrorController(errorMessage: "DotFace is not initialized.")
+            let alertController = UIAlertController.createErrorController(errorMessage: "DotSdk is not initialized.")
             present(alertController, animated: true)
             return false
         }
