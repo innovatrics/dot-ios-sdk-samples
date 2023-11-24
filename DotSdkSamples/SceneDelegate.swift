@@ -6,8 +6,6 @@ import DotNfc
 
 import DotFaceCore
 import DotFaceDetectionFast
-import DotFacePassiveLiveness
-import DotFaceVerification
 import DotFaceBackgroundUniformity
 import DotFaceExpressionNeutral
 
@@ -53,8 +51,6 @@ extension SceneDelegate {
         return .init(
             modules: [
                 DotFaceDetectionFastModule.shared,
-                DotFacePassiveLivenessModule.shared,
-                DotFaceVerificationModule.shared,
                 DotFaceBackgroundUniformityModule.shared,
                 DotFaceExpressionNeutralModule.shared
             ]

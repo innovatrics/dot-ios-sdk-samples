@@ -31,10 +31,6 @@
 		3BC2FF8B28D2138500B144CD /* FaceAutoCaptureContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF8A28D2138400B144CD /* FaceAutoCaptureContainerViewController.swift */; };
 		3BC2FF8F28D4841C00B144CD /* FaceAutoCapture+Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF8E28D4841C00B144CD /* FaceAutoCapture+Encodable.swift */; };
 		3BC2FF9228D4A65300B144CD /* SmileLivenessContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF9128D4A65300B144CD /* SmileLivenessContainerViewController.swift */; };
-		3BC2FF9728D85EDA00B144CD /* FaceMatchingExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF9628D85EDA00B144CD /* FaceMatchingExecutor.swift */; };
-		3BC2FF9928D8761E00B144CD /* FaceMatchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF9828D8761E00B144CD /* FaceMatchingViewController.swift */; };
-		3BC2FF9B28D8838100B144CD /* ActivityIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF9A28D8838100B144CD /* ActivityIndicatorViewController.swift */; };
-		3BC2FF9D28D8A8C800B144CD /* FaceMatcher+Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF9C28D8A8C800B144CD /* FaceMatcher+Encodable.swift */; };
 		3BC2FFA028D8B6F500B144CD /* NfcReadingDocumentAutoCaptureContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF9F28D8B6F500B144CD /* NfcReadingDocumentAutoCaptureContainerViewController.swift */; };
 		3BC2FFA228D8B8AB00B144CD /* NfcReadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FFA128D8B8AB00B144CD /* NfcReadingViewController.swift */; };
 		3BC2FFA428D8BAC300B144CD /* NfcReadingExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FFA328D8BAC300B144CD /* NfcReadingExecutor.swift */; };
@@ -71,10 +67,6 @@
 		3BC2FF8A28D2138400B144CD /* FaceAutoCaptureContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceAutoCaptureContainerViewController.swift; sourceTree = "<group>"; };
 		3BC2FF8E28D4841C00B144CD /* FaceAutoCapture+Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FaceAutoCapture+Encodable.swift"; sourceTree = "<group>"; };
 		3BC2FF9128D4A65300B144CD /* SmileLivenessContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmileLivenessContainerViewController.swift; sourceTree = "<group>"; };
-		3BC2FF9628D85EDA00B144CD /* FaceMatchingExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceMatchingExecutor.swift; sourceTree = "<group>"; };
-		3BC2FF9828D8761E00B144CD /* FaceMatchingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceMatchingViewController.swift; sourceTree = "<group>"; };
-		3BC2FF9A28D8838100B144CD /* ActivityIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorViewController.swift; sourceTree = "<group>"; };
-		3BC2FF9C28D8A8C800B144CD /* FaceMatcher+Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FaceMatcher+Encodable.swift"; sourceTree = "<group>"; };
 		3BC2FF9F28D8B6F500B144CD /* NfcReadingDocumentAutoCaptureContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NfcReadingDocumentAutoCaptureContainerViewController.swift; sourceTree = "<group>"; };
 		3BC2FFA128D8B8AB00B144CD /* NfcReadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NfcReadingViewController.swift; sourceTree = "<group>"; };
 		3BC2FFA328D8BAC300B144CD /* NfcReadingExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NfcReadingExecutor.swift; sourceTree = "<group>"; };
@@ -167,7 +159,6 @@
 				3BC2FF8528D1F85A00B144CD /* FaceAutoCapture */,
 				3B569AE729CC44E3007A34EE /* MagnifEyeLiveness */,
 				3BC2FF9028D4A5F800B144CD /* SmileLiveness */,
-				3BC2FF9328D85D9A00B144CD /* FaceMatcher */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -200,17 +191,6 @@
 				3BC2FFB228D9EE4500B144CD /* SmileLivenessSampleResultViewController.swift */,
 			);
 			path = SmileLiveness;
-			sourceTree = "<group>";
-		};
-		3BC2FF9328D85D9A00B144CD /* FaceMatcher */ = {
-			isa = PBXGroup;
-			children = (
-				3BC2FF9628D85EDA00B144CD /* FaceMatchingExecutor.swift */,
-				3BC2FF9828D8761E00B144CD /* FaceMatchingViewController.swift */,
-				3BC2FF9A28D8838100B144CD /* ActivityIndicatorViewController.swift */,
-				3BC2FF9C28D8A8C800B144CD /* FaceMatcher+Encodable.swift */,
-			);
-			path = FaceMatcher;
 			sourceTree = "<group>";
 		};
 		3BC2FF9E28D8B66800B144CD /* NfcReading */ = {
@@ -323,7 +303,6 @@
 				3BC2FF7C28CF733C00B144CD /* ButtonFactory.swift in Sources */,
 				3BC2FF9228D4A65300B144CD /* SmileLivenessContainerViewController.swift in Sources */,
 				3BC2FF6128CF462000B144CD /* SamplesViewController.swift in Sources */,
-				3BC2FF9928D8761E00B144CD /* FaceMatchingViewController.swift in Sources */,
 				3BC2FFAD28D9E68400B144CD /* DocumentAutoCaptureSampleResult.swift in Sources */,
 				3BC2FFB328D9EE4500B144CD /* SmileLivenessSampleResultViewController.swift in Sources */,
 				3BC2FF7F28D0BE4F00B144CD /* SampleResultViewController.swift in Sources */,
@@ -336,15 +315,12 @@
 				3B569AEA29CC44E3007A34EE /* MagnifEyeLivenessContainerViewController.swift in Sources */,
 				3BC2FFA028D8B6F500B144CD /* NfcReadingDocumentAutoCaptureContainerViewController.swift in Sources */,
 				3BC2FF7528CF6DEF00B144CD /* DocumentAutoCaptureContainerViewController.swift in Sources */,
-				3BC2FF9B28D8838100B144CD /* ActivityIndicatorViewController.swift in Sources */,
 				3BC2FFA228D8B8AB00B144CD /* NfcReadingViewController.swift in Sources */,
 				3BD0E8A829CC6B760027E4FF /* MagnifEyeLivenessResult+Extension.swift in Sources */,
 				3BC2FF5F28CF462000B144CD /* SceneDelegate.swift in Sources */,
 				3BC2FFB128D9EC5800B144CD /* NfcReadingSampleResult.swift in Sources */,
 				3BC2FF8F28D4841C00B144CD /* FaceAutoCapture+Encodable.swift in Sources */,
-				3BC2FF9D28D8A8C800B144CD /* FaceMatcher+Encodable.swift in Sources */,
 				3BC2FFA628D8BDCE00B144CD /* NfcKeyFactory.swift in Sources */,
-				3BC2FF9728D85EDA00B144CD /* FaceMatchingExecutor.swift in Sources */,
 				3BC2FF8B28D2138500B144CD /* FaceAutoCaptureContainerViewController.swift in Sources */,
 				3BC2FFA428D8BAC300B144CD /* NfcReadingExecutor.swift in Sources */,
 			);
@@ -520,7 +496,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.12.0;
+				MARKETING_VERSION = 4.13.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.innovatrics.dot.samples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "DotSamples Development Profile";
@@ -556,7 +532,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.12.0;
+				MARKETING_VERSION = 4.13.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.innovatrics.dot.samples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "DotSamples Development Profile";

@@ -8,8 +8,7 @@ class FaceAutoCaptureContainerViewController: ContainerViewController {
     }
     
     init() {
-        let configuration = FaceAutoCaptureConfiguration(qualityAttributeThresholds: FaceAutoCaptureConfiguration.QualityAttributeThresholdPresets.passiveLiveness.build())
-        let viewController = FaceAutoCaptureViewController.create(configuration: configuration)
+        let viewController = FaceAutoCaptureViewController.create()
         super.init(viewController: viewController)
         viewController.delegate = self
     }
