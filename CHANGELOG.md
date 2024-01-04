@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.14.0 - 2024-01-04
+### Changed
+- updated DOT SDK to 7.2.0
+
 ## 4.13.0 - 2023-11-24
 ### Removed
 - Face Matcher sample.

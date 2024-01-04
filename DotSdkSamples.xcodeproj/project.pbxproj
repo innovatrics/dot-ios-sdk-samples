@@ -7,14 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B053F60299FBC0D00F74426 /* DotDocument in Frameworks */ = {isa = PBXBuildFile; productRef = 3B053F5F299FBC0D00F74426 /* DotDocument */; };
-		3B053F62299FBC0D00F74426 /* DotFaceBackgroundUniformity in Frameworks */ = {isa = PBXBuildFile; productRef = 3B053F61299FBC0D00F74426 /* DotFaceBackgroundUniformity */; };
-		3B053F64299FBC0D00F74426 /* DotFaceDetectionFast in Frameworks */ = {isa = PBXBuildFile; productRef = 3B053F63299FBC0D00F74426 /* DotFaceDetectionFast */; };
-		3B053F66299FBC0D00F74426 /* DotFaceExpressionNeutral in Frameworks */ = {isa = PBXBuildFile; productRef = 3B053F65299FBC0D00F74426 /* DotFaceExpressionNeutral */; };
-		3B053F68299FBC0D00F74426 /* DotFacePassiveLiveness in Frameworks */ = {isa = PBXBuildFile; productRef = 3B053F67299FBC0D00F74426 /* DotFacePassiveLiveness */; };
-		3B053F6A299FBC0D00F74426 /* DotFaceVerification in Frameworks */ = {isa = PBXBuildFile; productRef = 3B053F69299FBC0D00F74426 /* DotFaceVerification */; };
-		3B053F6C299FBC0D00F74426 /* DotNfc in Frameworks */ = {isa = PBXBuildFile; productRef = 3B053F6B299FBC0D00F74426 /* DotNfc */; };
 		3B569AEA29CC44E3007A34EE /* MagnifEyeLivenessContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B569AE829CC44E3007A34EE /* MagnifEyeLivenessContainerViewController.swift */; };
+		3B9B6A162B10E4A30097B01C /* DotDocument in Frameworks */ = {isa = PBXBuildFile; productRef = 3B9B6A152B10E4A30097B01C /* DotDocument */; };
+		3B9B6A182B10E4A30097B01C /* DotFaceBackgroundUniformity in Frameworks */ = {isa = PBXBuildFile; productRef = 3B9B6A172B10E4A30097B01C /* DotFaceBackgroundUniformity */; };
+		3B9B6A1A2B10E4A30097B01C /* DotFaceDetectionFast in Frameworks */ = {isa = PBXBuildFile; productRef = 3B9B6A192B10E4A30097B01C /* DotFaceDetectionFast */; };
+		3B9B6A1C2B10E4A30097B01C /* DotFaceExpressionNeutral in Frameworks */ = {isa = PBXBuildFile; productRef = 3B9B6A1B2B10E4A30097B01C /* DotFaceExpressionNeutral */; };
+		3B9B6A1E2B10E4A30097B01C /* DotNfc in Frameworks */ = {isa = PBXBuildFile; productRef = 3B9B6A1D2B10E4A30097B01C /* DotNfc */; };
 		3BB0F9342AF3F3B1004D9FD2 /* dot_license.lic in Resources */ = {isa = PBXBuildFile; fileRef = 3BB0F9332AF3F3B1004D9FD2 /* dot_license.lic */; };
 		3BC2FF5D28CF462000B144CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF5C28CF462000B144CD /* AppDelegate.swift */; };
 		3BC2FF5F28CF462000B144CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF5E28CF462000B144CD /* SceneDelegate.swift */; };
@@ -88,13 +86,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B053F6C299FBC0D00F74426 /* DotNfc in Frameworks */,
-				3B053F68299FBC0D00F74426 /* DotFacePassiveLiveness in Frameworks */,
-				3B053F60299FBC0D00F74426 /* DotDocument in Frameworks */,
-				3B053F6A299FBC0D00F74426 /* DotFaceVerification in Frameworks */,
-				3B053F66299FBC0D00F74426 /* DotFaceExpressionNeutral in Frameworks */,
-				3B053F64299FBC0D00F74426 /* DotFaceDetectionFast in Frameworks */,
-				3B053F62299FBC0D00F74426 /* DotFaceBackgroundUniformity in Frameworks */,
+				3B9B6A1E2B10E4A30097B01C /* DotNfc in Frameworks */,
+				3B9B6A162B10E4A30097B01C /* DotDocument in Frameworks */,
+				3B9B6A1C2B10E4A30097B01C /* DotFaceExpressionNeutral in Frameworks */,
+				3B9B6A1A2B10E4A30097B01C /* DotFaceDetectionFast in Frameworks */,
+				3B9B6A182B10E4A30097B01C /* DotFaceBackgroundUniformity in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,13 +226,11 @@
 			);
 			name = DotSdkSamples;
 			packageProductDependencies = (
-				3B053F5F299FBC0D00F74426 /* DotDocument */,
-				3B053F61299FBC0D00F74426 /* DotFaceBackgroundUniformity */,
-				3B053F63299FBC0D00F74426 /* DotFaceDetectionFast */,
-				3B053F65299FBC0D00F74426 /* DotFaceExpressionNeutral */,
-				3B053F67299FBC0D00F74426 /* DotFacePassiveLiveness */,
-				3B053F69299FBC0D00F74426 /* DotFaceVerification */,
-				3B053F6B299FBC0D00F74426 /* DotNfc */,
+				3B9B6A152B10E4A30097B01C /* DotDocument */,
+				3B9B6A172B10E4A30097B01C /* DotFaceBackgroundUniformity */,
+				3B9B6A192B10E4A30097B01C /* DotFaceDetectionFast */,
+				3B9B6A1B2B10E4A30097B01C /* DotFaceExpressionNeutral */,
+				3B9B6A1D2B10E4A30097B01C /* DotNfc */,
 			);
 			productName = DotSdkSamples;
 			productReference = 3BC2FF5928CF462000B144CD /* DotSdkSamples.app */;
@@ -267,7 +261,7 @@
 			);
 			mainGroup = 3BC2FF5028CF462000B144CD;
 			packageReferences = (
-				3B053F5E299FBC0D00F74426 /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */,
+				3B9B6A142B10E4A30097B01C /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */,
 			);
 			productRefGroup = 3BC2FF5A28CF462000B144CD /* Products */;
 			projectDirPath = "";
@@ -496,7 +490,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.13.0;
+				MARKETING_VERSION = 4.14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.innovatrics.dot.samples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "DotSamples Development Profile";
@@ -532,7 +526,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.13.0;
+				MARKETING_VERSION = 4.14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.innovatrics.dot.samples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "DotSamples Development Profile";
@@ -566,50 +560,40 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		3B053F5E299FBC0D00F74426 /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */ = {
+		3B9B6A142B10E4A30097B01C /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/innovatrics/dot-ios-sdk-spm.git";
 			requirement = {
 				kind = exactVersion;
-				version = 7.0.0;
+				version = 7.2.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3B053F5F299FBC0D00F74426 /* DotDocument */ = {
+		3B9B6A152B10E4A30097B01C /* DotDocument */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3B053F5E299FBC0D00F74426 /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */;
+			package = 3B9B6A142B10E4A30097B01C /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */;
 			productName = DotDocument;
 		};
-		3B053F61299FBC0D00F74426 /* DotFaceBackgroundUniformity */ = {
+		3B9B6A172B10E4A30097B01C /* DotFaceBackgroundUniformity */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3B053F5E299FBC0D00F74426 /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */;
+			package = 3B9B6A142B10E4A30097B01C /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */;
 			productName = DotFaceBackgroundUniformity;
 		};
-		3B053F63299FBC0D00F74426 /* DotFaceDetectionFast */ = {
+		3B9B6A192B10E4A30097B01C /* DotFaceDetectionFast */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3B053F5E299FBC0D00F74426 /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */;
+			package = 3B9B6A142B10E4A30097B01C /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */;
 			productName = DotFaceDetectionFast;
 		};
-		3B053F65299FBC0D00F74426 /* DotFaceExpressionNeutral */ = {
+		3B9B6A1B2B10E4A30097B01C /* DotFaceExpressionNeutral */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3B053F5E299FBC0D00F74426 /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */;
+			package = 3B9B6A142B10E4A30097B01C /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */;
 			productName = DotFaceExpressionNeutral;
 		};
-		3B053F67299FBC0D00F74426 /* DotFacePassiveLiveness */ = {
+		3B9B6A1D2B10E4A30097B01C /* DotNfc */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3B053F5E299FBC0D00F74426 /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */;
-			productName = DotFacePassiveLiveness;
-		};
-		3B053F69299FBC0D00F74426 /* DotFaceVerification */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3B053F5E299FBC0D00F74426 /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */;
-			productName = DotFaceVerification;
-		};
-		3B053F6B299FBC0D00F74426 /* DotNfc */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3B053F5E299FBC0D00F74426 /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */;
+			package = 3B9B6A142B10E4A30097B01C /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */;
 			productName = DotNfc;
 		};
 /* End XCSwiftPackageProductDependency section */
