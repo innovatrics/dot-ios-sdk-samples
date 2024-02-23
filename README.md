@@ -20,8 +20,7 @@ A collection of quickstart samples demonstrating the DOT iOS SDK. [Read more abo
 
 1. In the **General** tab of DotSdkSamples target, choose your unique **Bundle Identifier**. This identifier is used for the generation of the license.
 1. Complete app signing configuration using your certificates and profiles.
-1. Run the sample and your **LicenseId** will be printed in the terminal.
-1. To obtain a license, please contact `support@innovatrics.com` and send them your **Bundle Identifier** and **LicenseId**.
+1. To obtain a license, please contact `support@innovatrics.com` and send them your **Bundle Identifier**.
 1. After you receive your license, rename the license file to `dot_license.lic` and import it to the DotSdkSamples project.
 1. The setup is now complete and you can run DOT iOS SDK samples.
 

@@ -16,10 +16,10 @@ class NfcReadingExecutor {
         }
     }
     
-    private lazy var travelDocumentReader: NfcTravelDocumentReader = {
+    private lazy var travelDocumentReader: NfcTravelDocumentReaderProtocol = {
         let authorityCertificatesUrl = Bundle.main.url(forResource: "master_list", withExtension: "pem")
         let configuration = NfcTravelDocumentReaderConfiguration(authorityCertificatesUrl: authorityCertificatesUrl)
-        let travelDocumentReader = NfcTravelDocumentReader(configuration: configuration)
+        let travelDocumentReader = NfcTravelDocumentReaderFactory().create(configuration: configuration)
         travelDocumentReader.setDelegate(self)
         return travelDocumentReader
     }()
@@ -33,7 +33,7 @@ class NfcReadingExecutor {
 
 extension NfcReadingExecutor: NfcTravelDocumentReaderDelegate {
     
-    func nfcTravelDocumentReader(_ nfcTravelDocumentReader: NfcTravelDocumentReader, succeeded travelDocument: TravelDocument) {
+    func nfcTravelDocumentReader(_ nfcTravelDocumentReader: NfcTravelDocumentReaderProtocol, succeeded travelDocument: TravelDocument) {
         guard let bytes = travelDocument.encodedIdentificationFeaturesFace.faceImage?.bytes, let image = UIImage(data: bytes) else {
             delegate?.nfcReadingExecutorError(self, errorDescription: Error.missingFaceImage.localizedDescription)
             return
@@ -43,7 +43,7 @@ extension NfcReadingExecutor: NfcTravelDocumentReaderDelegate {
         delegate?.nfcReadingExecutorSuccess(self, result: sampleResult)
     }
     
-    func nfcTravelDocumentReader(_ nfcTravelDocumentReader: NfcTravelDocumentReader, failed error: NfcTravelDocumentReaderError) {
+    func nfcTravelDocumentReader(_ nfcTravelDocumentReader: NfcTravelDocumentReaderProtocol, failed error: NfcTravelDocumentReaderError) {
         delegate?.nfcReadingExecutorError(self, errorDescription: error.localizedDescription)
     }
 }
