@@ -112,7 +112,6 @@
 				3B4D53C52ACDA4BC009613BE /* CHANGELOG.md */,
 				3BC2FF5B28CF462000B144CD /* DotSdkSamples */,
 				3BC2FF5A28CF462000B144CD /* Products */,
-				E801544B8D724CDFE5D73259 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -200,13 +199,6 @@
 				3BC2FFB028D9EC5800B144CD /* NfcReadingSampleResult.swift */,
 			);
 			path = NfcReading;
-			sourceTree = "<group>";
-		};
-		E801544B8D724CDFE5D73259 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -490,7 +482,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.15.0;
+				MARKETING_VERSION = 4.16.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.innovatrics.dot.samples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "DotSamples Development Profile";
@@ -526,7 +518,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.15.0;
+				MARKETING_VERSION = 4.16.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.innovatrics.dot.samples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "DotSamples Development Profile";
@@ -565,7 +557,7 @@
 			repositoryURL = "https://github.com/innovatrics/dot-ios-sdk-spm.git";
 			requirement = {
 				kind = exactVersion;
-				version = 7.3.0;
+				version = 7.4.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
