@@ -7,6 +7,7 @@ class NfcReadingViewController: UIViewController {
         case nfcReadingNotStarted
         case nfcReadingInProgress
         case nfcReadingSuccess(NfcReadingSampleResult)
+        case nfcReadingCanceled
         case nfcReadingError(String)
     }
     
@@ -77,6 +78,10 @@ extension NfcReadingViewController {
         case .nfcReadingSuccess(let sampleResult):
             textView.text = String(data: try! encoder.encode(sampleResult), encoding: .utf8)
             addImage(sampleResult.image)
+        case .nfcReadingCanceled:
+            textView.text = nil
+            imageView.image = nil
+            navigationController?.popViewController(animated: true)
         case .nfcReadingError(let errorDescription):
             textView.text = nil
             imageView.image = nil
@@ -85,7 +90,9 @@ extension NfcReadingViewController {
     }
     
     private func presentErrorAlert(errorMessage: String) {
-        let alertController = UIAlertController.createErrorController(errorMessage: errorMessage)
+        let alertController = UIAlertController.createErrorController(errorMessage: errorMessage) { _ in
+            self.navigationController?.popViewController(animated: true)
+        }
         present(alertController, animated: true)
     }
     
@@ -157,6 +164,10 @@ extension NfcReadingViewController: NfcReadingExecutorDelegate {
     
     func nfcReadingExecutorSuccess(_ executor: NfcReadingExecutor, result: NfcReadingSampleResult) {
         state = .nfcReadingSuccess(result)
+    }
+    
+    func nfcReadingExecutorCanceled(_ executor: NfcReadingExecutor) {
+        state = .nfcReadingCanceled
     }
     
     func nfcReadingExecutorError(_ executor: NfcReadingExecutor, errorDescription: String) {

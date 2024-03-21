@@ -4,6 +4,7 @@ import UIKit
 protocol NfcReadingExecutorDelegate: AnyObject {
     func nfcReadingExecutorSuccess(_ executor: NfcReadingExecutor, result: NfcReadingSampleResult)
     func nfcReadingExecutorError(_ executor: NfcReadingExecutor, errorDescription: String)
+    func nfcReadingExecutorCanceled(_ executor: NfcReadingExecutor)
 }
 
 class NfcReadingExecutor {
@@ -41,6 +42,10 @@ extension NfcReadingExecutor: NfcTravelDocumentReaderDelegate {
         
         let sampleResult =  NfcReadingSampleResult(image: image, travelDocument: travelDocument)
         delegate?.nfcReadingExecutorSuccess(self, result: sampleResult)
+    }
+    
+    func nfcTravelDocumentReaderCanceled(_ nfcTravelDocumentReader: NfcTravelDocumentReaderProtocol) {
+        delegate?.nfcReadingExecutorCanceled(self)
     }
     
     func nfcTravelDocumentReader(_ nfcTravelDocumentReader: NfcTravelDocumentReaderProtocol, failed error: NfcTravelDocumentReaderError) {
