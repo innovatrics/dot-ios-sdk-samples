@@ -18,12 +18,12 @@ extension FaceAttribute: Encodable {
 extension FaceAspects: Encodable {
     
     enum Keys: String, CodingKey {
-        case eyeDistance
+        case eyeDistanceToImageShorterSideRatio
     }
     
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: Keys.self)
-        try container.encode(eyeDistance, forKey: .eyeDistance)
+        try container.encode(eyeDistanceToImageShorterSideRatio, forKey: .eyeDistanceToImageShorterSideRatio)
     }
 }
 
@@ -118,7 +118,7 @@ extension Expression: Encodable {
     
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: Keys.self)
-        try container.encodeIfPresent(eyes, forKey: .eyes)
+        try container.encode(eyes, forKey: .eyes)
         try container.encodeIfPresent(mouth, forKey: .mouth)
     }
 }
@@ -148,9 +148,9 @@ extension FaceQuality: Encodable {
     
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: Keys.self)
-        try container.encodeIfPresent(imageQuality, forKey: .imageQuality)
-        try container.encodeIfPresent(headPose, forKey: .headPose)
-        try container.encodeIfPresent(wearables, forKey: .wearables)
-        try container.encodeIfPresent(expression, forKey: .expression)
+        try container.encode(imageQuality, forKey: .imageQuality)
+        try container.encode(headPose, forKey: .headPose)
+        try container.encode(wearables, forKey: .wearables)
+        try container.encode(expression, forKey: .expression)
     }
 }

@@ -1,5 +1,6 @@
 import Foundation
 import DotNfc
+import DotDocumentCommons
 
 extension TravelDocument: Encodable {
     
@@ -62,6 +63,20 @@ extension AdditionalDocumentDetails: Encodable {
         try container.encodeIfPresent(taxOrExitRequirements, forKey: .taxOrExitRequirements)
         try container.encodeIfPresent(personalizationTime, forKey: .personalizationTime)
         try container.encodeIfPresent(personalizationDeviceSerialNumber, forKey: .personalizationDeviceSerialNumber)
+    }
+}
+
+extension NameOfHolder: Encodable {
+
+    enum Keys: String, CodingKey {
+        case primaryIdentifier
+        case secondaryIdentifier
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: Keys.self)
+        try container.encodeIfPresent(primaryIdentifier, forKey: .primaryIdentifier)
+        try container.encodeIfPresent(secondaryIdentifier, forKey: .secondaryIdentifier)
     }
 }
 
@@ -154,32 +169,168 @@ extension ImageFormat: Encodable {
 extension MachineReadableZoneInformation: Encodable {
     
     enum Keys: String, CodingKey {
+        case machineReadableZone
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: Keys.self)
+        try container.encode(machineReadableZone, forKey: .machineReadableZone)
+    }
+}
+
+extension MachineReadableZone: Encodable {
+   
+    enum Keys: String, CodingKey {
+        case lines
+        case td1
+        case td2
+        case td3
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: Keys.self)
+        try container.encode(lines, forKey: .lines)
+        try container.encodeIfPresent(td1, forKey: .td1)
+        try container.encodeIfPresent(td2, forKey: .td2)
+        try container.encodeIfPresent(td3, forKey: .td3)
+    }
+}
+
+extension MrzCheckDigit: Encodable {
+
+    enum Keys: String, CodingKey {
+        case value
+        case isValid
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: Keys.self)
+        try container.encode(value, forKey: .value)
+        try container.encode(isValid, forKey: .isValid)
+    }
+}
+
+extension Td1MachineReadableZone: Encodable {
+    
+    enum Keys: String, CodingKey {
         case documentCode
         case issuingStateOrOrganization
-        case nameOfHolder
+        case name
         case nationality
         case documentNumber
         case dateOfBirth
         case sex
         case dateOfExpiry
         case optionalData
+        case compositeCheckDigit
     }
     
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: Keys.self)
         try container.encode(documentCode, forKey: .documentCode)
         try container.encode(issuingStateOrOrganization, forKey: .issuingStateOrOrganization)
-        try container.encode(nameOfHolder, forKey: .nameOfHolder)
+        try container.encode(name, forKey: .name)
         try container.encode(nationality, forKey: .nationality)
         try container.encode(documentNumber, forKey: .documentNumber)
         try container.encode(dateOfBirth, forKey: .dateOfBirth)
         try container.encode(sex, forKey: .sex)
         try container.encode(dateOfExpiry, forKey: .dateOfExpiry)
         try container.encode(optionalData, forKey: .optionalData)
+        try container.encode(compositeCheckDigit, forKey: .compositeCheckDigit)
     }
 }
 
-extension NameOfHolder: Encodable {
+extension Td2MachineReadableZone: Encodable {
+    
+    enum Keys: String, CodingKey {
+        case documentCode
+        case issuingStateOrOrganization
+        case name
+        case documentNumber
+        case nationality
+        case dateOfBirth
+        case sex
+        case dateOfExpiry
+        case optionalData
+        case compositeCheckDigit
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: Keys.self)
+        try container.encode(documentCode, forKey: .documentCode)
+        try container.encode(issuingStateOrOrganization, forKey: .issuingStateOrOrganization)
+        try container.encode(name, forKey: .name)
+        try container.encode(nationality, forKey: .nationality)
+        try container.encode(documentNumber, forKey: .documentNumber)
+        try container.encode(dateOfBirth, forKey: .dateOfBirth)
+        try container.encode(sex, forKey: .sex)
+        try container.encode(dateOfExpiry, forKey: .dateOfExpiry)
+        try container.encodeIfPresent(optionalData, forKey: .optionalData)
+        try container.encode(compositeCheckDigit, forKey: .compositeCheckDigit)
+    }
+}
+
+extension Td3MachineReadableZone: Encodable {
+    
+    enum Keys: String, CodingKey {
+        case documentCode
+        case issuingStateOrOrganization
+        case name
+        case passportNumber
+        case nationality
+        case dateOfBirth
+        case sex
+        case dateOfExpiry
+        case personalNumberOrOtherOptionalData
+        case compositeCheckDigit
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: Keys.self)
+        try container.encode(documentCode, forKey: .documentCode)
+        try container.encode(issuingStateOrOrganization, forKey: .issuingStateOrOrganization)
+        try container.encode(name, forKey: .name)
+        try container.encode(passportNumber, forKey: .passportNumber)
+        try container.encode(nationality, forKey: .nationality)
+        try container.encode(dateOfBirth, forKey: .dateOfBirth)
+        try container.encode(sex, forKey: .sex)
+        try container.encode(dateOfExpiry, forKey: .dateOfExpiry)
+        try container.encode(personalNumberOrOtherOptionalData, forKey: .personalNumberOrOtherOptionalData)
+        try container.encode(compositeCheckDigit, forKey: .compositeCheckDigit)
+    }
+}
+
+extension MrzStringPosition: Encodable {
+
+    enum Keys: String, CodingKey {
+        case lineIndex
+        case startIndex
+        case endIndex
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: Keys.self)
+        try container.encode(lineIndex, forKey: .lineIndex)
+        try container.encode(startIndex, forKey: .startIndex)
+        try container.encode(endIndex, forKey: .endIndex)
+    }
+}
+
+extension MrzElement: Encodable {
+    
+    enum Keys: String, CodingKey {
+        case value
+        case positions
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: Keys.self)
+        try container.encode(value, forKey: .value)
+        try container.encode(positions, forKey: .positions)
+    }
+}
+
+extension MrzNameElement: Encodable {
     
     enum Keys: String, CodingKey {
         case primaryIdentifier

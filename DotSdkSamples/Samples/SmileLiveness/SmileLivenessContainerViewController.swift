@@ -5,7 +5,7 @@ import DotCore
 class SmileLivenessContainerViewController: ContainerViewController {
     
     init() {
-        let viewController = SmileLivenessViewController.create()
+        let viewController = SmileLivenessViewController()
         super.init(viewController: viewController)
         viewController.delegate = self
     }

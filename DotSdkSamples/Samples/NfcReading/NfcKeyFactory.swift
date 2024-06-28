@@ -1,6 +1,7 @@
 import Foundation
 import DotNfc
 import DotDocument
+import DotDocumentCommons
 
 struct NfcKeyFactory {
     

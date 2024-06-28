@@ -5,7 +5,7 @@ import DotCore
 class DocumentAutoCaptureContainerViewController: ContainerViewController {
     
     init() {
-        let viewController = DocumentAutoCaptureViewController.create()
+        let viewController = DocumentAutoCaptureViewController()
         super.init(viewController: viewController)
         viewController.delegate = self
     }

@@ -8,7 +8,35 @@ class FaceAutoCaptureContainerViewController: ContainerViewController {
     }
     
     init() {
-        let viewController = FaceAutoCaptureViewController.create()
+        
+        let faceDetectionQuery = FaceDetectionQuery(
+            faceQuality: .init(
+                imageQuality: .init(
+                    evaluateSharpness: true,
+                    evaluateBrightness: true,
+                    evaluateContrast: true,
+                    evaluateUniqueIntensityLevels: true,
+                    evaluateShadow: true,
+                    evaluateSpecularity: true
+                ),
+                headPose: .init (
+                    evaluateRoll: true,
+                    evaluateYaw: true,
+                    evaluatePitch: true
+                ),
+                wearables: .init (
+                    evaluateGlasses: true
+                ),
+                expression: .init (
+                    eyes: .init(
+                        evaluateRightEye: true,
+                        evaluateLeftEye: true
+                    ),
+                    evaluateMouth: true
+                )
+            )
+        )
+        let viewController = FaceAutoCaptureViewController(configuration: .init(query: faceDetectionQuery))
         super.init(viewController: viewController)
         viewController.delegate = self
     }
@@ -42,16 +70,16 @@ extension FaceAutoCaptureContainerViewController: FaceAutoCaptureViewControllerD
     
     func faceAutoCaptureViewController(_ viewController: FaceAutoCaptureViewController, captured result: FaceAutoCaptureResult) {
         Task {
-            guard let detectedFace = result.detectedFace else {
+            guard let detectedFace = result.face else {
                 presentErrorAlert(NoFaceDetectedError())
                 return
             }
-            do {
-                let faceAutoCaptureSampleResult = try await DetectedFaceEvaluator().evaluate(detectedFace)
-                navigateToResultViewController(faceAutoCaptureSampleResult)
-            } catch {
-                presentErrorAlert(error)
-            }
+            
+            let faceAutoCaptureSampleResult = await DetectedFaceEvaluator().evaluate(
+                image: result.bgrRawImage,
+                detectedFace: detectedFace
+            )
+            navigateToResultViewController(faceAutoCaptureSampleResult)
         }
     }
         

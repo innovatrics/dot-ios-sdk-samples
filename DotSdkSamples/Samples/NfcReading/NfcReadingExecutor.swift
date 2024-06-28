@@ -17,10 +17,10 @@ class NfcReadingExecutor {
         }
     }
     
-    private lazy var travelDocumentReader: NfcTravelDocumentReaderProtocol = {
+    private lazy var travelDocumentReader: NfcTravelDocumentReader = {
         let authorityCertificatesUrl = Bundle.main.url(forResource: "master_list", withExtension: "pem")
-        let configuration = NfcTravelDocumentReaderConfiguration(authorityCertificatesUrl: authorityCertificatesUrl)
-        let travelDocumentReader = NfcTravelDocumentReaderFactory().create(configuration: configuration)
+        let configuration = NfcTravelDocumentReader.Configuration(authorityCertificatesUrl: authorityCertificatesUrl)
+        let travelDocumentReader = NfcTravelDocumentReader(configuration: configuration)
         travelDocumentReader.setDelegate(self)
         return travelDocumentReader
     }()
@@ -34,7 +34,7 @@ class NfcReadingExecutor {
 
 extension NfcReadingExecutor: NfcTravelDocumentReaderDelegate {
     
-    func nfcTravelDocumentReader(_ nfcTravelDocumentReader: NfcTravelDocumentReaderProtocol, succeeded travelDocument: TravelDocument) {
+    func nfcTravelDocumentReader(_ nfcTravelDocumentReader: NfcTravelDocumentReader, succeeded travelDocument: TravelDocument) {
         guard let bytes = travelDocument.encodedIdentificationFeaturesFace.faceImage?.bytes, let image = UIImage(data: bytes) else {
             delegate?.nfcReadingExecutorError(self, errorDescription: Error.missingFaceImage.localizedDescription)
             return
@@ -44,11 +44,11 @@ extension NfcReadingExecutor: NfcTravelDocumentReaderDelegate {
         delegate?.nfcReadingExecutorSuccess(self, result: sampleResult)
     }
     
-    func nfcTravelDocumentReaderCanceled(_ nfcTravelDocumentReader: NfcTravelDocumentReaderProtocol) {
+    func nfcTravelDocumentReaderCanceled(_ nfcTravelDocumentReader: NfcTravelDocumentReader) {
         delegate?.nfcReadingExecutorCanceled(self)
     }
     
-    func nfcTravelDocumentReader(_ nfcTravelDocumentReader: NfcTravelDocumentReaderProtocol, failed error: NfcTravelDocumentReaderError) {
+    func nfcTravelDocumentReader(_ nfcTravelDocumentReader: NfcTravelDocumentReader, failed error: NfcTravelDocumentReader.Error) {
         delegate?.nfcReadingExecutorError(self, errorDescription: error.localizedDescription)
     }
 }

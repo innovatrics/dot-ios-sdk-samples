@@ -4,7 +4,7 @@ import DotFaceCore
 class MagnifEyeLivenessContainerViewController: ContainerViewController {
     
     init() {
-        let viewController = MagnifEyeLivenessViewController.create()
+        let viewController = MagnifEyeLivenessViewController()
         super.init(viewController: viewController)
         viewController.delegate = self
     }

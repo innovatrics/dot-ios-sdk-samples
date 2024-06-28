@@ -6,13 +6,13 @@ extension DocumentAutoCaptureResult: Encodable {
     
     enum Keys: String, CodingKey {
         case bgraRawImage
-        case documentDetectorResult
+        case document
     }
     
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: Keys.self)
         try container.encode(bgraRawImage, forKey: .bgraRawImage)
-        try container.encode(documentDetectorResult, forKey: .documentDetectorResult)
+        try container.encodeIfPresent(document, forKey: .document)
     }
 }
 
@@ -44,23 +44,41 @@ extension ImageSize: Encodable {
     }
 }
 
-extension DocumentDetector.Result: Encodable {
-    
+extension ImageParameters: Encodable {
+
     enum Keys: String, CodingKey {
-        case confidence
-        case widthToHeightRatio
-        case corners
+        case brightness
+        case sharpness
+        case hotspotsScore
     }
     
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: Keys.self)
-        try container.encode(confidence, forKey: .confidence)
-        try container.encode(widthToHeightRatio.value, forKey: .widthToHeightRatio)
-        try container.encode(corners, forKey: .corners)
+        try container.encode(brightness, forKey: .brightness)
+        try container.encode(sharpness, forKey: .sharpness)
+        try container.encode(hotspotsScore, forKey: .hotspotsScore)
     }
 }
 
-extension Corners: Encodable {
+extension DocumentDetector.Document: Encodable {
+    
+    enum Keys: String, CodingKey {
+        case detectionPosition
+        case confidence
+        case widthToHeightRatio
+        case imageParameters
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: Keys.self)
+        try container.encode(detectionPosition, forKey: .detectionPosition)
+        try container.encode(confidence, forKey: .confidence)
+        try container.encode(widthToHeightRatio, forKey: .widthToHeightRatio)
+        try container.encode(imageParameters, forKey: .imageParameters)
+    }
+}
+
+extension DetectionPosition: Encodable {
     
     enum Keys: String, CodingKey {
         case topLeft
