@@ -24,7 +24,7 @@ class NfcReadingViewController: UIViewController {
         return encoder
     }()
     
-    private let nfcKey: NfcKey
+    private let password: TravelDocumentReaderPassword
     private lazy var nfcReadingExecutor: NfcReadingExecutor = {
         let nfcReadingExecutor = NfcReadingExecutor()
         nfcReadingExecutor.delegate = self
@@ -38,8 +38,8 @@ class NfcReadingViewController: UIViewController {
     
     private var imageViewWidthConstraint: NSLayoutConstraint?
     
-    init(nfcKey: NfcKey) {
-        self.nfcKey = nfcKey
+    init(password: TravelDocumentReaderPassword) {
+        self.password = password
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -98,7 +98,7 @@ extension NfcReadingViewController {
     
     private func performNfcReading() {
         state = .nfcReadingInProgress
-        nfcReadingExecutor.execute(nfcKey: nfcKey)
+        nfcReadingExecutor.execute(password: password)
     }
     
     private func addImage(_ image: UIImage) {

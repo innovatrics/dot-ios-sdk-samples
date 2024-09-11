@@ -27,8 +27,8 @@ class NfcReadingExecutor {
     
     weak var delegate: NfcReadingExecutorDelegate?
     
-    func execute(nfcKey: NfcKey) {
-        travelDocumentReader.read(nfcKey: nfcKey)
+    func execute(password: TravelDocumentReaderPassword) {
+        travelDocumentReader.read(password: password)
     }
 }
 

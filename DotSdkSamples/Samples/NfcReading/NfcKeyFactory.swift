@@ -3,21 +3,36 @@ import DotNfc
 import DotDocument
 import DotDocumentCommons
 
-struct NfcKeyFactory {
+struct MrzPasswordFactory {
+    private init () {}
     
-    func create(documentAutoCaptureResult: DocumentAutoCaptureResult) throws -> NfcKey {
+    static func create(documentAutoCaptureResult: DocumentAutoCaptureResult) throws -> MachineReadableZonePassword {
         guard let machineReadableZone = documentAutoCaptureResult.machineReadableZone,
               let travelDocumentType = documentAutoCaptureResult.travelDocumentType?.travelDocumentType
         else {
             fatalError("Machine readable zone or travel document type is nil.")
         }
         
-        return try NfcKey(documentNumber: resolveDocumentNumber(machineReadableZone: machineReadableZone, travelDocumentType: travelDocumentType),
-                          dateOfExpiry: resolveDateOfExpiry(machineReadableZone: machineReadableZone, travelDocumentType: travelDocumentType),
-                          dateOfBirth: resolveDateOfBirth(machineReadableZone: machineReadableZone, travelDocumentType: travelDocumentType))
+        return try MachineReadableZonePassword(
+            documentNumber:
+                resolveDocumentNumber(
+                    machineReadableZone: machineReadableZone,
+                    travelDocumentType: travelDocumentType
+                ),
+            dateOfExpiry:
+                resolveDateOfExpiry(
+                    machineReadableZone: machineReadableZone,
+                    travelDocumentType: travelDocumentType
+                ),
+            dateOfBirth:
+                resolveDateOfBirth(
+                    machineReadableZone: machineReadableZone,
+                    travelDocumentType: travelDocumentType
+                )
+        )
     }
     
-    private func resolveDocumentNumber(machineReadableZone: MachineReadableZone, travelDocumentType: TravelDocumentType) -> String {
+    private static func resolveDocumentNumber(machineReadableZone: MachineReadableZone, travelDocumentType: TravelDocumentType) -> String {
         switch travelDocumentType {
         case .td1: return machineReadableZone.td1!.documentNumber.value
         case .td2: return machineReadableZone.td2!.documentNumber.value
@@ -26,7 +41,7 @@ struct NfcKeyFactory {
         }
     }
     
-    private func resolveDateOfExpiry(machineReadableZone: MachineReadableZone, travelDocumentType: TravelDocumentType) -> String {
+    private static func resolveDateOfExpiry(machineReadableZone: MachineReadableZone, travelDocumentType: TravelDocumentType) -> String {
         switch travelDocumentType {
         case .td1: return machineReadableZone.td1!.dateOfExpiry.value
         case .td2: return machineReadableZone.td2!.dateOfExpiry.value
@@ -35,7 +50,7 @@ struct NfcKeyFactory {
         }
     }
     
-    private func resolveDateOfBirth(machineReadableZone: MachineReadableZone, travelDocumentType: TravelDocumentType) -> String {
+    private static func resolveDateOfBirth(machineReadableZone: MachineReadableZone, travelDocumentType: TravelDocumentType) -> String {
         switch travelDocumentType {
         case .td1: return machineReadableZone.td1!.dateOfBirth.value
         case .td2: return machineReadableZone.td2!.dateOfBirth.value

@@ -3,9 +3,7 @@ import DotDocument
 import DotNfc
 
 class NfcReadingDocumentAutoCaptureContainerViewController: ContainerViewController {
-    
-    private let nfcKeyFactory = NfcKeyFactory()
-    
+        
     init() {
         let configuration = DocumentAutoCaptureViewController.Configuration(mrzValidation: .validateAlways)
         let viewController = DocumentAutoCaptureViewController(configuration: configuration)
@@ -23,10 +21,10 @@ class NfcReadingDocumentAutoCaptureContainerViewController: ContainerViewControl
         view.backgroundColor = .systemBackground
     }
     
-    private func navigateToNfcReadingViewController(_ nfcKey: NfcKey) {
+    private func navigateToNfcReadingViewController(_ password: TravelDocumentReaderPassword) {
         guard let samplesViewController = navigationController?.viewControllers.first else { return }
         
-        let nfcReadingViewController = NfcReadingViewController(nfcKey: nfcKey)
+        let nfcReadingViewController = NfcReadingViewController(password: password)
         navigationController?.setViewControllers([samplesViewController, nfcReadingViewController], animated: true)
     }
 }
@@ -35,10 +33,10 @@ extension NfcReadingDocumentAutoCaptureContainerViewController: DocumentAutoCapt
     
     func documentAutoCaptureViewController(_ viewController: DocumentAutoCaptureViewController, captured result: DocumentAutoCaptureResult) {
         do {
-            let nfcKey = try nfcKeyFactory.create(documentAutoCaptureResult: result)
-            navigateToNfcReadingViewController(nfcKey)
+            let mrzPassword = try MrzPasswordFactory.create(documentAutoCaptureResult: result)
+            navigateToNfcReadingViewController(mrzPassword)
         } catch {
-            let alertController = UIAlertController.createErrorController(errorMessage: "Failed to create NfcKey: \(error.localizedDescription)")
+            let alertController = UIAlertController.createErrorController(errorMessage: "Failed to create Machine Readable Zone password: \(error.localizedDescription)")
             present(alertController, animated: true)
         }
     }
