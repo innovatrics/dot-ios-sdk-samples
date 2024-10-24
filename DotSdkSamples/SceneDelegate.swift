@@ -4,6 +4,9 @@ import DotCore
 import DotDocument
 import DotNfc
 
+import DotPalmCore
+import DotPalmDetection
+
 import DotFaceCore
 import DotFaceDetectionFast
 import DotFaceBackgroundUniformity
@@ -22,8 +25,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func presentErrorAlert(_ errorMessage: String) {
-        let alertController = UIAlertController.createErrorController(errorMessage: errorMessage)
-        window?.rootViewController?.present(alertController, animated: true)
+        DispatchQueue.main.async {
+            let alertController = UIAlertController.createErrorController(errorMessage: errorMessage)
+            self.window?.rootViewController?.present(alertController, animated: true)
+        }
     }
 }
 
@@ -36,8 +41,11 @@ extension SceneDelegate {
         if let url = Bundle.main.url(forResource: "dot_license", withExtension: "lic") {
             do {
                 let license = try Data(contentsOf: url)
-                let dotFaceLibraryConfiguration = createDotFaceLibraryConfiguration()
-                let dotSdkConfiguration = createDotSdkConfiguration(license: license, dotFaceLibraryConfiguration: dotFaceLibraryConfiguration)
+                let dotSdkConfiguration = createDotSdkConfiguration(
+                    license: license,
+                    dotFaceLibraryConfiguration: createDotFaceLibraryConfiguration(),
+                    dotPalmLibraryConfiguration: createDotPalmLibraryConfiguration()
+                )
                 try DotSdk.shared.initialize(configuration: dotSdkConfiguration)
             } catch {
                 presentErrorAlert("Failed to initialize DotSdk: \(error.localizedDescription)")
@@ -57,13 +65,22 @@ extension SceneDelegate {
         )
     }
     
-    private func createDotSdkConfiguration(license: Data, dotFaceLibraryConfiguration: DotFaceLibraryConfiguration) -> DotSdkConfiguration {
+    private func createDotPalmLibraryConfiguration() -> DotPalmLibraryConfiguration {
+        return .init(modules: [DotPalmDetectionModule.shared])
+    }
+    
+    private func createDotSdkConfiguration(
+        license: Data,
+        dotFaceLibraryConfiguration: DotFaceLibraryConfiguration,
+        dotPalmLibraryConfiguration: DotPalmLibraryConfiguration
+    ) -> DotSdkConfiguration {
         return DotSdkConfiguration(
             licenseBytes: license,
             libraries: [
                 DotFaceLibrary(configuration: dotFaceLibraryConfiguration),
                 DotDocumentLibrary(),
-                DotNfcLibrary()
+                DotNfcLibrary(),
+                DotPalmLibrary(configuration: dotPalmLibraryConfiguration)
             ]
         )
     }

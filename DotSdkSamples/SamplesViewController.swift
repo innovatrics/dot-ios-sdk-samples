@@ -16,12 +16,16 @@ class SamplesViewController: UIViewController {
     private lazy var faceAutoCaptureButton = buttonFactory.create(.faceAutoCapture)
     private lazy var smileLivenessButton = buttonFactory.create(.smileLiveness)
     private lazy var magnifEyeLivenessButton = buttonFactory.create(.magnifEyeLiveness)
+    private lazy var palmAutoCaptureButton = buttonFactory.create(.palmAutoCapture)
     
-    private lazy var buttons: [UIButton] = [documentAutoCaptureButton,
-                                            nfcReadingButton,
-                                            faceAutoCaptureButton,
-                                            smileLivenessButton,
-                                            magnifEyeLivenessButton]
+    private lazy var buttons: [UIButton] = [
+        documentAutoCaptureButton,
+        nfcReadingButton,
+        faceAutoCaptureButton,
+        smileLivenessButton,
+        magnifEyeLivenessButton,
+        palmAutoCaptureButton
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,6 +78,13 @@ extension SamplesViewController {
         let viewController = SmileLivenessContainerViewController()
         navigationController?.pushViewController(viewController, animated: true)
     }
+    
+    @objc private func showPalmAutoCapture() {
+        guard checkDotSdkIsInitialized() else { return }
+        
+        let viewController = PalmAutoCaptureContainerViewController()
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }
 
 extension SamplesViewController {
@@ -115,6 +126,7 @@ extension SamplesViewController {
         faceAutoCaptureButton.addTarget(self, action: #selector(showFaceAutoCapture), for: .touchUpInside)
         smileLivenessButton.addTarget(self, action: #selector(showSmileLiveness), for: .touchUpInside)
         magnifEyeLivenessButton.addTarget(self, action: #selector(showMagnifEyeLiveness), for: .touchUpInside)
+        palmAutoCaptureButton.addTarget(self, action: #selector(showPalmAutoCapture), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             scrollView.frameLayoutGuide.topAnchor.constraint(equalTo: view.topAnchor),
@@ -137,7 +149,8 @@ extension SamplesViewController {
             nfcReadingButton.heightAnchor.constraint(equalToConstant: buttonFactory.getHeight(.nfcReading)),
             faceAutoCaptureButton.heightAnchor.constraint(equalToConstant: buttonFactory.getHeight(.faceAutoCapture)),
             smileLivenessButton.heightAnchor.constraint(equalToConstant: buttonFactory.getHeight(.smileLiveness)),
-            magnifEyeLivenessButton.heightAnchor.constraint(equalToConstant: buttonFactory.getHeight(.magnifEyeLiveness))
+            magnifEyeLivenessButton.heightAnchor.constraint(equalToConstant: buttonFactory.getHeight(.magnifEyeLiveness)),
+            palmAutoCaptureButton.heightAnchor.constraint(equalToConstant: buttonFactory.getHeight(.palmAutoCapture))
         ])
     }
 }

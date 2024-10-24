@@ -11,6 +11,8 @@
 "samples.magnifeye_liveness.subtitle" = "Basic component sample.";
 "samples.smile_liveness.title" = "Smile Liveness";
 "samples.smile_liveness.subtitle" = "Basic component sample.";
+"samples.palm_auto_capture.title" = "Palm Auto Capture";
+"samples.palm_auto_capture.subtitle" = "Basic component sample.";
 
 "samples.smile_liveness.result_description" = "Use the Digital Identity Service in order to evaluate the smile liveness score. See: https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-dis/latest/documentation/#_smile_liveness_check";
 "samples.magnifeye_liveness.result_description" = "Use the Digital Identity Service in order to evaluate the MagnifEye liveness score. See: https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-dis/latest/documentation/#_magnifeye_liveness_check";

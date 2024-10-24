@@ -4,6 +4,7 @@ import DotCore
 import DotFaceCore
 import DotDocument
 import DotNfc
+import DotPalmCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DotFaceCore.Logger.logLevel = .debug
         DotDocument.Logger.logLevel = .debug
         DotNfc.Logger.logLevel = .debug
+        DotPalmCore.Logger.logLevel = .debug
         
         return true
     }

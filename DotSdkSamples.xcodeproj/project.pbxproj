@@ -3,17 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B4ABD992C821474005731B6 /* PalmAutoCaptureContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4ABD982C821474005731B6 /* PalmAutoCaptureContainerViewController.swift */; };
+		3B4ABD9B2C8214DB005731B6 /* PalmAutoCaptureSampleResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4ABD9A2C8214DB005731B6 /* PalmAutoCaptureSampleResult.swift */; };
+		3B4ABD9D2C821566005731B6 /* PalmAutoCapture+Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4ABD9C2C821566005731B6 /* PalmAutoCapture+Encodable.swift */; };
 		3B569AEA29CC44E3007A34EE /* MagnifEyeLivenessContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B569AE829CC44E3007A34EE /* MagnifEyeLivenessContainerViewController.swift */; };
-		3B9B6A162B10E4A30097B01C /* DotDocument in Frameworks */ = {isa = PBXBuildFile; productRef = 3B9B6A152B10E4A30097B01C /* DotDocument */; };
-		3B9B6A182B10E4A30097B01C /* DotFaceBackgroundUniformity in Frameworks */ = {isa = PBXBuildFile; productRef = 3B9B6A172B10E4A30097B01C /* DotFaceBackgroundUniformity */; };
-		3B9B6A1A2B10E4A30097B01C /* DotFaceDetectionFast in Frameworks */ = {isa = PBXBuildFile; productRef = 3B9B6A192B10E4A30097B01C /* DotFaceDetectionFast */; };
-		3B9B6A1C2B10E4A30097B01C /* DotFaceExpressionNeutral in Frameworks */ = {isa = PBXBuildFile; productRef = 3B9B6A1B2B10E4A30097B01C /* DotFaceExpressionNeutral */; };
-		3B9B6A1E2B10E4A30097B01C /* DotNfc in Frameworks */ = {isa = PBXBuildFile; productRef = 3B9B6A1D2B10E4A30097B01C /* DotNfc */; };
 		3BB0F9342AF3F3B1004D9FD2 /* dot_license.lic in Resources */ = {isa = PBXBuildFile; fileRef = 3BB0F9332AF3F3B1004D9FD2 /* dot_license.lic */; };
+		3BC1276C2CCA5AB9007997C7 /* DotDocument in Frameworks */ = {isa = PBXBuildFile; productRef = 3BC1276B2CCA5AB9007997C7 /* DotDocument */; };
+		3BC1276E2CCA5AB9007997C7 /* DotFaceBackgroundUniformity in Frameworks */ = {isa = PBXBuildFile; productRef = 3BC1276D2CCA5AB9007997C7 /* DotFaceBackgroundUniformity */; };
+		3BC127702CCA5AB9007997C7 /* DotFaceDetectionFast in Frameworks */ = {isa = PBXBuildFile; productRef = 3BC1276F2CCA5AB9007997C7 /* DotFaceDetectionFast */; };
+		3BC127722CCA5AB9007997C7 /* DotFaceExpressionNeutral in Frameworks */ = {isa = PBXBuildFile; productRef = 3BC127712CCA5AB9007997C7 /* DotFaceExpressionNeutral */; };
+		3BC127742CCA5AB9007997C7 /* DotNfc in Frameworks */ = {isa = PBXBuildFile; productRef = 3BC127732CCA5AB9007997C7 /* DotNfc */; };
+		3BC127762CCA5AB9007997C7 /* DotPalmDetection in Frameworks */ = {isa = PBXBuildFile; productRef = 3BC127752CCA5AB9007997C7 /* DotPalmDetection */; };
 		3BC2FF5D28CF462000B144CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF5C28CF462000B144CD /* AppDelegate.swift */; };
 		3BC2FF5F28CF462000B144CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF5E28CF462000B144CD /* SceneDelegate.swift */; };
 		3BC2FF6128CF462000B144CD /* SamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2FF6028CF462000B144CD /* SamplesViewController.swift */; };
@@ -45,6 +49,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B4ABD982C821474005731B6 /* PalmAutoCaptureContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalmAutoCaptureContainerViewController.swift; sourceTree = "<group>"; };
+		3B4ABD9A2C8214DB005731B6 /* PalmAutoCaptureSampleResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalmAutoCaptureSampleResult.swift; sourceTree = "<group>"; };
+		3B4ABD9C2C821566005731B6 /* PalmAutoCapture+Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PalmAutoCapture+Encodable.swift"; sourceTree = "<group>"; };
 		3B4D53C52ACDA4BC009613BE /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		3B569AE829CC44E3007A34EE /* MagnifEyeLivenessContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagnifEyeLivenessContainerViewController.swift; sourceTree = "<group>"; };
 		3BB0F9332AF3F3B1004D9FD2 /* dot_license.lic */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dot_license.lic; sourceTree = "<group>"; };
@@ -86,17 +93,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B9B6A1E2B10E4A30097B01C /* DotNfc in Frameworks */,
-				3B9B6A162B10E4A30097B01C /* DotDocument in Frameworks */,
-				3B9B6A1C2B10E4A30097B01C /* DotFaceExpressionNeutral in Frameworks */,
-				3B9B6A1A2B10E4A30097B01C /* DotFaceDetectionFast in Frameworks */,
-				3B9B6A182B10E4A30097B01C /* DotFaceBackgroundUniformity in Frameworks */,
+				3BC127742CCA5AB9007997C7 /* DotNfc in Frameworks */,
+				3BC1276C2CCA5AB9007997C7 /* DotDocument in Frameworks */,
+				3BC127762CCA5AB9007997C7 /* DotPalmDetection in Frameworks */,
+				3BC127722CCA5AB9007997C7 /* DotFaceExpressionNeutral in Frameworks */,
+				3BC127702CCA5AB9007997C7 /* DotFaceDetectionFast in Frameworks */,
+				3BC1276E2CCA5AB9007997C7 /* DotFaceBackgroundUniformity in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B4ABD972C821443005731B6 /* PalmAutoCapture */ = {
+			isa = PBXGroup;
+			children = (
+				3B4ABD982C821474005731B6 /* PalmAutoCaptureContainerViewController.swift */,
+				3B4ABD9A2C8214DB005731B6 /* PalmAutoCaptureSampleResult.swift */,
+				3B4ABD9C2C821566005731B6 /* PalmAutoCapture+Encodable.swift */,
+			);
+			path = PalmAutoCapture;
+			sourceTree = "<group>";
+		};
 		3B569AE729CC44E3007A34EE /* MagnifEyeLiveness */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +172,7 @@
 				3BC2FF8528D1F85A00B144CD /* FaceAutoCapture */,
 				3B569AE729CC44E3007A34EE /* MagnifEyeLiveness */,
 				3BC2FF9028D4A5F800B144CD /* SmileLiveness */,
+				3B4ABD972C821443005731B6 /* PalmAutoCapture */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -218,11 +237,12 @@
 			);
 			name = DotSdkSamples;
 			packageProductDependencies = (
-				3B9B6A152B10E4A30097B01C /* DotDocument */,
-				3B9B6A172B10E4A30097B01C /* DotFaceBackgroundUniformity */,
-				3B9B6A192B10E4A30097B01C /* DotFaceDetectionFast */,
-				3B9B6A1B2B10E4A30097B01C /* DotFaceExpressionNeutral */,
-				3B9B6A1D2B10E4A30097B01C /* DotNfc */,
+				3BC1276B2CCA5AB9007997C7 /* DotDocument */,
+				3BC1276D2CCA5AB9007997C7 /* DotFaceBackgroundUniformity */,
+				3BC1276F2CCA5AB9007997C7 /* DotFaceDetectionFast */,
+				3BC127712CCA5AB9007997C7 /* DotFaceExpressionNeutral */,
+				3BC127732CCA5AB9007997C7 /* DotNfc */,
+				3BC127752CCA5AB9007997C7 /* DotPalmDetection */,
 			);
 			productName = DotSdkSamples;
 			productReference = 3BC2FF5928CF462000B144CD /* DotSdkSamples.app */;
@@ -253,7 +273,7 @@
 			);
 			mainGroup = 3BC2FF5028CF462000B144CD;
 			packageReferences = (
-				3B9B6A142B10E4A30097B01C /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */,
+				3BC1276A2CCA5AB9007997C7 /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */,
 			);
 			productRefGroup = 3BC2FF5A28CF462000B144CD /* Products */;
 			projectDirPath = "";
@@ -285,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B4ABD9B2C8214DB005731B6 /* PalmAutoCaptureSampleResult.swift in Sources */,
 				3BC2FFB928DB099200B144CD /* UIAlertController+Ext.swift in Sources */,
 				3BC2FF7C28CF733C00B144CD /* ButtonFactory.swift in Sources */,
 				3BC2FF9228D4A65300B144CD /* SmileLivenessContainerViewController.swift in Sources */,
@@ -297,8 +318,10 @@
 				3BC2FFB528D9FB3100B144CD /* DetectedFaceEvaluator.swift in Sources */,
 				3BC2FF8428D1E91F00B144CD /* DocumentAutoCapture+Encodable.swift in Sources */,
 				3BC2FF7328CF6D0F00B144CD /* ContainerViewController.swift in Sources */,
+				3B4ABD992C821474005731B6 /* PalmAutoCaptureContainerViewController.swift in Sources */,
 				3BC2FFA928D9BDF400B144CD /* NfcReading+Encodable.swift in Sources */,
 				3B569AEA29CC44E3007A34EE /* MagnifEyeLivenessContainerViewController.swift in Sources */,
+				3B4ABD9D2C821566005731B6 /* PalmAutoCapture+Encodable.swift in Sources */,
 				3BC2FFA028D8B6F500B144CD /* NfcReadingDocumentAutoCaptureContainerViewController.swift in Sources */,
 				3BC2FF7528CF6DEF00B144CD /* DocumentAutoCaptureContainerViewController.swift in Sources */,
 				3BC2FFA228D8B8AB00B144CD /* NfcReadingViewController.swift in Sources */,
@@ -482,7 +505,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.23.1;
+				MARKETING_VERSION = 4.24.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.innovatrics.dot.samples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "DotSamples Development Profile";
@@ -518,7 +541,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.23.1;
+				MARKETING_VERSION = 4.24.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.innovatrics.dot.samples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "DotSamples Development Profile";
@@ -552,41 +575,46 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		3B9B6A142B10E4A30097B01C /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */ = {
+		3BC1276A2CCA5AB9007997C7 /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/innovatrics/dot-ios-sdk-spm.git";
 			requirement = {
 				kind = exactVersion;
-				version = 8.4.1;
+				version = 8.5.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3B9B6A152B10E4A30097B01C /* DotDocument */ = {
+		3BC1276B2CCA5AB9007997C7 /* DotDocument */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3B9B6A142B10E4A30097B01C /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */;
+			package = 3BC1276A2CCA5AB9007997C7 /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */;
 			productName = DotDocument;
 		};
-		3B9B6A172B10E4A30097B01C /* DotFaceBackgroundUniformity */ = {
+		3BC1276D2CCA5AB9007997C7 /* DotFaceBackgroundUniformity */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3B9B6A142B10E4A30097B01C /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */;
+			package = 3BC1276A2CCA5AB9007997C7 /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */;
 			productName = DotFaceBackgroundUniformity;
 		};
-		3B9B6A192B10E4A30097B01C /* DotFaceDetectionFast */ = {
+		3BC1276F2CCA5AB9007997C7 /* DotFaceDetectionFast */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3B9B6A142B10E4A30097B01C /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */;
+			package = 3BC1276A2CCA5AB9007997C7 /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */;
 			productName = DotFaceDetectionFast;
 		};
-		3B9B6A1B2B10E4A30097B01C /* DotFaceExpressionNeutral */ = {
+		3BC127712CCA5AB9007997C7 /* DotFaceExpressionNeutral */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3B9B6A142B10E4A30097B01C /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */;
+			package = 3BC1276A2CCA5AB9007997C7 /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */;
 			productName = DotFaceExpressionNeutral;
 		};
-		3B9B6A1D2B10E4A30097B01C /* DotNfc */ = {
+		3BC127732CCA5AB9007997C7 /* DotNfc */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3B9B6A142B10E4A30097B01C /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */;
+			package = 3BC1276A2CCA5AB9007997C7 /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */;
 			productName = DotNfc;
+		};
+		3BC127752CCA5AB9007997C7 /* DotPalmDetection */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3BC1276A2CCA5AB9007997C7 /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */;
+			productName = DotPalmDetection;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
