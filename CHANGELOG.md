@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.24.1 - 2024-10-30
+### Changed
+- updated `master_list.pem`
+
 ## 4.24.0 - 2024-10-24
 ### Added
 - new sample: Palm Auto Capture
