@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.25.0 - 2025-01-10
+### Changed
+- updated DOT SDK to 8.6.0
+
 ## 4.24.1 - 2024-10-30
 ### Changed
 - updated `master_list.pem`
