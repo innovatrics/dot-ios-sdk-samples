@@ -34,13 +34,13 @@ class NfcReadingExecutor {
 
 extension NfcReadingExecutor: NfcTravelDocumentReaderDelegate {
     
-    func nfcTravelDocumentReader(_ nfcTravelDocumentReader: NfcTravelDocumentReader, succeeded travelDocument: TravelDocument) {
-        guard let bytes = travelDocument.encodedIdentificationFeaturesFace.faceImage?.bytes, let image = UIImage(data: bytes) else {
+    func nfcTravelDocumentReader(_ nfcTravelDocumentReader: NfcTravelDocumentReader, succeeded result: NfcTravelDocumentReaderResult) {
+        guard let bytes = result.travelDocument.encodedIdentificationFeaturesFace.faceImage?.bytes, let image = UIImage(data: bytes) else {
             delegate?.nfcReadingExecutorError(self, errorDescription: Error.missingFaceImage.localizedDescription)
             return
         }
         
-        let sampleResult =  NfcReadingSampleResult(image: image, travelDocument: travelDocument)
+        let sampleResult =  NfcReadingSampleResult(image: image, travelDocument: result.travelDocument)
         delegate?.nfcReadingExecutorSuccess(self, result: sampleResult)
     }
     
