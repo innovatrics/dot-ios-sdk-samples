@@ -1,4 +1,7 @@
 # Changelog
+## 4.26.1 - 2025-03-13
+### Fixed
+- added prefix to conflicting type `Expression`
 
 ## 4.26.0 - 2025-02-16
 ### Changed

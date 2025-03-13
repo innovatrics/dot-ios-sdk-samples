@@ -109,7 +109,7 @@ extension Glasses: Encodable {
     }
 }
 
-extension Expression: Encodable {
+extension DotFaceCore.Expression: Encodable {
     
     enum Keys: String, CodingKey {
         case eyes
