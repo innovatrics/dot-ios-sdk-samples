@@ -1,4 +1,8 @@
 # Changelog
+## 4.27.0 - 2025-03-21
+### Changed
+- updated DOT SDK to 8.7.1
+
 ## 4.26.1 - 2025-03-13
 ### Fixed
 - added prefix to conflicting type `Expression`
