@@ -6,14 +6,14 @@ source 'https://github.com/innovatrics/innovatrics-podspecs'
 target 'DotSdkSamples' do
   use_frameworks!
 
-  pod 'dot-face-detection-fast', '8.7.1'
-  pod 'dot-face-background-uniformity', '8.7.1'
-  pod 'dot-face-expression-neutral', '8.7.1'
+  pod 'dot-face-detection-fast', '8.8.0'
+  pod 'dot-face-background-uniformity', '8.8.0'
+  pod 'dot-face-expression-neutral', '8.8.0'
 
-  pod 'dot-document', '8.7.1'
+  pod 'dot-document', '8.8.0'
 
-  pod 'dot-nfc', '8.7.1'
+  pod 'dot-nfc', '8.8.0'
 
-  pod 'dot-palm-detection', '8.7.1'
+  pod 'dot-palm-detection', '8.8.0'
 
 end
