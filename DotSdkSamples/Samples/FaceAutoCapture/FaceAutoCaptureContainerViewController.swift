@@ -58,26 +58,15 @@ class FaceAutoCaptureContainerViewController: ContainerViewController {
         let resultViewController = SampleResultViewController(sampleResult: faceAutoCaptureSampleResult)
         navigationController?.setViewControllers([samplesViewController, resultViewController], animated: true)
     }
-    
-    @MainActor
-    private func presentErrorAlert(_ error: Error) {
-        let alertController = UIAlertController.createErrorController(errorMessage: "Failed to evaluate detected face: \(error.localizedDescription)")
-        present(alertController, animated: true)
-    }
 }
 
 extension FaceAutoCaptureContainerViewController: FaceAutoCaptureViewControllerDelegate {
     
     func faceAutoCaptureViewController(_ viewController: FaceAutoCaptureViewController, captured result: FaceAutoCaptureResult) {
         Task {
-            guard let detectedFace = result.face else {
-                presentErrorAlert(NoFaceDetectedError())
-                return
-            }
-            
             let faceAutoCaptureSampleResult = await DetectedFaceEvaluator().evaluate(
                 image: result.bgrRawImage,
-                detectedFace: detectedFace
+                detectedFace: result.face!
             )
             navigateToResultViewController(faceAutoCaptureSampleResult)
         }

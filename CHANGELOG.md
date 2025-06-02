@@ -1,4 +1,9 @@
 # Changelog
+## 4.32.0 - 2025-06-02
+### Changed
+- updated DOT SDK to 8.12.0
+- Simplified error handling: Errors will generate a fatal error instead of displaying an alert.
+
 ## 4.31.0 - 2025-05-06
 ### Changed
 - updated DOT SDK to 8.11.0

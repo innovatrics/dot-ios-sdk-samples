@@ -45,42 +45,42 @@ class SamplesViewController: UIViewController {
 extension SamplesViewController {
     
     @objc private func showDocumentAutoCapture() {
-        guard checkDotSdkIsInitialized() else { return }
+        checkDotSdkIsInitialized()
         
         let viewController = DocumentAutoCaptureContainerViewController()
         navigationController?.pushViewController(viewController, animated: true)
     }
     
     @objc private func showNfcReading() {
-        guard checkDotSdkIsInitialized() else { return }
+        checkDotSdkIsInitialized()
         
         let viewController = NfcReadingDocumentAutoCaptureContainerViewController()
         navigationController?.pushViewController(viewController, animated: true)
     }
     
     @objc private func showFaceAutoCapture() {
-        guard checkDotSdkIsInitialized() else { return }
+        checkDotSdkIsInitialized()
         
         let viewController = FaceAutoCaptureContainerViewController()
         navigationController?.pushViewController(viewController, animated: true)
     }
     
     @objc private func showMagnifEyeLiveness() {
-        guard checkDotSdkIsInitialized() else { return }
+        checkDotSdkIsInitialized()
         
         let viewController = MagnifEyeLivenessContainerViewController()
         navigationController?.pushViewController(viewController, animated: true)
     }
     
     @objc private func showSmileLiveness() {
-        guard checkDotSdkIsInitialized() else { return }
+        checkDotSdkIsInitialized()
         
         let viewController = SmileLivenessContainerViewController()
         navigationController?.pushViewController(viewController, animated: true)
     }
     
     @objc private func showPalmAutoCapture() {
-        guard checkDotSdkIsInitialized() else { return }
+        checkDotSdkIsInitialized()
         
         let viewController = PalmAutoCaptureContainerViewController()
         navigationController?.pushViewController(viewController, animated: true)
@@ -89,14 +89,8 @@ extension SamplesViewController {
 
 extension SamplesViewController {
     
-    private func checkDotSdkIsInitialized() -> Bool {
-        if DotSdk.shared.isInitialized {
-            return true
-        } else {
-            let alertController = UIAlertController.createErrorController(errorMessage: "DotSdk is not initialized.")
-            present(alertController, animated: true)
-            return false
-        }
+    private func checkDotSdkIsInitialized() {
+        guard DotSdk.shared.isInitialized else { fatalError("DotSdk is not initialized.") }
     }
     
     private func refreshButtonColors() {

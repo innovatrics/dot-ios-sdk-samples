@@ -23,13 +23,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             }
         }
     }
-    
-    private func presentErrorAlert(_ errorMessage: String) {
-        DispatchQueue.main.async {
-            let alertController = UIAlertController.createErrorController(errorMessage: errorMessage)
-            self.window?.rootViewController?.present(alertController, animated: true)
-        }
-    }
 }
 
 extension SceneDelegate {
@@ -48,10 +41,10 @@ extension SceneDelegate {
                 )
                 try DotSdk.shared.initialize(configuration: dotSdkConfiguration)
             } catch {
-                presentErrorAlert("Failed to initialize DotSdk: \(error.localizedDescription)")
+                fatalError("Failed to initialize DotSdk: \(error.localizedDescription)")
             }
         } else {
-            presentErrorAlert("Failed to initialize DotSdk: License not found.")
+            fatalError("Failed to initialize DotSdk: License not found.")
         }
     }
     

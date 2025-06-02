@@ -32,13 +32,8 @@ class NfcReadingDocumentAutoCaptureContainerViewController: ContainerViewControl
 extension NfcReadingDocumentAutoCaptureContainerViewController: DocumentAutoCaptureViewControllerDelegate {
     
     func documentAutoCaptureViewController(_ viewController: DocumentAutoCaptureViewController, captured result: DocumentAutoCaptureResult) {
-        do {
-            let mrzPassword = try MrzPasswordFactory.create(documentAutoCaptureResult: result)
-            navigateToNfcReadingViewController(mrzPassword)
-        } catch {
-            let alertController = UIAlertController.createErrorController(errorMessage: "Failed to create Machine Readable Zone password: \(error.localizedDescription)")
-            present(alertController, animated: true)
-        }
+        let mrzPassword = try! MrzPasswordFactory.create(documentAutoCaptureResult: result)
+        navigateToNfcReadingViewController(mrzPassword)
     }
     
     func documentAutoCaptureViewControllerViewWillAppear(_ viewController: DocumentAutoCaptureViewController) {
