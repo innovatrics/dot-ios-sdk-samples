@@ -36,7 +36,7 @@ class FaceAutoCaptureContainerViewController: ContainerViewController {
                 )
             )
         )
-        let viewController = FaceAutoCaptureViewController(configuration: .init(query: faceDetectionQuery))
+        let viewController = FaceAutoCaptureViewController(configuration: try! .init(query: faceDetectionQuery))
         super.init(viewController: viewController)
         viewController.delegate = self
     }

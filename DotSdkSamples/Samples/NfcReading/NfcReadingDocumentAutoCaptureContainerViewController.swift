@@ -5,7 +5,7 @@ import DotNfc
 class NfcReadingDocumentAutoCaptureContainerViewController: ContainerViewController {
         
     init() {
-        let configuration = DocumentAutoCaptureViewController.Configuration(mrzValidation: .validateAlways)
+        let configuration = try! DocumentAutoCaptureViewController.Configuration(mrzValidation: .validateAlways)
         let viewController = DocumentAutoCaptureViewController(configuration: configuration)
         super.init(viewController: viewController)
         viewController.delegate = self

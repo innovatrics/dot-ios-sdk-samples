@@ -1,4 +1,8 @@
 # Changelog
+## 4.33.0 - 2025-06-19
+### Changed
+- updated DOT SDK to 8.13.0
+
 ## 4.32.1 - 2025-06-10
 ### Changed
 - updated DOT SDK to 8.12.1
