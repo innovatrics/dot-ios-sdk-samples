@@ -3,7 +3,7 @@ import UIKit
 struct ButtonFactory {
     
     enum ButtonType {
-        case documentAutoCapture, nfcReading, faceAutoCapture, magnifEyeLiveness, smileLiveness, palmAutoCapture
+        case documentAutoCapture, nfcReading, faceAutoCapture, magnifEyeLiveness, multiRangeLiveness, smileLiveness, palmAutoCapture
         
         var title: String {
             switch self {
@@ -11,6 +11,7 @@ struct ButtonFactory {
             case .nfcReading: return NSLocalizedString("samples.nfc_reading.title", comment: "")
             case .faceAutoCapture: return NSLocalizedString("samples.face_auto_capture.title", comment: "")
             case .magnifEyeLiveness: return NSLocalizedString("samples.magnifeye_liveness.title", comment: "")
+            case .multiRangeLiveness: return NSLocalizedString("samples.multi_range_liveness.title", comment: "")
             case .smileLiveness: return NSLocalizedString("samples.smile_liveness.title", comment: "")
             case .palmAutoCapture: return NSLocalizedString("samples.palm_auto_capture.title", comment: "")
             }
@@ -22,6 +23,7 @@ struct ButtonFactory {
             case .nfcReading: return NSLocalizedString("samples.nfc_reading.subtitle", comment: "")
             case .faceAutoCapture: return NSLocalizedString("samples.face_auto_capture.subtitle", comment: "")
             case .magnifEyeLiveness: return NSLocalizedString("samples.magnifeye_liveness.subtitle", comment: "")
+            case .multiRangeLiveness: return NSLocalizedString("samples.multi_range_liveness.subtitle", comment: "")
             case .smileLiveness: return NSLocalizedString("samples.smile_liveness.subtitle", comment: "")
             case .palmAutoCapture: return NSLocalizedString("samples.palm_auto_capture.subtitle", comment: "")
             }
@@ -33,6 +35,7 @@ struct ButtonFactory {
             case .nfcReading: return 85
             case .faceAutoCapture: return 55
             case .magnifEyeLiveness: return 55
+            case .multiRangeLiveness: return 55
             case .smileLiveness: return 55
             case .palmAutoCapture: return 55
             }

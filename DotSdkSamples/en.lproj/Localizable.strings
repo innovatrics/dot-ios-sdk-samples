@@ -9,6 +9,8 @@
 "samples.face_auto_capture.subtitle" = "Basic component sample.";
 "samples.magnifeye_liveness.title" = "MagnifEye Liveness";
 "samples.magnifeye_liveness.subtitle" = "Basic component sample.";
+"samples.multi_range_liveness.title" = "Multi-Range Liveness";
+"samples.multi_range_liveness.subtitle" = "Basic component sample.";
 "samples.smile_liveness.title" = "Smile Liveness";
 "samples.smile_liveness.subtitle" = "Basic component sample.";
 "samples.palm_auto_capture.title" = "Palm Auto Capture";

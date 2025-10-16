@@ -16,6 +16,7 @@ class SamplesViewController: UIViewController {
     private lazy var faceAutoCaptureButton = buttonFactory.create(.faceAutoCapture)
     private lazy var smileLivenessButton = buttonFactory.create(.smileLiveness)
     private lazy var magnifEyeLivenessButton = buttonFactory.create(.magnifEyeLiveness)
+    private lazy var multiRangeLivenessButton = buttonFactory.create(.multiRangeLiveness)
     private lazy var palmAutoCaptureButton = buttonFactory.create(.palmAutoCapture)
     
     private lazy var buttons: [UIButton] = [
@@ -24,6 +25,7 @@ class SamplesViewController: UIViewController {
         faceAutoCaptureButton,
         smileLivenessButton,
         magnifEyeLivenessButton,
+        multiRangeLivenessButton,
         palmAutoCaptureButton
     ]
     
@@ -69,6 +71,13 @@ extension SamplesViewController {
         checkDotSdkIsInitialized()
         
         let viewController = MagnifEyeLivenessContainerViewController()
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    @objc private func showMultiRangeLiveness() {
+        checkDotSdkIsInitialized()
+        
+        let viewController = MultiRangeLivenessContainerViewController()
         navigationController?.pushViewController(viewController, animated: true)
     }
     
@@ -120,6 +129,7 @@ extension SamplesViewController {
         faceAutoCaptureButton.addTarget(self, action: #selector(showFaceAutoCapture), for: .touchUpInside)
         smileLivenessButton.addTarget(self, action: #selector(showSmileLiveness), for: .touchUpInside)
         magnifEyeLivenessButton.addTarget(self, action: #selector(showMagnifEyeLiveness), for: .touchUpInside)
+        multiRangeLivenessButton.addTarget(self, action: #selector(showMultiRangeLiveness), for: .touchUpInside)
         palmAutoCaptureButton.addTarget(self, action: #selector(showPalmAutoCapture), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
@@ -144,6 +154,7 @@ extension SamplesViewController {
             faceAutoCaptureButton.heightAnchor.constraint(equalToConstant: buttonFactory.getHeight(.faceAutoCapture)),
             smileLivenessButton.heightAnchor.constraint(equalToConstant: buttonFactory.getHeight(.smileLiveness)),
             magnifEyeLivenessButton.heightAnchor.constraint(equalToConstant: buttonFactory.getHeight(.magnifEyeLiveness)),
+            multiRangeLivenessButton.heightAnchor.constraint(equalToConstant: buttonFactory.getHeight(.multiRangeLiveness)),
             palmAutoCaptureButton.heightAnchor.constraint(equalToConstant: buttonFactory.getHeight(.palmAutoCapture))
         ])
     }
