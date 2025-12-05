@@ -1,4 +1,8 @@
 # Changelog
+## 4.37.0 - 2025-12-05
+### Changed
+- updated DOT SDK to 8.17.0
+
 ## 4.36.0 - 2025-10-16
 ### Added
 - new sample: Multi-Range Liveness
