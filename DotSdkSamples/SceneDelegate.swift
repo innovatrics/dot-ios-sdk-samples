@@ -50,31 +50,31 @@ extension SceneDelegate {
     
     private func createDotFaceLibraryConfiguration() -> DotFaceLibraryConfiguration {
         return .init(
-            modules: [
-                DotFaceDetectionFastModule.shared,
-                DotFaceBackgroundUniformityModule.shared,
-                DotFaceExpressionNeutralModule.shared
-            ]
+            modules: .init(
+                detection: DotFaceDetectionModuleConfiguration.Fast(),
+                expressionNeutral: DotFaceExpressionNeutralModuleConfiguration(),
+                backgroundUniformity: DotFaceBackgroundUniformityModuleConfiguration()
+            )
         )
     }
     
     private func createDotPalmLibraryConfiguration() -> DotPalmLibraryConfiguration {
-        return .init(modules: [DotPalmDetectionModule.shared])
+        return .init(modules: .init(detection: DotPalmDetectionModuleConfiguration()))
     }
     
     private func createDotSdkConfiguration(
         license: Data,
         dotFaceLibraryConfiguration: DotFaceLibraryConfiguration,
         dotPalmLibraryConfiguration: DotPalmLibraryConfiguration
-    ) -> DotSdkConfiguration {
-        return DotSdkConfiguration(
+    ) -> DotSdk.Configuration {
+        return DotSdk.Configuration(
             licenseBytes: license,
-            libraries: [
-                DotFaceLibrary(configuration: dotFaceLibraryConfiguration),
-                DotDocumentLibrary(),
-                DotNfcLibrary(),
-                DotPalmLibrary(configuration: dotPalmLibraryConfiguration)
-            ]
+            libraries: .init(
+                document: DotDocumentLibraryConfiguration(),
+                face: dotFaceLibraryConfiguration,
+                nfc: DotNfcLibraryConfiguration(),
+                palm: dotPalmLibraryConfiguration
+            )
         )
     }
 }

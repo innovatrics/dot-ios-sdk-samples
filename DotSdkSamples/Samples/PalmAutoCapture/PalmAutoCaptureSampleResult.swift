@@ -3,12 +3,12 @@ import UIKit
 
 class PalmAutoCaptureSampleResult: SampleResult {
     
-    let image: UIImage
+    let uiImage: UIImage
     let resultDescription: String? = nil
     let palmAutoCaptureResult: PalmAutoCaptureResult
     
-    init(image: UIImage, palmAutoCaptureResult: PalmAutoCaptureResult) {
-        self.image = image
+    init(uiImage: UIImage, palmAutoCaptureResult: PalmAutoCaptureResult) {
+        self.uiImage = uiImage
         self.palmAutoCaptureResult = palmAutoCaptureResult
     }
 }

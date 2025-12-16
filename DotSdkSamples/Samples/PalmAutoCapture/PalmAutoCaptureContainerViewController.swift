@@ -23,8 +23,8 @@ class PalmAutoCaptureContainerViewController: ContainerViewController {
     private func navigateToResultViewController(_ result: PalmAutoCaptureResult) {
         guard let samplesViewController = navigationController?.viewControllers.first else { return }
         
-        let uiImage = UIImage(cgImage: CGImageFactory.create(bgraRawImage: result.bgraRawImage))
-        let sampleResult = PalmAutoCaptureSampleResult(image: uiImage, palmAutoCaptureResult: result)
+        let uiImage = UIImage(cgImage: CGImageFactory.create(image: result.image))
+        let sampleResult = PalmAutoCaptureSampleResult(uiImage: uiImage, palmAutoCaptureResult: result)
         let resultViewController = SampleResultViewController(sampleResult: sampleResult)
         navigationController?.setViewControllers([samplesViewController, resultViewController], animated: true)
     }
@@ -32,11 +32,11 @@ class PalmAutoCaptureContainerViewController: ContainerViewController {
 
 extension PalmAutoCaptureContainerViewController: PalmAutoCaptureViewControllerDelegate {
     
-    func palmAutoCaptureViewController(_ viewController: PalmAutoCaptureViewController, captured result: PalmAutoCaptureResult) {
+    func palmAutoCaptureViewController(_ viewController: BasePalmAutoCaptureViewController, finished result: PalmAutoCaptureResult) {
         navigateToResultViewController(result)
     }
     
-    func palmAutoCaptureViewControllerViewWillAppear(_ viewController: PalmAutoCaptureViewController) {
+    func palmAutoCaptureViewControllerViewWillAppear(_ viewController: BasePalmAutoCaptureViewController) {
         viewController.start()
     }
 }

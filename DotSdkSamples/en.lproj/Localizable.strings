@@ -7,6 +7,8 @@
 "samples.nfc_reading.subtitle" = "Combination of Document Auto Capture component with enabled MRZ recognition and NFC Travel Document Reader component.";
 "samples.face_auto_capture.title" = "Face Auto Capture";
 "samples.face_auto_capture.subtitle" = "Basic component sample.";
+"samples.custom_ui.face_auto_capture.title" = "Custom UI Face Auto Capture";
+"samples.custom_ui.face_auto_capture.subtitle" = "Base Face Auto Capture component with custom UI.";
 "samples.magnifeye_liveness.title" = "MagnifEye Liveness";
 "samples.magnifeye_liveness.subtitle" = "Basic component sample.";
 "samples.multi_range_liveness.title" = "Multi-Range Liveness";

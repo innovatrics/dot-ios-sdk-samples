@@ -3,12 +3,12 @@ import DotNfc
 
 class NfcReadingSampleResult: SampleResult {
     
-    let image: UIImage
+    let uiImage: UIImage
     let resultDescription: String? = nil
     let travelDocument: TravelDocument
     
-    init(image: UIImage, travelDocument: TravelDocument) {
-        self.image = image
+    init(uiImage: UIImage, travelDocument: TravelDocument) {
+        self.uiImage = uiImage
         self.travelDocument = travelDocument
     }
 }

@@ -5,18 +5,30 @@ import DotCore
 extension PalmAutoCaptureResult: Encodable {
     
     enum Keys: String, CodingKey {
-        case bgraRawImage
+        case image
         case palm
     }
     
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: Keys.self)
-        try container.encode(bgraRawImage, forKey: .bgraRawImage)
+        try container.encode(image, forKey: .image)
         try container.encodeIfPresent(palm, forKey: .palm)
     }
 }
 
-extension ImageParameters: Encodable {
+extension PalmQuality: Encodable {
+    
+    enum Keys: String, CodingKey {
+        case imageQuality
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: Keys.self)
+        try container.encode(imageQuality, forKey: .imageQuality)
+    }
+}
+
+extension PalmImageQuality: Encodable {
 
     enum Keys: String, CodingKey {
         case brightness
@@ -35,14 +47,14 @@ extension PalmDetector.Palm: Encodable {
     enum Keys: String, CodingKey {
         case detectionPosition
         case confidence
-        case imageParameters
+        case quality
     }
     
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: Keys.self)
         try container.encode(detectionPosition, forKey: .detectionPosition)
         try container.encode(confidence, forKey: .confidence)
-        try container.encode(imageParameters, forKey: .imageParameters)
+        try container.encode(quality, forKey: .quality)
     }
 }
 

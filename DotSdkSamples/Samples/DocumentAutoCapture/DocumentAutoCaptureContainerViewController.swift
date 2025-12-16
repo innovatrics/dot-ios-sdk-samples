@@ -23,8 +23,8 @@ class DocumentAutoCaptureContainerViewController: ContainerViewController {
     private func navigateToResultViewController(_ result: DocumentAutoCaptureResult) {
         guard let samplesViewController = navigationController?.viewControllers.first else { return }
         
-        let uiImage = UIImage(cgImage: CGImageFactory.create(bgraRawImage: result.bgraRawImage))
-        let sampleResult = DocumentAutoCaptureSampleResult(image: uiImage, documentAutoCaptureResult: result)
+        let uiImage = UIImage(cgImage: CGImageFactory.create(image: result.image))
+        let sampleResult = DocumentAutoCaptureSampleResult(uiImage: uiImage, documentAutoCaptureResult: result)
         let resultViewController = SampleResultViewController(sampleResult: sampleResult)
         navigationController?.setViewControllers([samplesViewController, resultViewController], animated: true)
     }
@@ -32,11 +32,11 @@ class DocumentAutoCaptureContainerViewController: ContainerViewController {
 
 extension DocumentAutoCaptureContainerViewController: DocumentAutoCaptureViewControllerDelegate {
     
-    func documentAutoCaptureViewController(_ viewController: DocumentAutoCaptureViewController, captured result: DocumentAutoCaptureResult) {
+    func documentAutoCaptureViewController(_ viewController: BaseDocumentAutoCaptureViewController, finished result: DocumentAutoCaptureResult) {
         navigateToResultViewController(result)
     }
     
-    func documentAutoCaptureViewControllerViewWillAppear(_ viewController: DocumentAutoCaptureViewController) {
+    func documentAutoCaptureViewControllerViewWillAppear(_ viewController: BaseDocumentAutoCaptureViewController) {
         viewController.start()
     }
 }

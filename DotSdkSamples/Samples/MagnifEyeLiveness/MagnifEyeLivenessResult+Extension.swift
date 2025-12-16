@@ -5,8 +5,8 @@ import DotFaceCore
 
 extension MagnifEyeLivenessResult: SampleResult {
     
-    var image: UIImage {
-        UIImage(cgImage: CGImageFactory.create(bgrRawImage: bgrRawImage))
+    var uiImage: UIImage {
+        UIImage(cgImage: CGImageFactory.create(image: image))
     }
     
     public var resultDescription: String? {
@@ -17,27 +17,13 @@ extension MagnifEyeLivenessResult: SampleResult {
 extension MagnifEyeLivenessResult: Encodable {
     
     enum Keys: String, CodingKey {
-        case bgrRawImage
+        case image
         case content
     }
     
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: Keys.self)
-        try container.encode(bgrRawImage, forKey: .bgrRawImage)
+        try container.encode(image, forKey: .image)
         try container.encode(content.description, forKey: .content)
-    }
-}
-
-extension BgrRawImage: Encodable {
-    
-    enum Keys: String, CodingKey {
-        case size
-        case bytes
-    }
-    
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: Keys.self)
-        try container.encode(size, forKey: .size)
-        try container.encode(bytes.description, forKey: .bytes)
     }
 }

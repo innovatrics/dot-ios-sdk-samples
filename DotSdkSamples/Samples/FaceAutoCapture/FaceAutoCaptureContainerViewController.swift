@@ -8,9 +8,9 @@ class FaceAutoCaptureContainerViewController: ContainerViewController {
     }
     
     init() {
-        
+        typealias Defaults = BaseFaceAutoCaptureViewController.Configuration.Defaults
         let faceDetectionQuery = FaceDetectionQuery(
-            faceQuality: .init(
+            quality: .init(
                 imageQuality: .init(
                     evaluateSharpness: true,
                     evaluateBrightness: true,
@@ -36,7 +36,7 @@ class FaceAutoCaptureContainerViewController: ContainerViewController {
                 )
             )
         )
-        let viewController = FaceAutoCaptureViewController(configuration: try! .init(query: faceDetectionQuery))
+        let viewController = FaceAutoCaptureViewController(configuration: .init(baseConfiguration: .init(faceLibraryComponent: try! .init(faceSizeRatioInterval: Defaults.faceSizeRatioInterval, query: faceDetectionQuery))))
         super.init(viewController: viewController)
         viewController.delegate = self
     }
@@ -62,17 +62,17 @@ class FaceAutoCaptureContainerViewController: ContainerViewController {
 
 extension FaceAutoCaptureContainerViewController: FaceAutoCaptureViewControllerDelegate {
     
-    func faceAutoCaptureViewController(_ viewController: FaceAutoCaptureViewController, captured result: FaceAutoCaptureResult) {
+    func faceAutoCaptureViewController(_ viewController: BaseFaceAutoCaptureViewController, finished result: FaceAutoCaptureResult) {
         Task {
             let faceAutoCaptureSampleResult = await DetectedFaceEvaluator().evaluate(
-                image: result.bgrRawImage,
+                image: result.image,
                 detectedFace: result.face!
             )
             navigateToResultViewController(faceAutoCaptureSampleResult)
         }
     }
         
-    func faceAutoCaptureViewControllerViewWillAppear(_ viewController: FaceAutoCaptureViewController) {
+    func faceAutoCaptureViewControllerViewWillAppear(_ viewController: BaseFaceAutoCaptureViewController) {
         viewController.start()
     }
 }

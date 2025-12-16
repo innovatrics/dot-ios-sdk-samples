@@ -3,12 +3,12 @@ import UIKit
 
 class DocumentAutoCaptureSampleResult: SampleResult {
     
-    let image: UIImage
+    let uiImage: UIImage
     let resultDescription: String? = nil
     let documentAutoCaptureResult: DocumentAutoCaptureResult
     
-    init(image: UIImage, documentAutoCaptureResult: DocumentAutoCaptureResult) {
-        self.image = image
+    init(uiImage: UIImage, documentAutoCaptureResult: DocumentAutoCaptureResult) {
+        self.uiImage = uiImage
         self.documentAutoCaptureResult = documentAutoCaptureResult
     }
 }

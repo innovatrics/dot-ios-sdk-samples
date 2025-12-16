@@ -4,14 +4,10 @@ import DotCore
 
 struct DetectedFaceEvaluator {
     
-    func evaluate(image: BgrRawImage, detectedFace: FaceDetector.Face) async -> FaceAutoCaptureSampleResult {
-        
-        let image = UIImage(cgImage: CGImageFactory.create(bgrRawImage: image))
-        let faceAspects = detectedFace.faceAspects
-        let faceQuality = detectedFace.faceQuality
-        return FaceAutoCaptureSampleResult(image: image,
+    func evaluate(image: Image, detectedFace: FaceDetector.Face) async -> FaceAutoCaptureSampleResult {
+        return FaceAutoCaptureSampleResult(uiImage: UIImage(cgImage: CGImageFactory.create(image: image)),
                                            confidence: detectedFace.confidence,
-                                           faceAspects: faceAspects,
-                                           faceQuality: faceQuality)
+                                           faceAspects: detectedFace.aspects,
+                                           faceQuality: detectedFace.quality)
     }
 }

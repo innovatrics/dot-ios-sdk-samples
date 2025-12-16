@@ -14,6 +14,7 @@ class SamplesViewController: UIViewController {
     private lazy var documentAutoCaptureButton = buttonFactory.create(.documentAutoCapture)
     private lazy var nfcReadingButton = buttonFactory.create(.nfcReading)
     private lazy var faceAutoCaptureButton = buttonFactory.create(.faceAutoCapture)
+    private lazy var customUifaceAutoCaptureButton = buttonFactory.create(.customUiFaceAutoCapture)
     private lazy var smileLivenessButton = buttonFactory.create(.smileLiveness)
     private lazy var magnifEyeLivenessButton = buttonFactory.create(.magnifEyeLiveness)
     private lazy var multiRangeLivenessButton = buttonFactory.create(.multiRangeLiveness)
@@ -23,6 +24,7 @@ class SamplesViewController: UIViewController {
         documentAutoCaptureButton,
         nfcReadingButton,
         faceAutoCaptureButton,
+        customUifaceAutoCaptureButton,
         smileLivenessButton,
         magnifEyeLivenessButton,
         multiRangeLivenessButton,
@@ -64,6 +66,13 @@ extension SamplesViewController {
         checkDotSdkIsInitialized()
         
         let viewController = FaceAutoCaptureContainerViewController()
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    @objc private func showCustomUiFaceAutoCapture() {
+        checkDotSdkIsInitialized()
+        
+        let viewController = CustomUiFaceAutoCaptureContainerViewController()
         navigationController?.pushViewController(viewController, animated: true)
     }
     
@@ -127,6 +136,7 @@ extension SamplesViewController {
         documentAutoCaptureButton.addTarget(self, action: #selector(showDocumentAutoCapture), for: .touchUpInside)
         nfcReadingButton.addTarget(self, action: #selector(showNfcReading), for: .touchUpInside)
         faceAutoCaptureButton.addTarget(self, action: #selector(showFaceAutoCapture), for: .touchUpInside)
+        customUifaceAutoCaptureButton.addTarget(self, action: #selector(showCustomUiFaceAutoCapture), for: .touchUpInside)
         smileLivenessButton.addTarget(self, action: #selector(showSmileLiveness), for: .touchUpInside)
         magnifEyeLivenessButton.addTarget(self, action: #selector(showMagnifEyeLiveness), for: .touchUpInside)
         multiRangeLivenessButton.addTarget(self, action: #selector(showMultiRangeLiveness), for: .touchUpInside)
@@ -152,6 +162,7 @@ extension SamplesViewController {
             documentAutoCaptureButton.heightAnchor.constraint(equalToConstant: buttonFactory.getHeight(.documentAutoCapture)),
             nfcReadingButton.heightAnchor.constraint(equalToConstant: buttonFactory.getHeight(.nfcReading)),
             faceAutoCaptureButton.heightAnchor.constraint(equalToConstant: buttonFactory.getHeight(.faceAutoCapture)),
+            customUifaceAutoCaptureButton.heightAnchor.constraint(equalToConstant: buttonFactory.getHeight(.customUiFaceAutoCapture)),
             smileLivenessButton.heightAnchor.constraint(equalToConstant: buttonFactory.getHeight(.smileLiveness)),
             magnifEyeLivenessButton.heightAnchor.constraint(equalToConstant: buttonFactory.getHeight(.magnifEyeLiveness)),
             multiRangeLivenessButton.heightAnchor.constraint(equalToConstant: buttonFactory.getHeight(.multiRangeLiveness)),

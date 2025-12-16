@@ -3,13 +3,14 @@ import UIKit
 struct ButtonFactory {
     
     enum ButtonType {
-        case documentAutoCapture, nfcReading, faceAutoCapture, magnifEyeLiveness, multiRangeLiveness, smileLiveness, palmAutoCapture
+        case documentAutoCapture, nfcReading, faceAutoCapture, customUiFaceAutoCapture, magnifEyeLiveness, multiRangeLiveness, smileLiveness, palmAutoCapture
         
         var title: String {
             switch self {
             case .documentAutoCapture: return NSLocalizedString("samples.document_auto_capture.title", comment: "")
             case .nfcReading: return NSLocalizedString("samples.nfc_reading.title", comment: "")
             case .faceAutoCapture: return NSLocalizedString("samples.face_auto_capture.title", comment: "")
+            case .customUiFaceAutoCapture: return NSLocalizedString("samples.custom_ui.face_auto_capture.title", comment: "")
             case .magnifEyeLiveness: return NSLocalizedString("samples.magnifeye_liveness.title", comment: "")
             case .multiRangeLiveness: return NSLocalizedString("samples.multi_range_liveness.title", comment: "")
             case .smileLiveness: return NSLocalizedString("samples.smile_liveness.title", comment: "")
@@ -22,6 +23,7 @@ struct ButtonFactory {
             case .documentAutoCapture: return NSLocalizedString("samples.document_auto_capture.subtitle", comment: "")
             case .nfcReading: return NSLocalizedString("samples.nfc_reading.subtitle", comment: "")
             case .faceAutoCapture: return NSLocalizedString("samples.face_auto_capture.subtitle", comment: "")
+            case .customUiFaceAutoCapture: return NSLocalizedString("samples.custom_ui.face_auto_capture.subtitle", comment: "")
             case .magnifEyeLiveness: return NSLocalizedString("samples.magnifeye_liveness.subtitle", comment: "")
             case .multiRangeLiveness: return NSLocalizedString("samples.multi_range_liveness.subtitle", comment: "")
             case .smileLiveness: return NSLocalizedString("samples.smile_liveness.subtitle", comment: "")
@@ -34,6 +36,7 @@ struct ButtonFactory {
             case .documentAutoCapture: return 55
             case .nfcReading: return 85
             case .faceAutoCapture: return 55
+            case .customUiFaceAutoCapture: return 55
             case .magnifEyeLiveness: return 55
             case .multiRangeLiveness: return 55
             case .smileLiveness: return 55

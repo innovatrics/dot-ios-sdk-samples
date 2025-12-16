@@ -5,8 +5,8 @@ import DotFaceCore
 
 extension MultiRangeLivenessResult: SampleResult {
     
-    var image: UIImage {
-        UIImage(cgImage: CGImageFactory.create(bgrRawImage: bgrRawImage))
+    var uiImage: UIImage {
+        UIImage(cgImage: CGImageFactory.create(image: image))
     }
     
     public var resultDescription: String? {
@@ -17,13 +17,13 @@ extension MultiRangeLivenessResult: SampleResult {
 extension MultiRangeLivenessResult: Encodable {
     
     enum Keys: String, CodingKey {
-        case bgrRawImage
+        case image
         case content
     }
     
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: Keys.self)
-        try container.encode(bgrRawImage, forKey: .bgrRawImage)
+        try container.encode(image, forKey: .image)
         try container.encode(content.description, forKey: .content)
     }
 }

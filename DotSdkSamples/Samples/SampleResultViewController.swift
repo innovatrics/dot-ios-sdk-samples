@@ -1,7 +1,7 @@
 import UIKit
 
 protocol SampleResult: Encodable {
-    var image: UIImage { get }
+    var uiImage: UIImage { get }
     var resultDescription: String? { get }
 }
 
@@ -45,10 +45,10 @@ extension SampleResultViewController {
         
         contentView.addSubview(imageView)
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = sampleResult.image
+        imageView.image = sampleResult.uiImage
         imageView.contentMode = .scaleAspectFit
         imageView.setContentHuggingPriority(.required, for: .vertical)
-        imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor, multiplier: sampleResult.image.size.width/sampleResult.image.size.height).isActive = true
+        imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor, multiplier: sampleResult.uiImage.size.width/sampleResult.uiImage.size.height).isActive = true
     }
     
     private func setupTextView() {

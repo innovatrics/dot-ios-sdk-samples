@@ -77,7 +77,7 @@ extension NfcReadingViewController {
             imageView.image = nil
         case .nfcReadingSuccess(let sampleResult):
             textView.text = String(data: try! encoder.encode(sampleResult), encoding: .utf8)
-            addImage(sampleResult.image)
+            addImage(sampleResult.uiImage)
         case .nfcReadingCanceled:
             textView.text = nil
             imageView.image = nil

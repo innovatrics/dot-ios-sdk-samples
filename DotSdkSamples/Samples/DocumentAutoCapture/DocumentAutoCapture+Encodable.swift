@@ -5,28 +5,14 @@ import DotCore
 extension DocumentAutoCaptureResult: Encodable {
     
     enum Keys: String, CodingKey {
-        case bgraRawImage
+        case image
         case document
     }
     
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: Keys.self)
-        try container.encode(bgraRawImage, forKey: .bgraRawImage)
+        try container.encode(image, forKey: .image)
         try container.encodeIfPresent(document, forKey: .document)
-    }
-}
-
-extension BgraRawImage: Encodable {
-    
-    enum Keys: String, CodingKey {
-        case size
-        case bytes
-    }
-    
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: Keys.self)
-        try container.encode(size, forKey: .size)
-        try container.encode(bytes.description, forKey: .bytes)
     }
 }
 
@@ -44,8 +30,8 @@ extension ImageSize: Encodable {
     }
 }
 
-extension ImageParameters: Encodable {
-
+extension DocumentImageQuality: Encodable {
+    
     enum Keys: String, CodingKey {
         case brightness
         case sharpness
@@ -60,13 +46,25 @@ extension ImageParameters: Encodable {
     }
 }
 
+extension DocumentQuality: Encodable {
+
+    enum Keys: String, CodingKey {
+        case imageQuality
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: Keys.self)
+        try container.encode(imageQuality, forKey: .imageQuality)
+    }
+}
+
 extension DocumentDetector.Document: Encodable {
     
     enum Keys: String, CodingKey {
         case detectionPosition
         case confidence
         case widthToHeightRatio
-        case imageParameters
+        case quality
     }
     
     public func encode(to encoder: Encoder) throws {
@@ -74,7 +72,7 @@ extension DocumentDetector.Document: Encodable {
         try container.encode(detectionPosition, forKey: .detectionPosition)
         try container.encode(confidence, forKey: .confidence)
         try container.encode(widthToHeightRatio, forKey: .widthToHeightRatio)
-        try container.encode(imageParameters, forKey: .imageParameters)
+        try container.encode(quality, forKey: .quality)
     }
 }
 

@@ -5,7 +5,7 @@ import DotNfc
 class NfcReadingDocumentAutoCaptureContainerViewController: ContainerViewController {
         
     init() {
-        let configuration = try! DocumentAutoCaptureViewController.Configuration(mrzValidation: .validateAlways)
+        let configuration = DocumentAutoCaptureViewController.Configuration(baseConfiguration: .init(mrzValidation: .requirePresenceAndValidity))
         let viewController = DocumentAutoCaptureViewController(configuration: configuration)
         super.init(viewController: viewController)
         viewController.delegate = self
@@ -31,12 +31,12 @@ class NfcReadingDocumentAutoCaptureContainerViewController: ContainerViewControl
 
 extension NfcReadingDocumentAutoCaptureContainerViewController: DocumentAutoCaptureViewControllerDelegate {
     
-    func documentAutoCaptureViewController(_ viewController: DocumentAutoCaptureViewController, captured result: DocumentAutoCaptureResult) {
+    func documentAutoCaptureViewController(_ viewController: BaseDocumentAutoCaptureViewController, finished result: DocumentAutoCaptureResult) {
         let mrzPassword = try! MrzPasswordFactory.create(documentAutoCaptureResult: result)
         navigateToNfcReadingViewController(mrzPassword)
     }
     
-    func documentAutoCaptureViewControllerViewWillAppear(_ viewController: DocumentAutoCaptureViewController) {
+    func documentAutoCaptureViewControllerViewWillAppear(_ viewController: BaseDocumentAutoCaptureViewController) {
         viewController.start()
     }
 }

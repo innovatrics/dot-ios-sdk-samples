@@ -1,4 +1,11 @@
 # Changelog
+## 4.38.0 - 2025-12-16
+### Added
+- new sample: Custom UI Face Auto Capture
+
+### Changed
+- updated DOT SDK to 9.0.0
+
 ## 4.37.0 - 2025-12-05
 ### Changed
 - updated DOT SDK to 8.17.0

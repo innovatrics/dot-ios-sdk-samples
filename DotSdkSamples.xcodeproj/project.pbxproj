@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		139EADCA2EF19AD6002AE27F /* DotCore+Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139EADC92EF19AD6002AE27F /* DotCore+Encodable.swift */; };
 		13DBB89F2EA12F9100757C51 /* MultiRangeLivenessContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DBB89D2EA12F9100757C51 /* MultiRangeLivenessContainerViewController.swift */; };
 		13DBB8A02EA12F9100757C51 /* MultiRangeLivenessResult+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DBB89E2EA12F9100757C51 /* MultiRangeLivenessResult+Extension.swift */; };
 		3B4ABD992C821474005731B6 /* PalmAutoCaptureContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4ABD982C821474005731B6 /* PalmAutoCaptureContainerViewController.swift */; };
 		3B4ABD9B2C8214DB005731B6 /* PalmAutoCaptureSampleResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4ABD9A2C8214DB005731B6 /* PalmAutoCaptureSampleResult.swift */; };
 		3B4ABD9D2C821566005731B6 /* PalmAutoCapture+Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4ABD9C2C821566005731B6 /* PalmAutoCapture+Encodable.swift */; };
 		3B569AEA29CC44E3007A34EE /* MagnifEyeLivenessContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B569AE829CC44E3007A34EE /* MagnifEyeLivenessContainerViewController.swift */; };
+		3B733D152EDDACF800552F5A /* FaceAutoCapturePhaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B733D132EDDACF800552F5A /* FaceAutoCapturePhaseView.swift */; };
+		3B733D162EDDACF800552F5A /* CustomUiFaceAutoCaptureContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B733D122EDDACF800552F5A /* CustomUiFaceAutoCaptureContainerViewController.swift */; };
 		3BB0F9342AF3F3B1004D9FD2 /* dot_license.lic in Resources */ = {isa = PBXBuildFile; fileRef = 3BB0F9332AF3F3B1004D9FD2 /* dot_license.lic */; };
 		3BC1276C2CCA5AB9007997C7 /* DotDocument in Frameworks */ = {isa = PBXBuildFile; productRef = 3BC1276B2CCA5AB9007997C7 /* DotDocument */; };
 		3BC1276E2CCA5AB9007997C7 /* DotFaceBackgroundUniformity in Frameworks */ = {isa = PBXBuildFile; productRef = 3BC1276D2CCA5AB9007997C7 /* DotFaceBackgroundUniformity */; };
@@ -51,6 +54,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		139EADC92EF19AD6002AE27F /* DotCore+Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DotCore+Encodable.swift"; sourceTree = "<group>"; };
 		13DBB89D2EA12F9100757C51 /* MultiRangeLivenessContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiRangeLivenessContainerViewController.swift; sourceTree = "<group>"; };
 		13DBB89E2EA12F9100757C51 /* MultiRangeLivenessResult+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MultiRangeLivenessResult+Extension.swift"; sourceTree = "<group>"; };
 		3B4ABD982C821474005731B6 /* PalmAutoCaptureContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalmAutoCaptureContainerViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 		3B4ABD9C2C821566005731B6 /* PalmAutoCapture+Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PalmAutoCapture+Encodable.swift"; sourceTree = "<group>"; };
 		3B4D53C52ACDA4BC009613BE /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		3B569AE829CC44E3007A34EE /* MagnifEyeLivenessContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagnifEyeLivenessContainerViewController.swift; sourceTree = "<group>"; };
+		3B733D122EDDACF800552F5A /* CustomUiFaceAutoCaptureContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUiFaceAutoCaptureContainerViewController.swift; sourceTree = "<group>"; };
+		3B733D132EDDACF800552F5A /* FaceAutoCapturePhaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceAutoCapturePhaseView.swift; sourceTree = "<group>"; };
 		3BB0F9332AF3F3B1004D9FD2 /* dot_license.lic */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dot_license.lic; sourceTree = "<group>"; };
 		3BC2FF5928CF462000B144CD /* DotSdkSamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DotSdkSamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BC2FF5C28CF462000B144CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +115,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		139EADC62EF19962002AE27F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				139EADC92EF19AD6002AE27F /* DotCore+Encodable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		13DBB89C2EA12F8300757C51 /* MultiRangeLiveness */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +151,15 @@
 			path = MagnifEyeLiveness;
 			sourceTree = "<group>";
 		};
+		3B733D142EDDACF800552F5A /* CutomUi */ = {
+			isa = PBXGroup;
+			children = (
+				3B733D122EDDACF800552F5A /* CustomUiFaceAutoCaptureContainerViewController.swift */,
+				3B733D132EDDACF800552F5A /* FaceAutoCapturePhaseView.swift */,
+			);
+			path = CutomUi;
+			sourceTree = "<group>";
+		};
 		3BC2FF5028CF462000B144CD = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +185,7 @@
 				3BC2FF6028CF462000B144CD /* SamplesViewController.swift */,
 				3BC2FF7B28CF733C00B144CD /* ButtonFactory.swift */,
 				3BC2FFB828DB099200B144CD /* UIAlertController+Ext.swift */,
+				139EADC62EF19962002AE27F /* Extensions */,
 				3BC2FF7D28D0BD6300B144CD /* Samples */,
 				3BC2FF6228CF462000B144CD /* Main.storyboard */,
 				3BC2FF6528CF462200B144CD /* Assets.xcassets */,
@@ -204,6 +228,7 @@
 		3BC2FF8528D1F85A00B144CD /* FaceAutoCapture */ = {
 			isa = PBXGroup;
 			children = (
+				3B733D142EDDACF800552F5A /* CutomUi */,
 				3BC2FF8A28D2138400B144CD /* FaceAutoCaptureContainerViewController.swift */,
 				3BC2FF8E28D4841C00B144CD /* FaceAutoCapture+Encodable.swift */,
 				3BC2FFAE28D9E9F700B144CD /* FaceAutoCaptureSampleResult.swift */,
@@ -332,6 +357,7 @@
 				3BC2FFB528D9FB3100B144CD /* DetectedFaceEvaluator.swift in Sources */,
 				3BC2FF8428D1E91F00B144CD /* DocumentAutoCapture+Encodable.swift in Sources */,
 				3BC2FF7328CF6D0F00B144CD /* ContainerViewController.swift in Sources */,
+				139EADCA2EF19AD6002AE27F /* DotCore+Encodable.swift in Sources */,
 				3B4ABD992C821474005731B6 /* PalmAutoCaptureContainerViewController.swift in Sources */,
 				3BC2FFA928D9BDF400B144CD /* NfcReading+Encodable.swift in Sources */,
 				3B569AEA29CC44E3007A34EE /* MagnifEyeLivenessContainerViewController.swift in Sources */,
@@ -342,6 +368,8 @@
 				3BD0E8A829CC6B760027E4FF /* MagnifEyeLivenessResult+Extension.swift in Sources */,
 				3BC2FF5F28CF462000B144CD /* SceneDelegate.swift in Sources */,
 				3BC2FFB128D9EC5800B144CD /* NfcReadingSampleResult.swift in Sources */,
+				3B733D152EDDACF800552F5A /* FaceAutoCapturePhaseView.swift in Sources */,
+				3B733D162EDDACF800552F5A /* CustomUiFaceAutoCaptureContainerViewController.swift in Sources */,
 				3BC2FF8F28D4841C00B144CD /* FaceAutoCapture+Encodable.swift in Sources */,
 				13DBB89F2EA12F9100757C51 /* MultiRangeLivenessContainerViewController.swift in Sources */,
 				13DBB8A02EA12F9100757C51 /* MultiRangeLivenessResult+Extension.swift in Sources */,
@@ -521,7 +549,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.36.0;
+				MARKETING_VERSION = 4.38.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.innovatrics.dot.samples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "DotSamples Development Profile";
@@ -557,7 +585,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.36.0;
+				MARKETING_VERSION = 4.38.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.innovatrics.dot.samples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "DotSamples Development Profile";
@@ -596,7 +624,7 @@
 			repositoryURL = "https://github.com/innovatrics/dot-ios-sdk-spm.git";
 			requirement = {
 				kind = exactVersion;
-				version = 8.17.0;
+				version = 9.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

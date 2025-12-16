@@ -5,13 +5,13 @@ extension FaceAttribute: Encodable {
     
     enum Keys: String, CodingKey {
         case score
-        case preconditionsMet
+        case arePreconditionsMet
     }
     
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: Keys.self)
         try container.encode(score, forKey: .score)
-        try container.encode(preconditionsMet, forKey: .preconditionsMet)
+        try container.encode(arePreconditionsMet, forKey: .arePreconditionsMet)
     }
 }
 
@@ -55,13 +55,13 @@ extension HeadPoseAttribute: Encodable {
     
     enum Keys: String, CodingKey {
         case angle
-        case preconditionsMet
+        case arePreconditionsMet
     }
     
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: Keys.self)
         try container.encode(angle, forKey: .angle)
-        try container.encode(preconditionsMet, forKey: .preconditionsMet)
+        try container.encode(arePreconditionsMet, forKey: .arePreconditionsMet)
     }
 }
 
@@ -99,13 +99,13 @@ extension Glasses: Encodable {
     
     enum Keys: String, CodingKey {
         case score
-        case preconditionsMet
+        case arePreconditionsMet
     }
     
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: Keys.self)
         try container.encode(score, forKey: .score)
-        try container.encode(preconditionsMet, forKey: .preconditionsMet)
+        try container.encode(arePreconditionsMet, forKey: .arePreconditionsMet)
     }
 }
 

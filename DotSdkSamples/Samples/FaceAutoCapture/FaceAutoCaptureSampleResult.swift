@@ -3,14 +3,14 @@ import DotFaceCore
 
 class FaceAutoCaptureSampleResult: SampleResult {
     
-    let image: UIImage
+    let uiImage: UIImage
     let resultDescription: String? = nil
     let confidence: Double
     let faceAspects: FaceAspects
     let faceQuality: FaceQuality
 
-    init(image: UIImage, confidence: Double, faceAspects: FaceAspects, faceQuality: FaceQuality) {
-        self.image = image
+    init(uiImage: UIImage, confidence: Double, faceAspects: FaceAspects, faceQuality: FaceQuality) {
+        self.uiImage = uiImage
         self.confidence = confidence
         self.faceAspects = faceAspects
         self.faceQuality = faceQuality

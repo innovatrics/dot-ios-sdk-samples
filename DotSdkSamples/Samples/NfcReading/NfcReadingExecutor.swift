@@ -40,7 +40,7 @@ extension NfcReadingExecutor: NfcTravelDocumentReaderDelegate {
             return
         }
         
-        let sampleResult =  NfcReadingSampleResult(image: image, travelDocument: result.travelDocument)
+        let sampleResult =  NfcReadingSampleResult(uiImage: image, travelDocument: result.travelDocument)
         delegate?.nfcReadingExecutorSuccess(self, result: sampleResult)
     }
     
