@@ -1,4 +1,11 @@
 # Changelog
+## 4.40.0 - 2026-02-26
+###Added
+- DotDocumentBarcode module
+
+### Changed
+- updated DOT SDK to 9.2.0
+
 ## 4.39.1 - 2026-02-19
 ### Changed
 - updated DOT SDK to 9.1.1

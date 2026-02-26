@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		139EADCA2EF19AD6002AE27F /* DotCore+Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139EADC92EF19AD6002AE27F /* DotCore+Encodable.swift */; };
+		13D4B5B92F50D0CB009C8A1F /* DotDocumentBarcode in Frameworks */ = {isa = PBXBuildFile; productRef = 13D4B5B82F50D0CB009C8A1F /* DotDocumentBarcode */; };
 		13DBB89F2EA12F9100757C51 /* MultiRangeLivenessContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DBB89D2EA12F9100757C51 /* MultiRangeLivenessContainerViewController.swift */; };
 		13DBB8A02EA12F9100757C51 /* MultiRangeLivenessResult+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DBB89E2EA12F9100757C51 /* MultiRangeLivenessResult+Extension.swift */; };
 		3B4ABD992C821474005731B6 /* PalmAutoCaptureContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4ABD982C821474005731B6 /* PalmAutoCaptureContainerViewController.swift */; };
@@ -103,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13D4B5B92F50D0CB009C8A1F /* DotDocumentBarcode in Frameworks */,
 				3BC127742CCA5AB9007997C7 /* DotNfc in Frameworks */,
 				3BC1276C2CCA5AB9007997C7 /* DotDocument in Frameworks */,
 				3BC127762CCA5AB9007997C7 /* DotPalmDetection in Frameworks */,
@@ -121,6 +123,13 @@
 				139EADC92EF19AD6002AE27F /* DotCore+Encodable.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		13D4B5B72F50D0CB009C8A1F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		13DBB89C2EA12F8300757C51 /* MultiRangeLiveness */ = {
@@ -165,6 +174,7 @@
 			children = (
 				3B4D53C52ACDA4BC009613BE /* CHANGELOG.md */,
 				3BC2FF5B28CF462000B144CD /* DotSdkSamples */,
+				13D4B5B72F50D0CB009C8A1F /* Frameworks */,
 				3BC2FF5A28CF462000B144CD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -282,6 +292,7 @@
 				3BC127712CCA5AB9007997C7 /* DotFaceExpressionNeutral */,
 				3BC127732CCA5AB9007997C7 /* DotNfc */,
 				3BC127752CCA5AB9007997C7 /* DotPalmDetection */,
+				13D4B5B82F50D0CB009C8A1F /* DotDocumentBarcode */,
 			);
 			productName = DotSdkSamples;
 			productReference = 3BC2FF5928CF462000B144CD /* DotSdkSamples.app */;
@@ -549,7 +560,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.39.1;
+				MARKETING_VERSION = 4.40.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.innovatrics.dot.samples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "DotSamples Development Profile";
@@ -585,7 +596,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.39.1;
+				MARKETING_VERSION = 4.40.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.innovatrics.dot.samples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "DotSamples Development Profile";
@@ -624,12 +635,17 @@
 			repositoryURL = "https://github.com/innovatrics/dot-ios-sdk-spm.git";
 			requirement = {
 				kind = exactVersion;
-				version = 9.1.1;
+				version = 9.2.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		13D4B5B82F50D0CB009C8A1F /* DotDocumentBarcode */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3BC1276A2CCA5AB9007997C7 /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */;
+			productName = DotDocumentBarcode;
+		};
 		3BC1276B2CCA5AB9007997C7 /* DotDocument */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3BC1276A2CCA5AB9007997C7 /* XCRemoteSwiftPackageReference "dot-ios-sdk-spm" */;

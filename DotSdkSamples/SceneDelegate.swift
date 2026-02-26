@@ -36,6 +36,7 @@ extension SceneDelegate {
                 let license = try Data(contentsOf: url)
                 let dotSdkConfiguration = createDotSdkConfiguration(
                     license: license,
+                    dotDocumentLibraryConfiguration: createDotDocumentLibraryConfiguration(),
                     dotFaceLibraryConfiguration: createDotFaceLibraryConfiguration(),
                     dotPalmLibraryConfiguration: createDotPalmLibraryConfiguration()
                 )
@@ -46,6 +47,10 @@ extension SceneDelegate {
         } else {
             fatalError("Failed to initialize DotSdk: License not found.")
         }
+    }
+    
+    private func createDotDocumentLibraryConfiguration() -> DotDocumentLibraryConfiguration {
+        return .init(modules: .init(barcode: DotDocumentBarcodeModuleConfiguration()))
     }
     
     private func createDotFaceLibraryConfiguration() -> DotFaceLibraryConfiguration {
@@ -64,13 +69,14 @@ extension SceneDelegate {
     
     private func createDotSdkConfiguration(
         license: Data,
+        dotDocumentLibraryConfiguration: DotDocumentLibraryConfiguration,
         dotFaceLibraryConfiguration: DotFaceLibraryConfiguration,
         dotPalmLibraryConfiguration: DotPalmLibraryConfiguration
     ) -> DotSdk.Configuration {
         return DotSdk.Configuration(
             licenseBytes: license,
             libraries: .init(
-                document: DotDocumentLibraryConfiguration(),
+                document: dotDocumentLibraryConfiguration,
                 face: dotFaceLibraryConfiguration,
                 nfc: DotNfcLibraryConfiguration(),
                 palm: dotPalmLibraryConfiguration
