@@ -17,7 +17,7 @@ class MultiRangeLivenessContainerViewController: ContainerViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = NSLocalizedString("samples.magnifeye_liveness.title", comment: "")
+        title = NSLocalizedString("samples.multi_range_liveness.title", comment: "")
         view.backgroundColor = .systemBackground
     }
     
