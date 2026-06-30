@@ -1,5 +1,5 @@
 
-"samples.title" = "DOT SDK Samples";
+"samples.title" = "IDV SDK Samples";
 "samples.result.title" = "Result";
 "samples.document_auto_capture.title" = "Document Auto Capture";
 "samples.document_auto_capture.subtitle" = "Basic component sample.";
@@ -17,6 +17,10 @@
 "samples.smile_liveness.subtitle" = "Basic component sample.";
 "samples.palm_auto_capture.title" = "Palm Auto Capture";
 "samples.palm_auto_capture.subtitle" = "Basic component sample.";
+"samples.fingers_auto_capture.title" = "Fingers Auto Capture";
+"samples.fingers_auto_capture.subtitle" = "Basic component sample with finger-to-fingerprint transformation.";
+"samples.fingers_auto_capture.result.finger_images" = "Finger images";
+"samples.fingers_auto_capture.result.fingerprint_images" = "Fingerprint images";
 
 "samples.smile_liveness.result_description" = "Use the Digital Identity Service in order to evaluate the smile liveness score. See: https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-dis/latest/documentation/#_smile_liveness_check";
 "samples.magnifeye_liveness.result_description" = "Use the Digital Identity Service in order to evaluate the MagnifEye liveness score. See: https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-dis/latest/documentation/#_magnifeye_liveness_check";

@@ -1,11 +1,11 @@
-# DOT iOS SDK Samples
+# IDV iOS SDK Samples
 
-A collection of quickstart samples demonstrating the DOT iOS SDK. [Read more about DOT iOS SDK](https://developers.innovatrics.com/digital-onboarding/technical/ios-development/).
+A collection of quickstart samples demonstrating the IDV iOS SDK. [Read more about IDV iOS SDK](https://developers.innovatrics.com/digital-onboarding/technical/ios-development/).
 
 ## Dependencies
 
 ### Swift Package Manager
-1. The project is configured to use Swift Package Manager by default. [Location of DOT iOS SDK Swift packages](https://github.com/innovatrics/dot-ios-sdk-spm.git).
+1. The project is configured to use Swift Package Manager by default. [Location of IDV iOS SDK Swift packages](https://github.com/innovatrics/dot-ios-sdk-spm.git).
 1. After you open DotSdkSamples.xcodeproj, Xcode will automatically download required packages.
 1. If you encounter an error while downloading packages, try one of the following: Xcode->File->Packages->Reset Package Caches/Update to Latest Package Versions 
 1. Swift package dependencies can be added or removed in Xcode in the **Package Dependencies** tab of DotSdkSamples project.
@@ -22,7 +22,7 @@ A collection of quickstart samples demonstrating the DOT iOS SDK. [Read more abo
 1. Complete app signing configuration using your certificates and profiles.
 1. To obtain a license, please contact `sales@innovatrics.com` and send them your **Bundle Identifier**.
 1. After you receive your license, rename the license file to `dot_license.lic` and import it to the DotSdkSamples project.
-1. The setup is now complete and you can run DOT iOS SDK samples.
+1. The setup is now complete and you can run IDV iOS SDK samples.
 
 ## Samples
 
@@ -37,7 +37,7 @@ A collection of quickstart samples demonstrating the DOT iOS SDK. [Read more abo
 | **Multi-Range Liveness**        | Basic component sample.                                                                                                  |
 | **Palm Auto Capture**           | Basic component sample.                                                                                                  |
 
-In case when the samples do not work because of the expired DOT license, please contact `sales@innovatrics.com` in order to obtain a new license file.
+In case when the samples do not work because of the expired IDV license, please contact `sales@innovatrics.com` in order to obtain a new license file.
 
 ## Changelog
 

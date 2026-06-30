@@ -1,5 +1,12 @@
 # Changelog
-## 4.41.0 - 2026-05-07
+## 4.43.0 - 2026-06-30
+### Added
+- Fingers Auto Capture sample with finger-to-fingerprint transformation
+### Changed
+- updated IDV SDK to 9.5.0
+- Renamed product to IDV (Identity Verification)
+
+## 4.42.0 - 2026-05-29
 ### Changed
 - updated DOT SDK to 9.4.1
 

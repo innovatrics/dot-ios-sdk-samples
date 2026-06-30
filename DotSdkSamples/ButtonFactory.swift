@@ -3,7 +3,7 @@ import UIKit
 struct ButtonFactory {
     
     enum ButtonType {
-        case documentAutoCapture, nfcReading, faceAutoCapture, customUiFaceAutoCapture, magnifEyeLiveness, multiRangeLiveness, smileLiveness, palmAutoCapture
+        case documentAutoCapture, nfcReading, faceAutoCapture, customUiFaceAutoCapture, magnifEyeLiveness, multiRangeLiveness, smileLiveness, palmAutoCapture, fingersAutoCapture
         
         var title: String {
             switch self {
@@ -15,9 +15,10 @@ struct ButtonFactory {
             case .multiRangeLiveness: return NSLocalizedString("samples.multi_range_liveness.title", comment: "")
             case .smileLiveness: return NSLocalizedString("samples.smile_liveness.title", comment: "")
             case .palmAutoCapture: return NSLocalizedString("samples.palm_auto_capture.title", comment: "")
+            case .fingersAutoCapture: return NSLocalizedString("samples.fingers_auto_capture.title", comment: "")
             }
         }
-        
+
         var subtitle: String {
             switch self {
             case .documentAutoCapture: return NSLocalizedString("samples.document_auto_capture.subtitle", comment: "")
@@ -28,9 +29,10 @@ struct ButtonFactory {
             case .multiRangeLiveness: return NSLocalizedString("samples.multi_range_liveness.subtitle", comment: "")
             case .smileLiveness: return NSLocalizedString("samples.smile_liveness.subtitle", comment: "")
             case .palmAutoCapture: return NSLocalizedString("samples.palm_auto_capture.subtitle", comment: "")
+            case .fingersAutoCapture: return NSLocalizedString("samples.fingers_auto_capture.subtitle", comment: "")
             }
         }
-        
+
         var height: CGFloat {
             switch self {
             case .documentAutoCapture: return 55
@@ -41,6 +43,7 @@ struct ButtonFactory {
             case .multiRangeLiveness: return 55
             case .smileLiveness: return 55
             case .palmAutoCapture: return 55
+            case .fingersAutoCapture: return 55
             }
         }
     }

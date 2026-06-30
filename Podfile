@@ -1,9 +1,9 @@
-platform :ios, '13.0'
+platform :ios, '15.5'
 
 source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/innovatrics/innovatrics-podspecs'
 
-dot_sdk_version = '9.4.1'
+dot_sdk_version = '9.5.0'
 
 target 'DotSdkSamples' do
   use_frameworks!
@@ -15,4 +15,6 @@ target 'DotSdkSamples' do
   pod 'dot-document-barcode', dot_sdk_version
   pod 'dot-nfc', dot_sdk_version
   pod 'dot-palm-detection', dot_sdk_version
+  pod 'dot-fingers-detection', dot_sdk_version
+  pod 'dot-fingers-transformation', dot_sdk_version
 end

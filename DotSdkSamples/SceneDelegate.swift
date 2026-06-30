@@ -7,6 +7,10 @@ import DotNfc
 import DotPalmCore
 import DotPalmDetection
 
+import DotFingersCore
+import DotFingersDetection
+import DotFingersTransformation
+
 import DotFaceCore
 import DotFaceDetectionFast
 import DotFaceBackgroundUniformity
@@ -38,7 +42,8 @@ extension SceneDelegate {
                     license: license,
                     dotDocumentLibraryConfiguration: createDotDocumentLibraryConfiguration(),
                     dotFaceLibraryConfiguration: createDotFaceLibraryConfiguration(),
-                    dotPalmLibraryConfiguration: createDotPalmLibraryConfiguration()
+                    dotPalmLibraryConfiguration: createDotPalmLibraryConfiguration(),
+                    dotFingersLibraryConfiguration: createDotFingersLibraryConfiguration()
                 )
                 try DotSdk.shared.initialize(configuration: dotSdkConfiguration)
             } catch {
@@ -66,12 +71,22 @@ extension SceneDelegate {
     private func createDotPalmLibraryConfiguration() -> DotPalmLibraryConfiguration {
         return .init(modules: .init(detection: DotPalmDetectionModuleConfiguration()))
     }
+
+    private func createDotFingersLibraryConfiguration() -> DotFingersLibraryConfiguration {
+        return .init(
+            modules: .init(
+                detection: DotFingersDetectionModuleConfiguration(),
+                transformation: DotFingersTransformationModuleConfiguration()
+            )
+        )
+    }
     
     private func createDotSdkConfiguration(
         license: Data,
         dotDocumentLibraryConfiguration: DotDocumentLibraryConfiguration,
         dotFaceLibraryConfiguration: DotFaceLibraryConfiguration,
-        dotPalmLibraryConfiguration: DotPalmLibraryConfiguration
+        dotPalmLibraryConfiguration: DotPalmLibraryConfiguration,
+        dotFingersLibraryConfiguration: DotFingersLibraryConfiguration
     ) -> DotSdk.Configuration {
         return DotSdk.Configuration(
             licenseBytes: license,
@@ -79,7 +94,8 @@ extension SceneDelegate {
                 document: dotDocumentLibraryConfiguration,
                 face: dotFaceLibraryConfiguration,
                 nfc: DotNfcLibraryConfiguration(),
-                palm: dotPalmLibraryConfiguration
+                palm: dotPalmLibraryConfiguration,
+                fingers: dotFingersLibraryConfiguration
             )
         )
     }

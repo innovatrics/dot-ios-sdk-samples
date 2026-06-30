@@ -19,7 +19,8 @@ class SamplesViewController: UIViewController {
     private lazy var magnifEyeLivenessButton = buttonFactory.create(.magnifEyeLiveness)
     private lazy var multiRangeLivenessButton = buttonFactory.create(.multiRangeLiveness)
     private lazy var palmAutoCaptureButton = buttonFactory.create(.palmAutoCapture)
-    
+    private lazy var fingersAutoCaptureButton = buttonFactory.create(.fingersAutoCapture)
+
     private lazy var buttons: [UIButton] = [
         documentAutoCaptureButton,
         nfcReadingButton,
@@ -28,7 +29,8 @@ class SamplesViewController: UIViewController {
         smileLivenessButton,
         magnifEyeLivenessButton,
         multiRangeLivenessButton,
-        palmAutoCaptureButton
+        palmAutoCaptureButton,
+        fingersAutoCaptureButton
     ]
     
     override func viewDidLoad() {
@@ -99,8 +101,15 @@ extension SamplesViewController {
     
     @objc private func showPalmAutoCapture() {
         checkDotSdkIsInitialized()
-        
+
         let viewController = PalmAutoCaptureContainerViewController()
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+
+    @objc private func showFingersAutoCapture() {
+        checkDotSdkIsInitialized()
+
+        let viewController = FingersAutoCaptureContainerViewController()
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
@@ -141,7 +150,8 @@ extension SamplesViewController {
         magnifEyeLivenessButton.addTarget(self, action: #selector(showMagnifEyeLiveness), for: .touchUpInside)
         multiRangeLivenessButton.addTarget(self, action: #selector(showMultiRangeLiveness), for: .touchUpInside)
         palmAutoCaptureButton.addTarget(self, action: #selector(showPalmAutoCapture), for: .touchUpInside)
-        
+        fingersAutoCaptureButton.addTarget(self, action: #selector(showFingersAutoCapture), for: .touchUpInside)
+
         NSLayoutConstraint.activate([
             scrollView.frameLayoutGuide.topAnchor.constraint(equalTo: view.topAnchor),
             scrollView.frameLayoutGuide.bottomAnchor.constraint(equalTo: view.bottomAnchor),
@@ -166,7 +176,8 @@ extension SamplesViewController {
             smileLivenessButton.heightAnchor.constraint(equalToConstant: buttonFactory.getHeight(.smileLiveness)),
             magnifEyeLivenessButton.heightAnchor.constraint(equalToConstant: buttonFactory.getHeight(.magnifEyeLiveness)),
             multiRangeLivenessButton.heightAnchor.constraint(equalToConstant: buttonFactory.getHeight(.multiRangeLiveness)),
-            palmAutoCaptureButton.heightAnchor.constraint(equalToConstant: buttonFactory.getHeight(.palmAutoCapture))
+            palmAutoCaptureButton.heightAnchor.constraint(equalToConstant: buttonFactory.getHeight(.palmAutoCapture)),
+            fingersAutoCaptureButton.heightAnchor.constraint(equalToConstant: buttonFactory.getHeight(.fingersAutoCapture))
         ])
     }
 }
