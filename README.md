@@ -36,6 +36,7 @@ A collection of quickstart samples demonstrating the IDV iOS SDK. [Read more abo
 | **MagnifEye Liveness**          | Basic component sample.                                                                                                  |
 | **Multi-Range Liveness**        | Basic component sample.                                                                                                  |
 | **Palm Auto Capture**           | Basic component sample.                                                                                                  |
+| **Fingers Auto Capture**        | Combination of Fingers Auto Capture component and Finger to Fingerprint Transformer component.                          |
 
 In case when the samples do not work because of the expired IDV license, please contact `sales@innovatrics.com` in order to obtain a new license file.
 

@@ -18,7 +18,7 @@
 "samples.palm_auto_capture.title" = "Palm Auto Capture";
 "samples.palm_auto_capture.subtitle" = "Basic component sample.";
 "samples.fingers_auto_capture.title" = "Fingers Auto Capture";
-"samples.fingers_auto_capture.subtitle" = "Basic component sample with finger-to-fingerprint transformation.";
+"samples.fingers_auto_capture.subtitle" = "Combination of Fingers Auto Capture component and Finger to Fingerprint Transformer component.";
 "samples.fingers_auto_capture.result.finger_images" = "Finger images";
 "samples.fingers_auto_capture.result.fingerprint_images" = "Fingerprint images";
 

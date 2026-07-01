@@ -12,6 +12,7 @@ final class FingersAutoCaptureResultViewController: UIViewController {
 
     private let scrollView = UIScrollView()
     private let contentStackView = UIStackView()
+    private let fingerprintsStackView = UIStackView()
     private let fingerprintsActivityIndicator = UIActivityIndicatorView(style: .medium)
 
     private var orderedBundles: [(label: String, bundle: FingerBundle?)] {
@@ -40,8 +41,8 @@ final class FingersAutoCaptureResultViewController: UIViewController {
 
         setupSubviews()
         showFingerImages()
-        showSummary()
         transformAndShowFingerprints()
+        showSummary()
     }
 }
 
@@ -56,6 +57,10 @@ extension FingersAutoCaptureResultViewController {
         contentStackView.axis = .vertical
         contentStackView.spacing = 10
         contentStackView.alignment = .fill
+
+        fingerprintsStackView.axis = .vertical
+        fingerprintsStackView.spacing = 10
+        fingerprintsStackView.alignment = .fill
 
         NSLayoutConstraint.activate([
             scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -81,9 +86,12 @@ extension FingersAutoCaptureResultViewController {
     }
 
     private func transformAndShowFingerprints() {
-        contentStackView.addArrangedSubview(makeHeaderLabel(NSLocalizedString("samples.fingers_auto_capture.result.fingerprint_images", comment: "")))
+        fingerprintsStackView.addArrangedSubview(makeHeaderLabel(NSLocalizedString("samples.fingers_auto_capture.result.fingerprint_images", comment: "")))
         fingerprintsActivityIndicator.startAnimating()
-        contentStackView.addArrangedSubview(fingerprintsActivityIndicator)
+        fingerprintsStackView.addArrangedSubview(fingerprintsActivityIndicator)
+        // Added before the JSON view (which is appended after this call), so the
+        // asynchronously-produced fingerprint images stay above the JSON — matching Android.
+        contentStackView.addArrangedSubview(fingerprintsStackView)
 
         let bundles = result.fingerBundles
         DispatchQueue.global().async { [weak self] in
@@ -103,7 +111,7 @@ extension FingersAutoCaptureResultViewController {
                     self.fingerprintsActivityIndicator.stopAnimating()
                     self.fingerprintsActivityIndicator.removeFromSuperview()
                     images.forEach { label, image in
-                        self.contentStackView.addArrangedSubview(self.makeLabeledImageView(label: label, image: image))
+                        self.fingerprintsStackView.addArrangedSubview(self.makeLabeledImageView(label: label, image: image))
                     }
                 }
             } catch {
@@ -111,31 +119,20 @@ extension FingersAutoCaptureResultViewController {
                     guard let self = self else { return }
                     self.fingerprintsActivityIndicator.stopAnimating()
                     self.fingerprintsActivityIndicator.removeFromSuperview()
-                    self.contentStackView.addArrangedSubview(self.makeHeaderLabel("Transformation failed: \(error.localizedDescription)"))
+                    self.fingerprintsStackView.addArrangedSubview(self.makeHeaderLabel("Transformation failed: \(error.localizedDescription)"))
                 }
             }
         }
     }
 
     private func showSummary() {
-        let fingers: [Summary.Finger] = orderedBundles.compactMap { label, bundle in
-            guard let bundle = bundle else { return nil }
-            return Summary.Finger(
-                finger: label,
-                confidence: bundle.finger.confidence,
-                pixelsPerInch: bundle.pixelsPerInch,
-                imageSize: "\(bundle.image.size)"
-            )
-        }
-        let summary = Summary(detectedFingerCount: fingers.count, fingers: fingers, contentSizeBytes: result.content.count)
-
         let textView = UITextView()
         textView.isEditable = false
         textView.isScrollEnabled = false
         textView.font = .systemFont(ofSize: 14)
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
-        textView.text = (try? encoder.encode(summary)).flatMap { String(data: $0, encoding: .utf8) }
+        textView.text = (try? encoder.encode(result)).flatMap { String(data: $0, encoding: .utf8) }
         contentStackView.addArrangedSubview(textView)
     }
 
@@ -167,16 +164,126 @@ extension FingersAutoCaptureResultViewController {
     }
 }
 
-private struct Summary: Encodable {
+// MARK: - Encodable (full result dump for the JSON view)
+// Reuses DotCore's `Image` Encodable (DotCore+Encodable.swift) and the Palm
+// sample's `DetectionPosition` Encodable (PalmAutoCapture+Encodable.swift) —
+// `FingerDetector.Finger.position` is the same shared `DetectionPosition`.
 
-    struct Finger: Encodable {
-        let finger: String
-        let confidence: Double
-        let pixelsPerInch: Double
-        let imageSize: String
+extension FingersAutoCaptureResult: Encodable {
+
+    enum Keys: String, CodingKey {
+        case requestCaptureImage
+        case fingerBundles
+        case contentSizeBytes
     }
 
-    let detectedFingerCount: Int
-    let fingers: [Finger]
-    let contentSizeBytes: Int
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: Keys.self)
+        try container.encodeIfPresent(requestCaptureImage, forKey: .requestCaptureImage)
+        try container.encode(fingerBundles, forKey: .fingerBundles)
+        try container.encode(content.count, forKey: .contentSizeBytes)
+    }
+}
+
+extension FingerBundles: Encodable {
+
+    enum Keys: String, CodingKey {
+        case index
+        case middle
+        case ring
+        case little
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: Keys.self)
+        try container.encodeIfPresent(index, forKey: .index)
+        try container.encodeIfPresent(middle, forKey: .middle)
+        try container.encodeIfPresent(ring, forKey: .ring)
+        try container.encodeIfPresent(little, forKey: .little)
+    }
+}
+
+extension FingerBundle: Encodable {
+
+    enum Keys: String, CodingKey {
+        case image
+        case pixelsPerInch
+        case finger
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: Keys.self)
+        try container.encode(image, forKey: .image)
+        try container.encode(pixelsPerInch, forKey: .pixelsPerInch)
+        try container.encode(finger, forKey: .finger)
+    }
+}
+
+extension FingerDetector.Finger: Encodable {
+
+    enum Keys: String, CodingKey {
+        case confidence
+        case position
+        case type
+        case quality
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: Keys.self)
+        try container.encode(confidence, forKey: .confidence)
+        try container.encode(position, forKey: .position)
+        try container.encode(type, forKey: .type)
+        try container.encode(quality, forKey: .quality)
+    }
+}
+
+// DotFingersCore has its own DetectionPosition (joint-based), distinct from the
+// Palm module's. Conform it here — PointDouble (shared DotCore) is already
+// Encodable via the Document sample.
+extension DotFingersCore.DetectionPosition: Encodable {
+
+    enum Keys: String, CodingKey {
+        case jointTop
+        case tip
+        case jointBottom
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: Keys.self)
+        try container.encode(jointTop, forKey: .jointTop)
+        try container.encode(tip, forKey: .tip)
+        try container.encode(jointBottom, forKey: .jointBottom)
+    }
+}
+
+extension FingerType: Encodable {
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.singleValueContainer()
+        try container.encode(description)
+    }
+}
+
+extension FingerQuality: Encodable {
+
+    enum Keys: String, CodingKey {
+        case imageQuality
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: Keys.self)
+        try container.encode(imageQuality, forKey: .imageQuality)
+    }
+}
+
+extension FingerImageQuality: Encodable {
+
+    enum Keys: String, CodingKey {
+        case sharpness
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: Keys.self)
+        try container.encode(sharpness, forKey: .sharpness)
+    }
 }

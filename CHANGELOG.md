@@ -1,4 +1,9 @@
 # Changelog
+## 4.43.1 - 2026-07-01
+### Changed
+- updated result screen in Fingers Auto Capture Component
+- updated README.md
+
 ## 4.43.0 - 2026-06-30
 ### Added
 - Fingers Auto Capture sample with finger-to-fingerprint transformation
