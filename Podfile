@@ -3,7 +3,7 @@ platform :ios, '15.5'
 source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/innovatrics/innovatrics-podspecs'
 
-dot_sdk_version = '9.5.0'
+dot_sdk_version = '9.6.0'
 
 target 'DotSdkSamples' do
   use_frameworks!

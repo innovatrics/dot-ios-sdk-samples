@@ -1,4 +1,8 @@
 # Changelog
+## 4.44.0 - 2026-08-06
+### Changed
+- updated IDV SDK to 9.6.0
+
 ## 4.43.1 - 2026-07-01
 ### Changed
 - updated result screen in Fingers Auto Capture Component
