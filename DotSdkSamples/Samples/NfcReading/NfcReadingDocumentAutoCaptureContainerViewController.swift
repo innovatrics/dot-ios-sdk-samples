@@ -23,17 +23,28 @@ class NfcReadingDocumentAutoCaptureContainerViewController: ContainerViewControl
     
     private func navigateToNfcReadingViewController(_ password: TravelDocumentReaderPassword) {
         guard let samplesViewController = navigationController?.viewControllers.first else { return }
-        
+
         let nfcReadingViewController = NfcReadingViewController(password: password)
         navigationController?.setViewControllers([samplesViewController, nfcReadingViewController], animated: true)
+    }
+
+    private func presentErrorAlert(errorMessage: String) {
+        let alertController = UIAlertController.createErrorController(errorMessage: errorMessage) { _ in
+            self.navigationController?.popViewController(animated: true)
+        }
+        present(alertController, animated: true)
     }
 }
 
 extension NfcReadingDocumentAutoCaptureContainerViewController: DocumentAutoCaptureViewControllerDelegate {
     
     func documentAutoCaptureViewController(_ viewController: BaseDocumentAutoCaptureViewController, finished result: DocumentAutoCaptureResult) {
-        let mrzPassword = try! MrzPasswordFactory.create(documentAutoCaptureResult: result)
-        navigateToNfcReadingViewController(mrzPassword)
+        do {
+            let mrzPassword = try MrzPasswordFactory.create(documentAutoCaptureResult: result)
+            navigateToNfcReadingViewController(mrzPassword)
+        } catch {
+            presentErrorAlert(errorMessage: error.localizedDescription)
+        }
     }
     
     func documentAutoCaptureViewControllerViewWillAppear(_ viewController: BaseDocumentAutoCaptureViewController) {

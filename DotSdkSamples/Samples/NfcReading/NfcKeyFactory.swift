@@ -5,12 +5,20 @@ import DotDocumentCommons
 
 struct MrzPasswordFactory {
     private init () {}
-    
+
+    enum Error: LocalizedError {
+        case machineReadableZoneNotAvailable
+
+        var errorDescription: String? {
+            return "The captured document has no parsed machine readable zone, so an NFC access key cannot be derived."
+        }
+    }
+
     static func create(documentAutoCaptureResult: DocumentAutoCaptureResult) throws -> MachineReadableZonePassword {
         guard let machineReadableZone = documentAutoCaptureResult.machineReadableZone,
               let travelDocumentType = documentAutoCaptureResult.travelDocumentType?.travelDocumentType
         else {
-            fatalError("Machine readable zone or travel document type is nil.")
+            throw Error.machineReadableZoneNotAvailable
         }
         
         return try MachineReadableZonePassword(

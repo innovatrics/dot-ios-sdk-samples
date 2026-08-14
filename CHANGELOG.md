@@ -1,4 +1,13 @@
 # Changelog
+## 4.45.0 - 2026-08-14
+### Added
+- barcode validation if present in Document Auto Capture sample
+- barcode content in Document Auto Capture result
+### Changed
+- updated IDV SDK to 9.7.0
+### Fixed
+- NFC Reading sample no longer crashes on a document whose MRZ cannot be parsed
+
 ## 4.44.0 - 2026-08-06
 ### Changed
 - updated IDV SDK to 9.6.0

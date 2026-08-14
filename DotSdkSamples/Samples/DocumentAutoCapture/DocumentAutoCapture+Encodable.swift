@@ -7,12 +7,46 @@ extension DocumentAutoCaptureResult: Encodable {
     enum Keys: String, CodingKey {
         case image
         case document
+        case barcode
     }
-    
+
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: Keys.self)
         try container.encode(image, forKey: .image)
         try container.encodeIfPresent(document, forKey: .document)
+        try container.encodeIfPresent(barcode, forKey: .barcode)
+    }
+}
+
+extension Barcode: Encodable {
+
+    enum Keys: String, CodingKey {
+        case text
+        case position
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: Keys.self)
+        try container.encodeIfPresent(text, forKey: .text)
+        try container.encode(position, forKey: .position)
+    }
+}
+
+extension Barcode.DetectionPosition: Encodable {
+
+    enum Keys: String, CodingKey {
+        case topLeft
+        case topRight
+        case bottomRight
+        case bottomLeft
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: Keys.self)
+        try container.encode(topLeft, forKey: .topLeft)
+        try container.encode(topRight, forKey: .topRight)
+        try container.encode(bottomRight, forKey: .bottomRight)
+        try container.encode(bottomLeft, forKey: .bottomLeft)
     }
 }
 

@@ -5,7 +5,8 @@ import DotCore
 class DocumentAutoCaptureContainerViewController: ContainerViewController {
     
     init() {
-        let viewController = DocumentAutoCaptureViewController()
+        let configuration = DocumentAutoCaptureViewController.Configuration(baseConfiguration: .init(barcodeValidation: .requireValidityIfPresent))
+        let viewController = DocumentAutoCaptureViewController(configuration: configuration)
         super.init(viewController: viewController)
         viewController.delegate = self
     }
