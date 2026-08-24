@@ -1,4 +1,8 @@
 # Changelog
+## 4.46.0 - 2026-08-24
+### Changed
+- updated IDV SDK to 9.8.0
+
 ## 4.45.0 - 2026-08-14
 ### Added
 - barcode validation if present in Document Auto Capture sample
