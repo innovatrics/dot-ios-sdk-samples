@@ -48,7 +48,7 @@ extension NfcReadingExecutor: NfcTravelDocumentReaderDelegate {
         delegate?.nfcReadingExecutorCanceled(self)
     }
     
-    func nfcTravelDocumentReader(_ nfcTravelDocumentReader: NfcTravelDocumentReader, failed error: NfcTravelDocumentReader.Error) {
+    func nfcTravelDocumentReader(_ nfcTravelDocumentReader: NfcTravelDocumentReader, failed error: NfcTravelDocumentReader.ReadError) {
         delegate?.nfcReadingExecutorError(self, errorDescription: error.localizedDescription)
     }
 }
