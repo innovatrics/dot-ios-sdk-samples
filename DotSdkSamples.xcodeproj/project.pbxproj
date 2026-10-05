@@ -657,7 +657,7 @@
 			repositoryURL = "https://github.com/innovatrics/dot-ios-sdk-spm.git";
 			requirement = {
 				kind = exactVersion;
-				version = 9.10.0;
+				version = 9.9.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

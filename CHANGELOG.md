@@ -1,7 +1,7 @@
 # Changelog
-## 4.48.0 - 2026-10-02
+## 4.48.0 - 2026-10-05
 ### Changed
-- updated IDV SDK to 9.10.0
+- updated IDV SDK to 9.9.1
 
 ## 4.47.0 - 2026-09-04
 ### Changed
