@@ -65,6 +65,7 @@ extension CustomUiFaceAutoCaptureContainerViewController: FaceAutoCaptureViewCon
             switch phase {
             case .preCandidateSelection: phaseView.state = .visible(text: phase.labelText, textColor: .black, backgroundColor: .white)
             case .candidateSelection: phaseView.state = .visible(text: phase.labelText, textColor: .black, backgroundColor: .systemGreen)
+            case .finished: phaseView.state = .hidden
             @unknown default: phaseView.state = .hidden
             }
         } else {
@@ -83,6 +84,7 @@ extension FaceAutoCapturePhase {
         switch self {
         case .preCandidateSelection: return "Pre-Candidate Selection"
         case .candidateSelection: return "Candidate Selection"
+        case .finished: return "Finished"
         @unknown default: return "Unknown Phase"
         }
     }
